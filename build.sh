@@ -1,3 +1,3 @@
-echo "Compiling Bootstrap files to bootstrap.css"
-lessc ./less/bootstrap.less > bootstrap.css -x
+echo "Compiling Bootstrap files to ${1}"
+lessc ./less/bootstrap.less > $1 -x
 echo "Done!"
