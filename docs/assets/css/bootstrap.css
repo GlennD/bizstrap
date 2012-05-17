@@ -22,6 +22,11 @@ textarea{overflow:auto;vertical-align:top;}
 body{margin:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:18px;color:#333333;background-color:#d1e6eb;}
 a{color:#00a5dc;text-decoration:none;}
 a:hover{color:#006c90;text-decoration:underline;}
+body.bizo-app{padding-top:110px;background:url("../img/logo.png") 30px 30px no-repeat #d1e6eb;border-top:10px solid #1b3d46;}body.bizo-app h1{color:#1B3D46;}
+body.bizo-app .header{position:relative;height:70px;margin:20px 0 20px;border-bottom:1px solid #cccccc;}
+body.bizo-app .content{background:white;padding:30px;border:1px solid #cccccc;border-radius:6px;}
+body.bizo-app .well{background:#fff;border:solid 1px #cccccc;}
+body.bizo-app .hero-unit{background:#f3f9f9;border:1px solid rgba(0, 0, 0, 0.1);}
 .row{margin-left:-20px;*zoom:1;}.row:before,.row:after{display:table;content:"";}
 .row:after{clear:both;}
 [class*="span"]{float:left;margin-left:20px;}
