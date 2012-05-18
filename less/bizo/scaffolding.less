@@ -2,9 +2,9 @@
 // Basic page layout stuff 
 // -------------------------------------------------------------------------------------------
 
-@logo: url(../img/logo.png); 
 @bizoAppPadding: 30px;
 
+// Use <body class="bizo-app">..</body> to get an instant "looks like Bizo" background + logo 
 body.bizo-app {
   padding-top: 110px;
   background:  url("@{bizoLogosPath}") @bizoAppPadding @bizoAppPadding no-repeat @blueLight;
@@ -21,6 +21,7 @@ body.bizo-app {
     border-bottom: 1px solid @grayMedium;
   }
 
+  // White content boxes for use against the light blue bizo background
   .content {
     background:  white;
     padding: 30px;
@@ -28,6 +29,7 @@ body.bizo-app {
     border-radius:  6px;
   }
 
+  // Well is a white box with slightly rounded corners
   .well {
     background: #fff;
     border: solid 1px @grayMedium;
