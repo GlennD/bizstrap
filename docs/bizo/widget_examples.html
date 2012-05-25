@@ -48,6 +48,92 @@
 
     <div class="container" style="padding-top: 90px;">
       <h1>Bizstrap Widget Examples</h1>
+
+      <h1>Forms</h1>
+
+      <p>For a typical CRUD form that will have validation errors/etc. (e.g. not an inline search box/etc.).</p>
+
+      <p>Notes/todo:</p>
+
+      <ul>
+        <li>Validation rules should not cause elements to "jump"</li>
+        <li>Inline help via popup?</li>
+        <li>Cancel/submit</li>
+        <li>Spinny while submit is working</li>
+        <li>Form-wide validation errors</li>
+        <li>Advanced sections toggle</li>
+        <li>Should we use a well around the form?</li>
+      </ul>
+
+      <hr/>
+
+      <h2>New Widget</h2>
+
+      <form class="form-vertical well">
+        <fieldset>
+          <div class="control-group error">
+            <label class="control-label">Name</label>
+            <div class="controls">
+              <input type="text" class="span3" placeholder="Foo" />
+              <span class="help-inline">
+                Required
+              </span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Description</label>
+            <div class="controls">
+              <input type="text" class="span10" placeholder="..." />
+              <span class="help-inline"></span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn">Save</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <hr/>
+
+      <h1>Tables</h1>
+
+      Used for listing CRUD items. Notes/todo:
+
+      <ul>
+        <li>Delete confirmation</li>
+      </ul>
+
+      <hr/>
+
+      <h2>Widgets</h2>
+
+      <table class="table table-striped">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td>Thing 1</td>
+          <td>Other Info</td>
+          <td>
+            <button type="submit" class="btn btn-mini">Edit</button>
+            <button type="submit" class="btn btn-mini">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Thing 1</td>
+          <td>Other Info</td>
+          <td>
+            <a class="btn btn-mini">Edit</a>
+            <a class="btn btn-mini">Delete</a>
+          </td>
+        </tr>
+      </table>
+
+      <button class="btn">Add new</button>
+
+      <hr/>
     </div>
 
   </body>
