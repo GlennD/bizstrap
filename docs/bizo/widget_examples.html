@@ -51,27 +51,46 @@
 
       <h1>Forms</h1>
 
-      Notes/todo:
+      <p>For a typical CRUD form that will have validation errors/etc. (e.g. not an inline search box/etc.).</p>
+
+      <p>Notes/todo:</p>
 
       <ul>
         <li>Validation rules should not cause elements to "jump"</li>
-        <li>Inline help</li>
+        <li>Inline help via popup?</li>
         <li>Cancel/submit</li>
         <li>Spinny while submit is working</li>
         <li>Form-wide validation errors</li>
         <li>Advanced sections toggle</li>
+        <li>Should we use a well around the form?</li>
       </ul>
 
       <hr/>
 
-      <p>New Widget (or Widget A)</p>
+      <h2>New Widget</h2>
 
-      <form class="well">
-        <label>
-          Name
-          <input type="text" class="span3" placeholder="Foo" />
-        </label>
-        <button type="submit" class="btn">Save</button>
+      <form class="form-vertical well">
+        <fieldset>
+          <div class="control-group error">
+            <label class="control-label">Name</label>
+            <div class="controls">
+              <input type="text" class="span3" placeholder="Foo" />
+              <span class="help-inline">
+                Required
+              </span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Description</label>
+            <div class="controls">
+              <input type="text" class="span10" placeholder="..." />
+              <span class="help-inline"></span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn">Save</button>
+          </div>
+        </fieldset>
       </form>
 
       <hr/>
@@ -86,9 +105,9 @@
 
       <hr/>
 
-      <p>Widgets</p>
+      <h2>Widgets</h2>
 
-      <table>
+      <table class="table table-striped">
         <tr>
           <th>Name</th>
           <th>Description</th>
@@ -97,12 +116,18 @@
         <tr>
           <td>Thing 1</td>
           <td>Other Info</td>
-          <td>Edit Delete</td>
+          <td>
+            <button type="submit" class="btn btn-mini">Edit</button>
+            <button type="submit" class="btn btn-mini">Delete</button>
+          </td>
         </tr>
         <tr>
           <td>Thing 1</td>
           <td>Other Info</td>
-          <td>Edit Delete</td>
+          <td>
+            <a class="btn btn-mini">Edit</a>
+            <a class="btn btn-mini">Delete</a>
+          </td>
         </tr>
       </table>
 
