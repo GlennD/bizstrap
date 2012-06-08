@@ -23,6 +23,26 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+      .control-label > .icon-question-sign {
+        float: right;
+        margin-right: 5px;
+      }
+
+      .control-group:hover .icon-question-sign {
+        visibility: visible;
+      }
+
+      .control-label > .icon-question-sign {
+        position: relative;
+      }
+
+      .control-label > .icon-question-sign:hover > .popover {
+        display: block;
+        top: 10px;
+        left: -270px; /* width is 280px */
+      }
+    </style>
   </head>
 
   <body>
@@ -76,6 +96,14 @@
           <div class="control-group error">
             <label class="control-label">
               Name
+              <span class="icon-question-sign">
+                <div class="popover">
+                  <div class="popover-inner">
+                    <h3 class="popover-title">foo</h3>
+                    <div class="popover-content">content</div>
+                  </div>
+                </div>
+              </span>
             </label>
             <div class="controls">
               <input type="text" class="span3" placeholder="Foo" />
