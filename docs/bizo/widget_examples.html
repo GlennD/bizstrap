@@ -24,23 +24,26 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
     <style>
-      .control-label > .icon-question-sign {
-        float: right;
-        margin-right: 5px;
+      .controls > .icon-question-sign {
+        visibility: hidden;
       }
 
       .control-group:hover .icon-question-sign {
         visibility: visible;
       }
 
-      .control-label > .icon-question-sign {
+      .control-group input:focus + .icon-question-sign {
+        visibility: visible;
+      }
+
+      .controls > .icon-question-sign {
         position: relative;
       }
 
-      .control-label > .icon-question-sign:hover > .popover {
+      .controls > .icon-question-sign:hover > .popover {
         display: block;
-        top: 10px;
-        left: -270px; /* width is 280px */
+        top: 12px;
+        left: -70px; /* width is 280px */
       }
     </style>
   </head>
@@ -96,6 +99,9 @@
           <div class="control-group error">
             <label class="control-label">
               Name
+            </label>
+            <div class="controls">
+              <input type="text" class="span3" placeholder="Foo" />
               <span class="icon-question-sign">
                 <div class="popover">
                   <div class="popover-inner">
@@ -104,9 +110,6 @@
                   </div>
                 </div>
               </span>
-            </label>
-            <div class="controls">
-              <input type="text" class="span3" placeholder="Foo" />
               <span class="help-inline">
                 Required
               </span>
