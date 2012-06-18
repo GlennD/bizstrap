@@ -1,0 +1,33 @@
+// Help.less
+// Styles for inline help on Forms 
+// -----------------------------------------------------------------
+
+@helpAnimationDuration: 0.25s;
+
+.controls > .icon-question-sign {
+  opacity: 0;
+  .transition(opacity @helpAnimationDuration);
+}
+
+.control-group input:focus + .icon-question-sign {
+  opacity: 1;
+  .transition(opacity @helpAnimationDuration);
+}
+
+.controls > .icon-question-sign {
+  position: relative;
+}
+
+.controls > .icon-question-sign > .popover {
+  display: block;
+  top: 12px;
+  left: -140px; /* width is 280px */
+  opacity: 0;
+  .transition(opacity @helpAnimationDuration);
+}
+.controls > .icon-question-sign:hover > .popover {
+  opacity: 1;
+  .transition(opacity @helpAnimationDuration);
+  
+}
+

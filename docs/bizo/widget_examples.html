@@ -23,29 +23,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-    <style>
-      .controls > .icon-question-sign {
-        visibility: hidden;
-      }
 
-      .control-group:hover .icon-question-sign {
-        visibility: visible;
-      }
-
-      .control-group input:focus + .icon-question-sign {
-        visibility: visible;
-      }
-
-      .controls > .icon-question-sign {
-        position: relative;
-      }
-
-      .controls > .icon-question-sign:hover > .popover {
-        display: block;
-        top: 12px;
-        left: -70px; /* width is 280px */
-      }
-    </style>
   </head>
 
   <body>
@@ -92,21 +70,22 @@
 
       <hr/>
 
-      <h2>New Widget</h2>
+      <h2>Contextual Help Example</h2>
 
       <form class="form-vertical well">
         <fieldset>
           <div class="control-group error">
             <label class="control-label">
-              Name
+             Daily Budget 
             </label>
             <div class="controls">
               <input type="text" class="span3" placeholder="Foo" />
               <span class="icon-question-sign">
-                <div class="popover">
+                <div class="popover bottom">
+                  <div class="arrow"></div>
                   <div class="popover-inner">
-                    <h3 class="popover-title">foo</h3>
-                    <div class="popover-content">content</div>
+                    <h3 class="popover-title">Daily Budget</h3>
+                    <div class="popover-content">The maximum dollar amount you are willing to spend per day.</div>
                   </div>
                 </div>
               </span>
