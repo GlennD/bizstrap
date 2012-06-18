@@ -27,10 +27,27 @@
   opacity: 0;
   .transition(opacity @helpAnimationDuration);
 }
+
 .controls > .icon-question-sign:hover > .popover {
   opacity: 1;
   left: -140px; /* width is 280px */
   .transition(opacity @helpAnimationDuration);
-  
 }
 
+.help .popover-inner {
+  background: darken(@blueLight, 12%);
+}
+
+.help.popover.bottom .arrow {
+  border-bottom: 5px solid darken(@blueLight, 12%);
+}
+
+
+.help .popover-title {
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.help .popover-content {
+  #gradient > .vertical(#fff, @blueLight);
+}
