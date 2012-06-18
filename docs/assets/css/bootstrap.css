@@ -721,8 +721,8 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .hide{display:none;}
 .show{display:block;}
 .invisible{visibility:hidden;}
-.controls>.icon-question-sign{opacity:0;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;-ms-transition:opacity 0.25s;-o-transition:opacity 0.25s;transition:opacity 0.25s;}
+.controls>.icon-question-sign{opacity:0;display:inline-block;position:relative;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;-ms-transition:opacity 0.25s;-o-transition:opacity 0.25s;transition:opacity 0.25s;}
 .control-group input:focus+.icon-question-sign{opacity:1;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;-ms-transition:opacity 0.25s;-o-transition:opacity 0.25s;transition:opacity 0.25s;}
 .controls>.icon-question-sign{position:relative;}
-.controls>.icon-question-sign>.popover{display:block;top:12px;left:-140px;opacity:0;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;-ms-transition:opacity 0.25s;-o-transition:opacity 0.25s;transition:opacity 0.25s;}
-.controls>.icon-question-sign:hover>.popover{opacity:1;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;-ms-transition:opacity 0.25s;-o-transition:opacity 0.25s;transition:opacity 0.25s;}
+.controls>.icon-question-sign>.popover{display:block;top:12px;left:-9999999px;opacity:0;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;-ms-transition:opacity 0.25s;-o-transition:opacity 0.25s;transition:opacity 0.25s;}
+.controls>.icon-question-sign:hover>.popover{opacity:1;left:-140px;-webkit-transition:opacity 0.25s;-moz-transition:opacity 0.25s;-ms-transition:opacity 0.25s;-o-transition:opacity 0.25s;transition:opacity 0.25s;}

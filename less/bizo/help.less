@@ -6,6 +6,8 @@
 
 .controls > .icon-question-sign {
   opacity: 0;
+  display: inline-block;
+  position: relative;
   .transition(opacity @helpAnimationDuration);
 }
 
@@ -21,12 +23,13 @@
 .controls > .icon-question-sign > .popover {
   display: block;
   top: 12px;
-  left: -140px; /* width is 280px */
+  left: -9999999px; /* have to hide as transitions don't work with display property */
   opacity: 0;
   .transition(opacity @helpAnimationDuration);
 }
 .controls > .icon-question-sign:hover > .popover {
   opacity: 1;
+  left: -140px; /* width is 280px */
   .transition(opacity @helpAnimationDuration);
   
 }
