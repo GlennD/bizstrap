@@ -1,4 +1,4 @@
-TAG=`git describe | cut -d '-' -f1`
+TAG=`git describe | cut -d '-' -f1,2`
 BIZSTRAP=bizstrap-$TAG.css
 BASE_PATH=s3://com-bizo-public/bizstrap
 CSS_RELEASE_PATH=$BASE_PATH/css/$BIZSTRAP
