@@ -1,53 +1,35 @@
 // Help.less
-// Styles for inline help on Forms 
+// Styles for inline help on Forms
 // -----------------------------------------------------------------
 
-@helpAnimationDuration: 0.25s;
-
-.controls > .icon-question-sign {
-  opacity: 0;
-  display: inline-block;
-  position: relative;
-  .transition(opacity @helpAnimationDuration);
-}
-
-.control-group input:focus + .icon-question-sign {
-  opacity: 1;
-  .transition(opacity @helpAnimationDuration);
-}
-
 .controls > .icon-question-sign {
   position: relative;
 }
 
+/* Put the popover centered under the icon. */
 .controls > .icon-question-sign > .popover {
-  display: block;
-  top: 12px;
-  left: -9999999px; /* have to hide as transitions don't work with display property */
-  opacity: 0;
-  .transition(opacity @helpAnimationDuration);
+  margin-top: 14px; /* 14 matches height of icon-question-sign, works better than top to avoid mouseouts */
+  left: -141px; /* width of popover-inner is 280+3x2px, /2=143px, -2px so arrow lines up under '?' */
+  display: none;
 }
 
+/* Show the popover on hover. */
 .controls > .icon-question-sign:hover > .popover {
-  opacity: 1;
-  left: -140px; /* width is 280px */
-  .transition(opacity @helpAnimationDuration);
+  display: block;
 }
 
-.help .popover-inner {
+/* Provide a blue border around the popup-inner's title/content. */
+.help > .popover-inner {
   background: darken(@blueLight, 12%);
 }
 
-.help.popover.bottom .arrow {
-  border-bottom: 5px solid darken(@blueLight, 12%);
+/* Color the arrow the same as the border above. */
+.help.popover.bottom > .arrow {
+  border-bottom: 6px solid darken(@blueLight, 12%); /* bootstrap uses 5, but at certain zoom levels it shows a gap */
 }
 
-
-.help .popover-title {
+.help > .popover-inner > .popover-title {
   background: #fff;
   border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
-.help .popover-content {
-  #gradient > .vertical(#fff, @blueLight);
-}
