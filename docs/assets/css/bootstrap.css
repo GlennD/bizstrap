@@ -721,7 +721,7 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .hide{display:none;}
 .show{display:block;}
 .invisible{visibility:hidden;}
-.controls>.icon-question-sign{position:relative;}
+.controls>.icon-question-sign{position:relative;vertical-align:baseline;}
 .controls>.icon-question-sign>.popover{margin-top:14px;left:-141px;display:none;}
 .controls>.icon-question-sign:hover>.popover{display:block;}
 .help>.popover-inner{background:#a6cfd8;}
