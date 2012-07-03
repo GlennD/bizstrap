@@ -2,6 +2,8 @@
 // Styles for inline help on Forms
 // -----------------------------------------------------------------
 
+@helpAnimationDuration: .25s;
+
 .controls > .icon-question-sign {
   position: relative;
   vertical-align: baseline; /* aligns better next to text boxes */
@@ -10,13 +12,17 @@
 /* Put the popover centered under the icon. */
 .controls > .icon-question-sign > .popover {
   margin-top: 14px; /* 14 matches height of icon-question-sign, works better than top to avoid mouseouts */
-  left: -141px; /* width of popover-inner is 280+3x2px, /2=143px, -2px so arrow lines up under '?' */
-  display: none;
+  left: -9999999px; /* hack to hide as transitions don't work with display */
+  display: block;
+  opacity: 0;
+  .transition(opacity @helpAnimationDuration);
 }
 
 /* Show the popover on hover. */
 .controls > .icon-question-sign:hover > .popover {
-  display: block;
+  left: -141px; /* width of popover-inner is 280+3x2px, /2=143px, -2px so arrow lines up under '?' */
+  opacity: 1;
+  .transition(opacity @helpAnimationDuration);
 }
 
 /* Provide a blue border around the popup-inner's title/content. */
