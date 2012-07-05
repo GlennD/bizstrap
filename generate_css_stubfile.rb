@@ -41,7 +41,7 @@ File.open(ARGV[0], "r") do |f|
 end
 
 File.open(output, 'w') do |f|
-  classes.sort { |a,b| a <=> b }.each do |class_name|
+  css_classes.sort { |a,b| a <=> b }.each do |class_name|
     f << ".#{class_name} {}\n"
   end
 end
