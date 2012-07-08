@@ -54,15 +54,35 @@
                   <a href="widget-prototypes/actions-widget-prototype.html" class="btn btn-inverse" target="_blank">Actions Widget Prototype</a>
                 </div>
               </div>
+          </div>
 
+          <div class="row-fluid">
+            <div class="span12">
+              <h2>Bizstrap Source Conventions</h2>
+              <hr />
+              <ul>
+                <li>
+                  <p>The <code>master</code> branch stays like the upstream Bootstrap master and acts as a vendor branch.</p>
+                  <p>E.g. at any time we can <code>git diff origin/master origin/bizo</code> to see what we've changed vs. Bootstrap proper.</p>
+                </li>
+                <li>The <code>bizo</code> branch has our changes</li>
+                <li>
+                  <p>Bizstrap version numbers are <code>bootstrap version.our version</code>.</p>
+                  <p>E.g. <code>2.0.3.1</code> is Bootstrap <code>2.0.3</code>, with our 1st release.</p>
+                </li>
+                <li>
+                  <p>When changing existing Bootstrap files, make changes inline, and leave a comment with the reason for your change. </p>
+                  <p>This should facilitate merging in changes in the future, as we'll get explicit conflicts (vs. changes in separate files) and also know why we had changed what we did.</p>
+                </li>
+                <li>
+                  <p>To update <code>code.bizo.com/bizstrap</code>, make changes in the <code>bizo</code> branch, then <code>git push origin bizo:gh-pages</code>.</p>
+                  <p>This means we don't have to maintain both <code>bizo</code> and <code>gh-pages</code> branches, but satisifies GitHub, which only looks for the <code>gh-pages</code> branch.</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- JavaScript code for chart widgets -->
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-      <script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"></script>
-      <script src="https://raw.github.com/jcarver989/raphy-charts/master/compiled/charts.min.js"></script>
-      <script src="http://com-bizo-public.s3.amazonaws.com/bizstrap/js/chart_placeholders.js"></script>
     </body>
   </html>
