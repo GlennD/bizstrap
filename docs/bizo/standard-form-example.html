@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bizstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="bizo-app">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <!-- sidebar -->
+        <div class="span2">
+          <div class="sidebar-nav well">
+            <ul class="nav nav-list">
+              <li class="nav-header">Common Elements</li>
+              <li><a href="./standard-form-example.html">Form Example</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- body -->
+        <div class="span10 content">
+          <div class="row-fluid">
+            <div class="span12">
+
+              <h2>Widget 123</h2>
+              <form class="form-vertical well">
+                <fieldset>
+                  <div class="control-group error">
+                    <label class="control-label">Daily Budget</label>
+                    <div class="controls">
+                      <input type="text" placeholder="Foo" />
+                      <span class="icon-question-sign">
+                        <div class="popover bottom help">
+                          <div class="arrow"></div>
+                          <div class="popover-inner">
+                            <div class="popover-content">The maximum dollar amount you are willing to spend per day.</div>
+                          </div>
+                        </div>
+                      </span>
+                      <span class="help-inline">Required</span>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label">Description</label>
+                    <div class="controls">
+                      <input type="text" class="span10" placeholder="..." />
+                      <span class="help-inline"></span>
+                    </div>
+                  </div>
+                  <div class="form-actions">
+                    <button type="submit" class="btn">Save</button>
+                  </div>
+                </fieldset>
+              </form>
+
+              <hr/>
+
+              <p>Notes/todo:</p>
+
+              <ul>
+                <li>Validation rules should not cause elements to "jump"</li>
+                <li>Inline help via popup?</li>
+                <li>Cancel/submit</li>
+                <li>Spinny while submit is working? Or just disable button.</li>
+                <li>Form-wide validation errors</li>
+                <li>Advanced sections toggle</li>
+                <li>Should we use a well around the form?</li>
+                <li>"Successfully saved" message</li>
+                <li>How to handle data that wasn't come back yet</li>
+                <li>Adding <code>spanX</code> messes up the help icon</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
