@@ -7,6 +7,7 @@
 
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="../assets/js/jquery.js"></script>
 
     <style>
       /*
@@ -34,12 +35,42 @@
       <div class="sidebar-nav well" style="width: 200px">
         <ul class="nav nav-list">
           <li class="nav-header">Common Elements</li>
-          <li><a href="./standard-form-example.html" target="content">Form Example</a></li>
+          <li><a href="standard-form-example.html">Form Example</a></li>
         </ul>
       </div>
       <div class="full" style="left: 300px;">
         <iframe name="content" width="100%" height="99%" style="border: 0px solid black;"></iframe>
       </div>
     </div>
+
+    <script>
+      /*
+       * Manually pokes content.location.replace to avoid making history entries.
+       *
+       * If we don't do this, both changing our hash and changing the iframe src
+       * make history entries, so back/forth gets mangled.
+       */
+      function updateContent() {
+        var page = window.location.hash.substring(1)
+        if (page == "") {
+          page = "iframe.html";
+        }
+        window.frames["content"].location.replace(page);
+      }
+
+      /* Preload the iframe if they'd been viewing a page. */
+      $(document).ready(function () {
+        updateContent();
+      });
+
+      /* On click, do our own location change to update the hash. */
+      $("a").click(function(e) {
+        window.location.hash = e.target.href.split("/").pop();
+        e.preventDefault();
+      });
+
+      /* Watch for back/forward. */
+      window.onhashchange = updateContent;
+    </script>
   </body>
 </html>
