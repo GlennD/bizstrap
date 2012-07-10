@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="http://media.bizo.com/bizstrap/css/bizstrap-v2.0.3.css" rel="stylesheet">
+        <!-- JavaScript for widgets & charts  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"></script>
+    <script src="https://raw.github.com/jcarver989/raphy-charts/master/compiled/charts.min.js"></script>
+    <script src="http://code.bizo.com/bizstrap/docs/assets/js/bootstrap-alert.js"></script>
+    <script src="http://code.bizo.com/bizstrap/docs/assets/js/bootstrap-tooltip.js"></script>
+    <script>$(function(){
+	$("[rel='tooltip']").tooltip({placement: "right", trigger: "hover"});
+	})
+    </script>
+   
+  </head>
+  
+  <body class="bizo-app">
+    <style type="text/css">
+		h3 {margin-bottom:10px; margin-top: 5px}
+		.sidebar {text-align:center}
+		ul.targeting {margin-top:10px}
+		label.checkbox {display:inline-block}
+		.gray {background-color:#EEE; padding-left:10px; border-radius:6px}
+		.separator {background-color:#EEE; height:1px; margin-bottom:20px; margin-right:auto; margin-left:auto}
+		.adcontent {padding-top:10px; padding-bottom:10px}
+		.advariation1 {margin-top:30px}
+		.advariation2 {margin-top:36px}
+		.cent {text-align:center; margin-top:5px; margin-bottom:15px}
+		.rght {text-align:right}
+		hr.dashed {border:dashed thin #EEE}
+    </style>
+    <div class="container">
+      <div class="row">
+
+        <!-- Sidebar  -->
+        <div class="span2"></div>
+
+        <!-- Main Content  -->
+        <div class="span10 content">
+          <h1>Campaign Targeting Controls</h1>
+          
+          <h2 class="page-header">Tree Selector</h2>
+                   
+		  <h3>Default State</h3>
+		  <div class="row">
+            <div class="span2">
+              <ul class="nav nav-tabs nav-stacked">
+            	<li class="active"><a href=#>Geography</a></li>
+                <li><a href=#>Company</a></li>
+                <li><a href=#>Job Title</a></li>
+                <li><a href=#>Group</a></li>
+                <li><a href=#>Demographics</a></li>
+
+              </ul>
+            </div>
+            <div class="span5 gray">
+              <ul class="unstyled targeting">
+                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Africa</label></li>
+                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Asia</label></li>
+                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Europe</label></li>
+                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Latin America</label></li>
+                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Middle East</label></li>
+                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> North America</label></li>
+              </ul>
+            </div>
+            <div class="span2 well"><h5 class="sidebar">Target Audience</h5><h3 class="sidebar">161,000,000 Members</h3><p><small>A summary of your target audience will appear here as you make your selections.</small></p></div>
+          </div>
+        
+          <h2 class="page-header">Create your ads</h2>
+
+            
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
