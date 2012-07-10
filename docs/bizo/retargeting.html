@@ -9,195 +9,147 @@
     <script src="http://code.bizo.com/bizstrap/docs/assets/js/bootstrap-alert.js"></script>
     <script src="http://code.bizo.com/bizstrap/docs/assets/js/bootstrap-tooltip.js"></script>
     <script>$(function(){
-	$("[rel='tooltip']").tooltip({placement: "right", trigger: "hover"});
-	})
+  $("[rel='tooltip']").tooltip({placement: "right", trigger: "hover"});
+  })
     </script>
    
   </head>
   
   <body class="bizo-app">
-    <style type="text/css">
-		h3 {margin-bottom:5px; margin-top:35px}
-		h4.sub {margin-bottom:5px; margin-top:20px}
-		.sidebar {text-align:center}
-		.topp {margin-top:15px}
-		.targeting {padding-top:15px; padding-left:5px}
-		.targeting2 {padding-left:10px; padding-bottom:5px}
-		label.checkbox {display:inline-block}
-		.roundy {border-radius:6px}
-		.gray {background-color:#EEE; padding-left:10px; border-radius:6px}
-		.adcontent {padding-top:10px; padding-bottom:10px}
-		.advariation1 {margin-top:30px}
-		.advariation2 {margin-top:36px}
-		.cent {text-align:center; margin-top:5px; margin-bottom:15px}
-		.rght {text-align:right; margin-top:15px}
-		hr.dashed {border:dashed thin #EEE}
-		.outer {position:relative}
-		.inner {position:absolute; top:50%; height:630px; margin-top:180px}
-		.initialism {font-size:90%; text-transform:uppercase;}
-		.diagonal_lines_pattern {
-			background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #ccc), color-stop(0.25, #ccc), color-stop(0.25, #bbb), color-stop(0.5, #bbb), color-stop(0.5, #ccc), color-stop(0.75, #ccc), color-stop(0.75, #bbb));
-			background-image: -webkit-linear-gradient(left bottom, #ccc 0%, #ccc 25%, #bbb 25%, #bbb 50%, #ccc 50%, #ccc 75%, #bbb 75%);
-			background-image: -moz-linear-gradient(left bottom, #ccc 0%, #ccc 25%, #bbb 25%, #bbb 50%, #ccc 50%, #ccc 75%, #bbb 75%);
-			background-image: -ms-linear-gradient(left bottom, #ccc 0%, #ccc 25%, #bbb 25%, #bbb 50%, #ccc 50%, #ccc 75%, #bbb 75%);
-			background-image: -o-linear-gradient(left bottom, #ccc 0%, #ccc 25%, #bbb 25%, #bbb 50%, #ccc 50%, #ccc 75%, #bbb 75%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#bbbbbb',GradientType=0 ); / IE6-8 */
-			background-image: linear-gradient(left bottom, #ccc 0%, #ccc 25%, #bbb 25%, #bbb 50%, #ccc 50%, #ccc 75%, #bbb 75%);
-			background-size: 30px 30px;
-			width:100%;
-			height:100%;
-		}
-    </style>
     <div class="container">
       <div class="row">
 
-        <!-- Sidebar  -->
-        <div class="span2"></div>
-
         <!-- Main Content  -->
         <div class="span10 content">
+          
           <h1>Edit Retargeting Campaign</h1>
-          <h3>Getting started</h3>
-		  <hr />
+          <h3 class="page-header">Getting started</h3>
 
           <form class="form-horizontal">
-          	<fieldset>
-            	<div class="control-group">
-                	<label class="control-label">Campaign Name</label>
-                    <div class="controls">
-                      <input type="text" class="span3" value="Bizo Ad Toolkit">
-                    </div>
-                </div>
-                
-
-                <div class="control-group">
-                	<label class="control-label">Associated Action</label>
-                    <div class="controls">
-     					<select id="actions">
-                        <option>BMP Signup</option></select><p class="help-inline"><a href=# rel="tooltip" id="tooltip" title="An action is something you want to track as a result of users clicking on your ads or Bizo Switchboard links (like registrations for an event or downloads of a whitepaper). All you need is a name for the action and a URL on your site that marks its completion."><i class="icon-info-sign"></i></a></p>
-                        <p class="help-block muted">(optional)</p>
-                    </div>
-                </div>
+            <fieldset>
+              <div class="control-group">
+                <label class="control-label">Campaign Name</label>
+                  <div class="controls">
+                    <input type="text" class="span3" value="Bizo Ad Toolkit">
+                  </div>
+              </div>
+          
+            
+              <div class="control-group">
+                <label class="control-label">Associated Action</label>
+                  <div class="controls">
+                    <select id="actions">
+                      <option>BMP Signup</option>
+                    </select>
+                    <p class="help-inline"><a href=# rel="tooltip" id="tooltip" title="An action is something you want to track as a result of users clicking on your ads or Bizo Switchboard links (like registrations for an event or downloads of a whitepaper). All you need is a name for the action and a URL on your site that marks its completion."><i class="icon-info-sign"></i></a></p>
+                    <p class="help-block muted">(optional)</p>
+                  </div>
+              </div>
             </fieldset>
-          </form>
-
-          <h3>Choose your target audience</h3>
-          <hr />
-          <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
-            <h4 class="alert-heading">Targeting Tips</h4>
-            <ul>
-              <li>Make sure your selected domains have the Bizo Insight tag correctly applied.</li>
-              <li>Enable Social Media Retargeting to add users who click your social media links to the campaign audience.</li>
-            </ul>
-          </div>
-          <h4 class="sub">Web Visitors</h4>
-
-            <div class="gray">
-            <p class="targeting">Visitors to your selected domains will see your retargeting ads when they browse the web.<br />Make sure the <a href="#">Bizo Insight tag</a> is applied successfully to these domains.</p>
-              <ul class="unstyled targeting2">
-          	    <li><label class="checkbox"><input type="checkbox"><strong>All</strong></label></li>
-          	    <li><label class="checkbox"><input type="checkbox" checked>bizo.com<span class="help-inline"><a href=# rel="tooltip" id="success" title="Your domain has been verified"><img src="../assets/img/icon-success.png"></label></a></span></li>
-           	    <li><label class="checkbox"><input type="checkbox" checked>bamp.com<span class="help-inline"><a href=# rel="tooltip" id="success" title="Your domain has been verified"><img src="../assets/img/icon-success.png"></label></a></span></label></li>
-           	    <li><label class="checkbox"><input type="checkbox">amazonaws.com<span class="help-inline"><a href=# rel="tooltip" id="error" title="We are no longer seeing data from this domain"><img src="../assets/img/icon-error.png"></label></a></span></label></li>
-           	    <li><label class="checkbox"><input type="checkbox">bizographics.com<span class="help-inline"><a href=# rel="tooltip" id="warning" title="We have not detected insight tags on this domain yet"><img src="../assets/img/icon-warning.png"></label></a></span></label></li>
+             
+            <h3 class="page-header">Choose your target audience</h3>
+            <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
+              <h4 class="alert-heading">Targeting Tips</h4>
+              <ul>
+                <li>Make sure your selected domains have the Bizo Insight tag correctly applied.</li>
+                <li>Enable Social Media Retargeting to add users who click your social media links to the campaign audience.</li>
               </ul>
             </div>
+            
+            <h4>Web Visitors</h4>
+            <div class="well">
+              <p>Visitors to your selected domains will see your retargeting ads when they browse the web.<br />Make sure the <a href="#">Bizo Insight tag</a> is applied successfully to these domains.</p>
+              <ul class="unstyled">
+                <li><label class="checkbox"><input type="checkbox"><strong>All</strong></label></li>
+                <li><label class="checkbox"><input type="checkbox" checked>bizo.com<span class="help-inline"><a href=# rel="tooltip" id="success" title="Your domain has been verified"><img src="../assets/img/icon-success.png"></label></a></span></li>
+                 <li><label class="checkbox"><input type="checkbox" checked>bamp.com<span class="help-inline"><a href=# rel="tooltip" id="success" title="Your domain has been verified"><img src="../assets/img/icon-success.png"></label></a></span></label></li>
+                 <li><label class="checkbox"><input type="checkbox">amazonaws.com<span class="help-inline"><a href=# rel="tooltip" id="error" title="We are no longer seeing data from this domain"><img src="../assets/img/icon-error.png"></label></a></span></label></li>
+                 <li><label class="checkbox"><input type="checkbox">bizographics.com<span class="help-inline"><a href=# rel="tooltip" id="warning" title="We have not detected insight tags on this domain yet"><img src="../assets/img/icon-warning.png"></label></a></span></label></li>
+              </ul>
+            </div>
+            
 
-		  <h4 class="sub">Social Media Retargeting</h4>
-          <div class="gray">
-            <form>
-              <p class="targeting targeting2">
-                <label class="checkbox"><input type="checkbox" checked>Add users who click on your <a href="#">Bizo Switchboard</a> links to your retargeting audience for this campaign (recommended)</label>
-              </p>
-            </form>
-		  </div>
+            <h4 class="sub">Social Media Retargeting</h4>
+            <div class="well">
+              <label class="checkbox"><input type="checkbox" checked>Add users who click on your <a href="#">Bizo Switchboard</a> links to your retargeting audience for this campaign (recommended)</label>
+            </div>
 
-          <h3>Upload your ad creative</h3>
-		  <hr />
-          <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
-            <h4 class="alert-heading">Creative Tips</h4>
-            <ul>
-              <li>Bizo supports the standard three <span class="initialism">IAB</span> display ad creative sizes.</li>
-              <li>Creatives can be <span class="initialism">JPEG</span>, <span class="initialism">GIF</span>, animated <span class="initialism">GIF</span> or Flash.</li>
-              <li>Be sure to only upload creatives that correspond to the selected size.</li>
-            </ul>
-          </div>
-		  <div class="diagonal_lines_pattern roundy">
-            <div class="row">
-         	   <div class="span4 rght">
-                 <img src="../assets/img/160x600widget.png">
-          	   </div>
-               <div class="span6 outer">
-                 <div class="inner">
-         	     <img src="../assets/img/300x250widget.png">
+            <h3 class="page-header">Upload your ad creative</h3>
+            <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
+              <h4 class="alert-heading">Creative Tips</h4>
+              <ul>
+                <li>Bizo supports the standard three <span class="initialism">IAB</span> display ad creative sizes.</li>
+                <li>Creatives can be <span class="initialism">JPEG</span>, <span class="initialism">GIF</span>, animated <span class="initialism">GIF</span> or Flash.</li>
+                <li>Be sure to only upload creatives that correspond to the selected size.</li>
+              </ul>
+            </div>
+            <div class="well">
+              <ul class="thumbnails">
+                <li>
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/728x90" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/160x600" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/300x250" alt="">
+                  </a>
+                </li>                
+              </ul>              
+            </div>
+
+            <h3 class="page-header">Set your campaign destination</h3>
+            <fieldset>
+              <div class="control-group">
+                <label class="control-label">Landing page <abbr class="initialism">URL</abbr></label>
+                  <div class="controls">
+                    <input type="text" class="span3" placeholder="http://www.example.com" value="http://bizo.com/marketer/index"><p class="help-inline"><a href=# rel="tooltip" id="tooltip" title="This is the destination that your visitors will reach after clicking your ads. If you want to use Action Tracking, make sure the Bizo Insight tag is applied successfully to the destination domain."><i class="icon-info-sign"></i></a></p>
+                  </div>
+              </div>
+            </fieldset>
+
+          
+            <h3 class="page-header">Set your budget and billing</h3>
+            <fieldset>
+              <div class="control-group">
+               <label class="control-label">Daily Budget</label>
+               <div class="controls">
+                 <div class="input-prepend">
+                   <span class="add-on">$</span><input type="text" class="span1" value="200"><p class="help-inline"><small>$10 minimum</small></p></input>
                  </div>
                </div>
-            </div>
-            <div class="cent">
-              <img src="../assets/img/728x90widget.png" class="topp">
-            </div>
-          </div>
+             </div>
 
-		  <h3>Set your campaign destination</h3>
-          <hr />
-		  <form class="form-horizontal">
-            <fieldset>
-                <div class="control-group">
-                	<label class="control-label">Landing page <span class="initialism">URL</span></label>
-                    <div class="controls">
-                      <input type="text" class="span3" placeholder="http://www.example.com" value="http://bizo.com/marketer/index"><p class="help-inline"><a href=# rel="tooltip" id="tooltip" title="This is the destination that your visitors will reach after clicking your ads. If you want to use Action Tracking, make sure the Bizo Insight tag is applied successfully to the destination domain."><i class="icon-info-sign"></i></a></p>
-                    </div>
+              <div class="control-group">
+                <label class="control-label">Campaign Start Date</label>
+                <div class="controls">
+                  <div class="input-append">
+                  <input class="span2" id="startdate" size="16" placeholder="mm/dd/yyyy" value="01/13/2012" type="text" disabled><span class="add-on"><i class="icon-calendar"></i></span>
+                  </div>
                 </div>
-			</fieldset>
-          </form>
-
-          
-		  <h3>Set your budget and billing</h3>
-		  <hr />
-
-          <form class="form-horizontal">
-          	   <fieldset>
-                 <div class="control-group">
-                   <label class="control-label">Daily Budget</label>
-                   <div class="controls">
-                     <div class="input-prepend">
-                       <span class="add-on">$</span>
-                       <input type="text" class="span1" value="200"><p class="help-inline"><small>$10 minimum</small></p></input>
-                     </div>
-                   </div>
-                 </div>
-
-                  <div class="control-group">
-                    <label class="control-label">Campaign Start Date</label>
-                    <div class="controls">
-                      <div class="input-append">
-                      <input class="span2" id="startdate" size="16" placeholder="mm/dd/yyyy" value="01/13/2012" type="text" disabled>
-                      <span class="add-on"><i class="icon-calendar"></i></span>
-                      </div>
-                    </div>
+              </div>
+        
+              <div class="control-group">
+              <label class="control-label">Billing Information</label>
+                <div class="controls">
+                  <div class="input-append">
+                  <input class="input-large disabled" id="disabledbilling" value="XXXX2432" type="text" disabled><span class="add-on"><i class="icon-edit"></i></span>
                   </div>
-                  
-                  <div class="control-group">
-                	<label class="control-label">Billing Information</label>
-                    <div class="controls">
-                      <div class="input-append">
-                      <input class="input-large disabled" id="disabledbilling" value="XXXX2432" type="text" disabled>
-                      <span class="add-on"><i class="icon-edit"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  
-               </fieldset>
+                </div>
+              </div>
+        
+        
+           </fieldset>
           </form>
-            
           
-
-            
-            
-            <div class="rght">
-              <button class="btn btn-large btn-primary">Save Changes</button>
-            </div>
+          <div class="form-actions">
+            <button class="btn btn-large btn-primary">Save Changes</button>
+          </div>
             
             
         </div>
