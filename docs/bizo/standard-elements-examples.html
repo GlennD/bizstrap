@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <title>Bizstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -15,81 +13,61 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-   
   </head>
 
-  <body class="bizo-app">
+  <body>
     <div class="container-fluid">
-      <div class="row-fluid">
-        <!-- sidebar -->
-        <div class="span2">
-          <div class="sidebar-nav well">
-            <ul class="nav nav-list">
-              <li class="nav-header">Common Elements</li>
-              <li><a href="#list-manager">List Manager</a></li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- body -->
-        <div class="span10 content">
-          <div class="row-fluid">
-            <div class="span12">
-              <a name="list-manager"></a>
-              <h2>List Mananger</h2>
-              <hr />
-              <div class="row-fluid" style="padding-top: 30px;">
-                <div class="span12">
-                  <h3>Example Widget</h3>
-                  <div class="row-fluid">
-                    <div class="span4"><h2>Your Domains</h2></div>
-                    <div class="span8">
-                      <form class="form-search pull-right">
-                        <input type="text" class="input-medium">
-                        <button type="submit" class="btn">Add Domain</button>
-                      </form>
-                    </div>
-                  </div>
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>Domain</th>
-                        <th>Validation</th>
-                        <th>Tag Type</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>amazonaws.com</td>
-                        <td><i class="icon-ok"></i> Your domain has been validated</td>
-                        <td>mixed</td>
-                        <td><button class="btn btn-danger">Delete</button>
-                      </tr>
-                      <tr>
-                        <td>b2bmarketing.bizo.com</td>
-                        <td><i class="icon-warning-sign"></i> We have not detected insight tags on this domain yet</td>
-                        <td>none</td>
-                        <td><button class="btn btn-danger">Delete</button>
-                      </tr>
-                      <tr>
-                        <td>bizo.com</td>
-                        <td><i class="icon-ok"></i> Your domain has been validated</td>
-                        <td>js</td>
-                        <td><button class="btn btn-danger">Delete</button>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+      <div class="content">
+        <h2>List Mananger</h2>
+        <hr />
+        <div class="row-fluid" style="padding-top: 30px;">
+          <div class="span12">
+            <h3>Example Widget</h3>
+            <div class="row-fluid">
+              <div class="span4"><h2>Your Domains</h2></div>
+              <div class="span8">
+                <form class="form-search pull-right">
+                  <input type="text" class="input-medium">
+                  <button type="submit" class="btn">Add Domain</button>
+                </form>
               </div>
-              <h3>Example Code</h3>
-              <pre class="prettyprint">
-                &lt;div class=&quot;row-fluid&quot;&gt;<br/>                    &lt;div class=&quot;span4&quot;&gt;&lt;h2&gt;Your Domains&lt;/h2&gt;&lt;/div&gt;<br/>                    &lt;div class=&quot;span8&quot;&gt;<br/>                      &lt;form class=&quot;form-search pull-right&quot;&gt;<br/>                        &lt;input type=&quot;text&quot; class=&quot;input-medium&quot;&gt;<br/>                        &lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Add Domain&lt;/button&gt;<br/>                      &lt;/form&gt;<br/>                    &lt;/div&gt;<br/>                  &lt;/div&gt;<br/>                  &lt;table class=&quot;table&quot;&gt;<br/>                    &lt;thead&gt;<br/>                      &lt;tr&gt;<br/>                        &lt;th&gt;Domain&lt;/th&gt;<br/>                        &lt;th&gt;Validation&lt;/th&gt;<br/>                        &lt;th&gt;Tag Type&lt;/th&gt;<br/>                        &lt;th&gt;Actions&lt;/th&gt;<br/>                      &lt;/tr&gt;<br/>                    &lt;/thead&gt;<br/>                    &lt;tbody&gt;<br/>                      &lt;tr&gt;<br/>                        &lt;td&gt;amazonaws.com&lt;/td&gt;<br/>                        &lt;td&gt;&lt;i class=&quot;icon-ok&quot;&gt;&lt;/i&gt; Your domain has been validated&lt;/td&gt;<br/>                        &lt;td&gt;mixed&lt;/td&gt;<br/>                        &lt;td&gt;&lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;<br/>                      &lt;/tr&gt;<br/>                      &lt;tr&gt;<br/>                        &lt;td&gt;b2bmarketing.bizo.com&lt;/td&gt;<br/>                        &lt;td&gt;&lt;i class=&quot;icon-warning-sign&quot;&gt;&lt;/i&gt; We have not detected insight tags on this domain yet&lt;/td&gt;<br/>                        &lt;td&gt;none&lt;/td&gt;<br/>                        &lt;td&gt;&lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;<br/>                      &lt;/tr&gt;<br/>                      &lt;tr&gt;<br/>                        &lt;td&gt;bizo.com&lt;/td&gt;<br/>                        &lt;td&gt;&lt;i class=&quot;icon-ok&quot;&gt;&lt;/i&gt; Your domain has been validated&lt;/td&gt;<br/>                        &lt;td&gt;js&lt;/td&gt;<br/>                        &lt;td&gt;&lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;<br/>                      &lt;/tr&gt;<br/>                    &lt;/tbody&gt;<br/>                  &lt;/table&gt;
-              </pre>
-              
             </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Domain</th>
+                  <th>Validation</th>
+                  <th>Tag Type</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>amazonaws.com</td>
+                  <td><i class="icon-ok"></i> Your domain has been validated</td>
+                  <td>mixed</td>
+                  <td><button class="btn btn-danger">Delete</button>
+                </tr>
+                <tr>
+                  <td>b2bmarketing.bizo.com</td>
+                  <td><i class="icon-warning-sign"></i> We have not detected insight tags on this domain yet</td>
+                  <td>none</td>
+                  <td><button class="btn btn-danger">Delete</button>
+                </tr>
+                <tr>
+                  <td>bizo.com</td>
+                  <td><i class="icon-ok"></i> Your domain has been validated</td>
+                  <td>js</td>
+                  <td><button class="btn btn-danger">Delete</button>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+        <h3>Example Code</h3>
+        <pre class="prettyprint">
+          &lt;div class=&quot;row-fluid&quot;&gt;<br/>                    &lt;div class=&quot;span4&quot;&gt;&lt;h2&gt;Your Domains&lt;/h2&gt;&lt;/div&gt;<br/>                    &lt;div class=&quot;span8&quot;&gt;<br/>                      &lt;form class=&quot;form-search pull-right&quot;&gt;<br/>                        &lt;input type=&quot;text&quot; class=&quot;input-medium&quot;&gt;<br/>                        &lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Add Domain&lt;/button&gt;<br/>                      &lt;/form&gt;<br/>                    &lt;/div&gt;<br/>                  &lt;/div&gt;<br/>                  &lt;table class=&quot;table&quot;&gt;<br/>                    &lt;thead&gt;<br/>                      &lt;tr&gt;<br/>                        &lt;th&gt;Domain&lt;/th&gt;<br/>                        &lt;th&gt;Validation&lt;/th&gt;<br/>                        &lt;th&gt;Tag Type&lt;/th&gt;<br/>                        &lt;th&gt;Actions&lt;/th&gt;<br/>                      &lt;/tr&gt;<br/>                    &lt;/thead&gt;<br/>                    &lt;tbody&gt;<br/>                      &lt;tr&gt;<br/>                        &lt;td&gt;amazonaws.com&lt;/td&gt;<br/>                        &lt;td&gt;&lt;i class=&quot;icon-ok&quot;&gt;&lt;/i&gt; Your domain has been validated&lt;/td&gt;<br/>                        &lt;td&gt;mixed&lt;/td&gt;<br/>                        &lt;td&gt;&lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;<br/>                      &lt;/tr&gt;<br/>                      &lt;tr&gt;<br/>                        &lt;td&gt;b2bmarketing.bizo.com&lt;/td&gt;<br/>                        &lt;td&gt;&lt;i class=&quot;icon-warning-sign&quot;&gt;&lt;/i&gt; We have not detected insight tags on this domain yet&lt;/td&gt;<br/>                        &lt;td&gt;none&lt;/td&gt;<br/>                        &lt;td&gt;&lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;<br/>                      &lt;/tr&gt;<br/>                      &lt;tr&gt;<br/>                        &lt;td&gt;bizo.com&lt;/td&gt;<br/>                        &lt;td&gt;&lt;i class=&quot;icon-ok&quot;&gt;&lt;/i&gt; Your domain has been validated&lt;/td&gt;<br/>                        &lt;td&gt;js&lt;/td&gt;<br/>                        &lt;td&gt;&lt;button class=&quot;btn btn-danger&quot;&gt;Delete&lt;/button&gt;<br/>                      &lt;/tr&gt;<br/>                    &lt;/tbody&gt;<br/>                  &lt;/table&gt;
+        </pre>
       </div>
     </div>
   </body>

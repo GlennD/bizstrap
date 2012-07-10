@@ -149,26 +149,26 @@ body.bizo-app {
   background: url("../img/logo.png") 30px 30px no-repeat #d1e6eb;
   border-top: 10px solid #1b3d46;
 }
-body.bizo-app h1 {
+h1 {
   color: #1B3D46;
 }
-body.bizo-app .header {
+.header {
   position: relative;
   height: 70px;
   margin: 20px 0 20px;
   border-bottom: 1px solid #cccccc;
 }
-body.bizo-app .content {
+.content {
   background: white;
   padding: 30px;
   border: 1px solid #cccccc;
   border-radius: 6px;
 }
-body.bizo-app .well {
+.well {
   background: #fff;
   border: solid 1px #cccccc;
 }
-body.bizo-app .hero-unit {
+.hero-unit {
   background: #f3f9f9;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
