@@ -60,12 +60,12 @@
       }
 
       /* Preload the iframe if they'd been viewing a page. */
-      $(document).ready(function () {
+      $(function() {
         updateContent();
       });
 
       /* On click, do our own location change to update the hash. */
-      $("a").click(function(e) {
+      $("body").on("click", "a", function(e) {
         window.location.hash = e.target.href.split("/").pop();
         e.preventDefault();
       });
