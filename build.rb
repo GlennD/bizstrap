@@ -33,7 +33,7 @@ module Dependence
       modified = false
       new_timetable.each do |filename,time|
         if time != @timetable[filename] 
-          modified = trur
+          modified = true
           break
         end
       end
