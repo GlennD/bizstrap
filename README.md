@@ -1,4 +1,4 @@
-[Bizsrtap](http://code.bizo.com/bizstrap)
+[Bizstrap](http://code.bizo.com/bizstrap)
 =================
 
 Quick start
