@@ -62,7 +62,7 @@ SOURCE = File.join(File.dirname(__FILE__), "less", "bootstrap.less")
 
 def build(output)
   puts "Compiling Bootstrap files to #{output}"
-  `lessc #{SOURCE} #{output}`
+  p `lessc #{SOURCE} #{output}`
   puts "Done!"
 end
 
