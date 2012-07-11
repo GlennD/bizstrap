@@ -10,3 +10,76 @@ hr {
   border-top: 1px solid @hrBorderTop;
   border-bottom: 1px solid @hrBorderBottom;
 }
+
+// Used for blue gradient big headers
+.bizo-header {
+  background: red;
+
+}
+
+// Page title
+.page-title {
+  font-size: 36px;
+  color: @tealDark;
+  letter-spacing: -2px;
+  font-weight: normal;
+}
+
+
+.section-header {
+  .border-radius(8px);
+  #gradient > .vertical(#D2EDF8, white);
+  font-size: 30pt;
+  font-weight: bold;
+  padding: 30px 20px 0 20px;
+  min-height: 100px;
+  color: @teal;
+  
+  small {
+  color: #97C3D3;
+  font-size: 12pt;
+  font-weight: normal;
+  font-style: italic;
+  display: block;
+  margin-left: 10px;
+  letter-spacing: -1px
+  }
+  
+}
+
+// Content box
+.content-box {
+  .border-radius(8px);
+  #gradient > .vertical(white, #D2EDF8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  
+  h3 {
+  .border-radius(8px);
+  background: @tealDark;
+  color: white;
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  }
+  
+  .content-box-content {
+  padding: 0 20px 20px 20px;
+  
+  p {
+  font-size: 14px;
+  margin: 10px 0 10px 0;
+  color: black;
+  }
+    
+  a {
+  .border-radius(20px);
+  margin-left: 10px;
+  font-size: 12px;
+
+}  
+  }
+  
+}
