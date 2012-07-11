@@ -58,7 +58,7 @@ module Dependence
   end
 end
 
-SOURCE = File.join(File.dirname(__FILE__), "less", "bootstrap.less")
+SOURCE = File.join(File.dirname(__FILE__), "/../less", "bootstrap.less")
 
 def build(output)
   puts "Compiling Bootstrap files to #{output}"
