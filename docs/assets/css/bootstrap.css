@@ -582,6 +582,69 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+h1.page-title {
+  color: #008aaa;
+  letter-spacing: -2px;
+  font-weight: normal;
+}
+h1.section-header {
+  padding: 30px 20px 0 20px;
+  min-height: 100px;
+  color: #007698;
+  font-weight: bold;
+  background-color: #e3f0f3;
+  background-image: -moz-linear-gradient(top, #d1e6eb, #ffffff);
+  background-image: -ms-linear-gradient(top, #d1e6eb, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d1e6eb), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #d1e6eb, #ffffff);
+  background-image: -o-linear-gradient(top, #d1e6eb, #ffffff);
+  background-image: linear-gradient(top, #d1e6eb, #ffffff);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1e6eb', endColorstr='#ffffff', GradientType=0);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+h1.section-header small {
+  color: #97c3d3;
+  font-style: italic;
+  display: block;
+  letter-spacing: -1px;
+}
+.content-box {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #edf8fc;
+  background-image: -moz-linear-gradient(top, #ffffff, #d2edf8);
+  background-image: -ms-linear-gradient(top, #ffffff, #d2edf8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#d2edf8));
+  background-image: -webkit-linear-gradient(top, #ffffff, #d2edf8);
+  background-image: -o-linear-gradient(top, #ffffff, #d2edf8);
+  background-image: linear-gradient(top, #ffffff, #d2edf8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d2edf8', GradientType=0);
+}
+.content-box h3 {
+  -webkit-border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0 0;
+  background: #008aaa;
+  color: #ffffff;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 200;
+}
+.content-box .content-box-content {
+  padding: 0 20px 20px 20px;
+}
+.content-box .content-box-content p {
+  margin: 10px 0;
+  color: #000000;
+}
 code,
 pre {
   padding: 0 3px 2px;
