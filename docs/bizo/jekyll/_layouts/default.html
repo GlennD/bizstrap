@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- JavaScript for widgets & charts  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://media.bizo.com/bizstrap/js/bootstrap.min.js"></script>
+    <script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"></script>
+    <script src="https://raw.github.com/jcarver989/raphy-charts/master/compiled/charts.min.js"></script>
+    <script src="https://raw.github.com/jcarver989/codify/master/dist/codify.min.js"></script>
+    <script src="../assets/js/codify.js"></script>
+
+    <title>{{ page.title }}</title>
+
+    <style type="text/css">
+      body.bizo-app { background-color: #fff; }
+    </style>
+  </head>
+
+  <body class="bizo-app">
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <a class="brand" href="#">
+          Bizstrap 
+        </a>
+        <ul class="nav pull-right">
+          <li><a href="/pages/index.html">Home</a></li>
+          <li><a href="/pages/forms.html">Forms</a></li>
+          <li><a href="/pages/widgets.html">Widgets</a></li>
+          <li><a href="/pages/contributing.html">Contributing</a></li>
+          <li><a href="http://twitter.github.com/bootstrap/index.html">Bootstrap Docs</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container center">
+      <div class="row-fluid">
+        <!-- Main Content  -->
+        <div class="span12">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
