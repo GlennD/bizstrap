@@ -1,3 +1,4 @@
 $(function() {
-  $("body").codify(".code-example");
+  $("body").codify(".code-example", "prettyprint");
+  prettyPrint();
 });
