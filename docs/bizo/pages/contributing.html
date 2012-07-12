@@ -99,12 +99,9 @@
       Sync your changes <code>git push origin bizo</code>
       </li>
       <li>
-      Update <code>code.bizo.com/bizstrap</code> (aka this site) by running <code>git push origin bizo:gh-pages</code>.
+      Update <code>code.bizo.com/bizstrap</code> (aka this site) by running <code>sync-docs-from-bizo-branch.sh</code> in the <code>gh-pages</code> branch, then <code>git push origin gh-pages</code>.
       </li>
     </ol>
-
-
-    <p>This means we don't have to maintain both <code>bizo</code> and <code>gh-pages</code> branches, but satisifies GitHub, which only looks for the <code>gh-pages</code> branch.</p>
   </div>
 
   <div class="span4">
@@ -116,10 +113,15 @@
       </li>
 
       <li>You need to have Ruby 1.8.7 or higher installed <code>ruby -v</code></li>
+
+      <li>To compile the docs you need to have the jekyll gem installed <code>gem install jekyll</code></li>
     </ul>
 
     <h4>Compiling Less</h4>
     <p>Simply run <code>./bin/build.rb docs/assets/css/bootstrap.css</code></p>
+
+    <h4>Compiling Docs</h4>
+    <p>From the <code>bizo</code> branch <code>cd jekyll_docs && jekyll</code>. If you want to see updates as you change files use <code>jekyll --server --auto</code></p>
   </div>
 </div>
 
