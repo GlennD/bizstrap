@@ -1,0 +1,47 @@
+---
+layout: default 
+title: Contributing 
+---
+
+<h1 class="page-title">Contributing</h1>
+<hr />
+
+<h3>Background</h3>
+<p>
+The <code>master</code> branch stays like the upstream Bootstrap master and acts as a vendor branch. The <code>bizo</code> branch contains our changes (bizstrap).
+</p>
+
+<p>
+E.g. at any time we can <code>git diff origin/master origin/bizo</code> to see what we've changed vs. Bootstrap proper.
+</p>
+
+<h3>Making Changes</h3>
+
+<ol>
+  <li>Make your changes to the <code>bizo</code> branch, which has our changes</li>
+  <li>
+  When changing existing Bootstrap files, <strong>make changes inline, and leave a comment with the reason for your change</strong>. This should facilitate merging in changes in the future, as we'll get explicit conflicts (vs. changes in separate files) and also know why we had changed what we did.
+  </li>
+
+  <li>
+  Sync your changes <code>git push origin bizo</code>
+  </li>
+  <li>
+  Update <code>code.bizo.com/bizstrap</code> (aka this site) by running <code>git push origin bizo:gh-pages</code>.
+  </li>
+</ol>
+
+
+<p>This means we don't have to maintain both <code>bizo</code> and <code>gh-pages</code> branches, but satisifies GitHub, which only looks for the <code>gh-pages</code> branch.</p>
+
+<h3>Versioning</h3>
+<p>Bizstrap version numbers are <code>bootstrap version.our version</code>.</p>
+<p>E.g. <code>2.0.3.1</code> is Bootstrap <code>2.0.3</code>, with our 1st release.</p>
+
+
+<h3>How to build Bizstrap</h3>
+<h4>Dependencies</h4>
+<ul>
+  <li>The less cli compiler, see instructions: <a href="http://lesscss.org/">here</a>
+</ul>
+
