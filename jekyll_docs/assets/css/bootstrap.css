@@ -145,9 +145,20 @@ a:hover {
   text-decoration: underline;
 }
 body.bizo-app {
-  padding-top: 110px;
-  background: url("../img/logo.png") 30px 30px no-repeat #d1e6eb;
+  padding-top: 60px;
+  /* spacing due to navbar */
+
+  background-color: #d1e6eb;
   border-top: 10px solid #1b3d46;
+}
+body.bizo-app.with-logo {
+  padding-top: 110px;
+  /* extra spacing for logo */
+
+  background: url("../img/logo.png") 30px 30px no-repeat #d1e6eb;
+}
+body.bizo-app.documentation {
+  background: #ffffff;
 }
 h1 {
   color: #1B3D46;
@@ -650,7 +661,7 @@ pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 12px;
-  color: #333333;
+  color: #ffffff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -671,7 +682,7 @@ pre {
   word-wrap: break-word;
   white-space: pre;
   white-space: pre-wrap;
-  background-color: #f5f5f5;
+  background-color: #222;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
@@ -3082,18 +3093,18 @@ Bizo Related Edits:
   margin-bottom: 18px;
 }
 .navbar-inner {
-  min-height: 50px;
+  min-height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #fdfdfd;
-  background-image: -moz-linear-gradient(top, #fbfbfb, #ffffff);
-  background-image: -ms-linear-gradient(top, #fbfbfb, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbfbfb), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #fbfbfb, #ffffff);
-  background-image: -o-linear-gradient(top, #fbfbfb, #ffffff);
-  background-image: linear-gradient(top, #fbfbfb, #ffffff);
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top, #f2f2f2, #ffffff);
+  background-image: -ms-linear-gradient(top, #f2f2f2, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #ffffff);
+  background-image: -o-linear-gradient(top, #f2f2f2, #ffffff);
+  background-image: linear-gradient(top, #f2f2f2, #ffffff);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfb', endColorstr='#ffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#ffffff', GradientType=0);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3108,7 +3119,7 @@ Bizo Related Edits:
   height: auto;
 }
 .navbar {
-  color: #00688d;
+  color: #333333;
 }
 .navbar .brand:hover {
   text-decoration: none;
@@ -3116,7 +3127,7 @@ Bizo Related Edits:
 .navbar .brand {
   float: left;
   display: block;
-  padding: 13px 20px 17px;
+  padding: 8px 15px 8px 0;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
@@ -3135,7 +3146,7 @@ Bizo Related Edits:
 }
 .navbar .btn,
 .navbar .btn-group {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .navbar .btn-group .btn {
   margin: 0;
@@ -3156,7 +3167,7 @@ Bizo Related Edits:
 .navbar-form select,
 .navbar-form .radio,
 .navbar-form .checkbox {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .navbar-form input,
 .navbar-form select {
@@ -3180,7 +3191,7 @@ Bizo Related Edits:
 .navbar-search {
   position: relative;
   float: left;
-  margin-top: 11px;
+  margin-top: 6px;
   margin-bottom: 0;
 }
 .navbar-search .search-query {
@@ -3261,40 +3272,47 @@ Bizo Related Edits:
 }
 .navbar .nav > li > a {
   float: none;
-  padding: 14px 10px 16px;
+  padding: 16px 8px;
   line-height: 19px;
   color: #0095d5;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: background-color 0.3s, box-shadow 0.3s;
+  -moz-transition: background-color 0.3s, box-shadow 0.3s;
+  -ms-transition: background-color 0.3s, box-shadow 0.3s;
+  -o-transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 .navbar .btn {
   display: inline-block;
   padding: 4px 10px 4px;
-  margin: 10px 5px 11px;
+  margin: 11.5px 5px 12.5px;
   line-height: 18px;
 }
 .navbar .btn-group {
   margin: 0;
-  padding: 10px 5px 11px;
+  padding: 5px 5px 6px;
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #ffffff;
+  color: #0095d5;
+  -webkit-box-shadow: inset 0 3px 0px #00a5dc;
+  -moz-box-shadow: inset 0 3px 0px #00a5dc;
+  box-shadow: inset 0 3px 0px #00a5dc;
   text-decoration: none;
 }
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #ffffff;
+  background-color: #00a5dc;
 }
 .navbar .divider-vertical {
-  height: 50px;
+  height: 51px;
   width: 1px;
   margin: 0 9px;
   overflow: hidden;
   background-color: #ffffff;
-  border-right: 1px solid #fbfbfb;
+  border-right: 1px solid #ddd;
 }
 .navbar .nav.pull-right {
   margin-left: 10px;
@@ -3306,15 +3324,15 @@ Bizo Related Edits:
   padding: 7px 10px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #fdfdfd;
-  background-image: -moz-linear-gradient(top, #fbfbfb, #ffffff);
-  background-image: -ms-linear-gradient(top, #fbfbfb, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbfbfb), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #fbfbfb, #ffffff);
-  background-image: -o-linear-gradient(top, #fbfbfb, #ffffff);
-  background-image: linear-gradient(top, #fbfbfb, #ffffff);
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top, #f2f2f2, #ffffff);
+  background-image: -ms-linear-gradient(top, #f2f2f2, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #ffffff);
+  background-image: -o-linear-gradient(top, #f2f2f2, #ffffff);
+  background-image: linear-gradient(top, #f2f2f2, #ffffff);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfb', endColorstr='#ffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#ffffff', GradientType=0);
   border-color: #ffffff #ffffff #d9d9d9;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #ffffff;
@@ -3417,6 +3435,9 @@ Bizo Related Edits:
 .navbar .dropdown-menu.pull-right:after {
   left: auto;
   right: 13px;
+}
+.navbar btn {
+  color: #ffffff;
 }
 .breadcrumb {
   padding: 7px 14px;

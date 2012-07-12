@@ -4,11 +4,22 @@
 
 @bizoAppPadding: 30px;
 
-// Use <body class="bizo-app">..</body> to get an instant "looks like Bizo" background + logo 
+// Use <body class="bizo-app">..</body> to get an instant "looks like Bizo"  look 
 body.bizo-app {
-  padding-top: 110px;
-  background:  url("@{bizoLogosPath}") @bizoAppPadding @bizoAppPadding no-repeat @blueLight;
+  padding-top: 60px; /* spacing due to navbar */
+  background-color: @blueLight;
   border-top: 10px solid @blueGreenDark;
+}
+
+// If you want a logo 
+body.bizo-app.with-logo {
+  padding-top: 110px; /* extra spacing for logo */
+  background:  url("@{bizoLogosPath}") @bizoAppPadding @bizoAppPadding no-repeat @blueLight;
+}
+
+// For project documentation sites 
+body.bizo-app.documentation {
+  background: @white;
 }
 
 h1 {
