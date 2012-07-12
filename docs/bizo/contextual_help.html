@@ -2,16 +2,37 @@
 <html lang="en">
   <head>
         <title>Bizstrap - Contextual Help Guide</title>
-		<link href="http://media.bizo.com/bizstrap/css/bizstrap-v2.0.3.css" rel="stylesheet">
+		<link rel="stylesheet/less" type="text/css" href="../../less/bootstrap.less" />
+        <script src="../../js/less.js" type="text/javascript"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"></script> 
 
   
   </head>
 
-  <body>
-
-        <div class="content">
+  <body class="bizo-app">
+  <style type="text/css">
+    .rght {float:right}
+	.cent {text-align:center}
+  </style>
+  
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <!-- sidebar -->
+        <div class="span2">
+          <div class="sidebar-nav well">
+            <ul class="nav nav-list">
+              <li class="nav-header">Contextual Help Patterns</li>
+              <li><a href="#help-box">In-line Help Box</a></li>
+              <li><a href="#field-button">Field Level Help Button</a></li>
+              <li><a href="#field-text">Field Help Text</a></li>
+              <li><a href="#easyshare">Switchboard EasyShare</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- body -->
+        <div class="span10 content">
           <div class="row-fluid">
             <div class="span12">
               <h1>Design Patterns for Contextual Help</h1>
@@ -166,15 +187,11 @@
                 
                 </div>
               </div>             
-              
-              
-              
-              
-              
             </div>
             
           </div>
         </div>
-        
+      </div>
+    </div>
   </body>
 </html>
