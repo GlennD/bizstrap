@@ -84,7 +84,7 @@
             <div class="span7 well">
               <ul class="unstyled">
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Africa</label></li>
-                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Antarctica</label></li>
+                <li class="lvl2"> <label class="checkbox"><input type="checkbox"> Antarctica</label></li>
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Asia</label></li>
                 <li class="lvl2"><label class="checkbox"><input type="checkbox" checked> Europe <p class="inline"><small>All countries selected, uncheck to specify</small></p></label></li>
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Latin America</label></li>
@@ -129,7 +129,10 @@
             <li><i class="icon-minus"></i> <label class="checkbox"><input type="checkbox"> North America</label></li>
             <li class="lvl2"><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Canada</label></li>
             <li class="lvl3"><label class="checkbox"><input type="checkbox" checked> United States <p class="inline"><small>All states selected, uncheck to specify</small></p></label></li>
-          </ul>                
+          </ul>
+          
+          <p>If a node's child is selected, prevent that node from collapsing to hide the selection.</p>
+                          
           <p>Adapt the hint text depending on the level of the selected node as follows.</p>
           <table>
             <tr><th>Node Level</th><th>Hint Text</th></tr>
@@ -158,7 +161,8 @@
             <div class="control-group">
               <textarea class="input-xlarge typeahead" data-provide="typeahead"></textarea>
           </div>
-          <p>Use the Typeahead Bizstrap javascript plugin to show groups, companies, and job titles matching user entered text via the API. When the user has selected an entry, pop</p>
+          <p>Use the Typeahead Bizstrap javascript plugin to show groups, companies, and job titles matching user entered text via the API. When the user has selected an entry, pop it into the textarea as a targeting criterion using <a href="http://harvesthq.github.com/chosen/">Chosen</a>'s Multiple Select pattern.</p>
+<p>Dynamically adjust the height of the textarea to accomodate the number of tags populated.</p>
         </div>
 
       </div>
