@@ -461,6 +461,13 @@ h6 {
 }
 .page-header h1 {
   line-height: 1;
+  color: #008aaa;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+.page-header h1 small {
+  color: #999999;
+  letter-spacing: 0;
 }
 ul,
 ol {
@@ -584,19 +591,11 @@ small {
 cite {
   font-style: normal;
 }
-.page-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
 hr {
   margin: 18px 0;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-h1.page-title {
-  color: #008aaa;
-  letter-spacing: -2px;
-  font-weight: normal;
 }
 h1.section-header {
   padding: 30px 20px 0 20px;
