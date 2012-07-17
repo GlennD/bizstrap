@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="http://media.bizo.com/bizstrap/css/bizstrap-v2.0.3.css" rel="stylesheet">
+    <!-- JavaScript for widgets & charts  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"></script>
+    <script src="https://raw.github.com/jcarver989/raphy-charts/master/compiled/charts.min.js"></script>
+    <script src="http://code.bizo.com/bizstrap/docs/assets/js/bootstrap-alert.js"></script>
+    <script src="http://code.bizo.com/bizstrap/docs/assets/js/bootstrap-tooltip.js"></script>
+    <script>$(function(){
+      $("[rel='tooltip']").tooltip({placement: "right", trigger: "hover"});
+    })
+    </script>
+  </head>
+  <body class="bizo-app">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <!-- Sidebar  -->
+        <div class="span2 content"></div>
+
+        <!-- Main Content  -->
+        <div class="span10 content">
+          {{content}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
