@@ -1,11 +1,8 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.css" />
-    <!-- JavaScript for widgets & charts  -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-    <script src="../../assets/js/bootstrap-typeahead.js"></script>        
+---
+layout: bmp
+title: Linkedin Targeting
+relativity: ../..
+---
 
     <script>
       $(function(){
@@ -20,9 +17,6 @@
       });
     </script>
 
-  </head>
-
-  <body class="bizo-app">
     <style type="text/css">
       label.checkbox {display:inline-block}
       .cent {text-align:center; margin-top:5px; margin-bottom:15px}
@@ -33,21 +27,14 @@
       p.inline {display:inline}
 
     </style>
-    <div class="container">
-      <div class="row">
 
-        <!-- Sidebar  -->
-        <div class="span2"></div>
-
-        <!-- Main Content  -->
-        <div class="span10 content">
           <h1>Campaign Targeting Controls</h1>
 
           <h2 class="page-header">Tree Selector</h2>
           <p>The <a href="http://checkboxtree.googlecode.com/svn/tags/checkboxtree-0.5.2/index.html">jQuery checkboxTree plugin</a> should be able to provide the functionality we need for the Tree Selector described below. The "check if full" and "collapse images" properties should be useful for implementing Geography targeting.</p>
 
           <h3>Closed State</h3>
-          <div class="row">
+          <div class="row-fluid">
             <div class="span2">
               <ul class="nav nav-tabs nav-stacked">
                 <li class="active"><a href=#>Geography</a></li>
@@ -71,7 +58,7 @@
           </div>
 
           <h3>Open State</h3>
-          <div class="row">
+          <div class="row-fluid">
             <div class="span2">
               <ul class="nav nav-tabs nav-stacked">
                 <li class="active"><a href=#>Geography</a></li>
@@ -84,7 +71,7 @@
             <div class="span7 well">
               <ul class="unstyled">
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Africa</label></li>
-                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Antarctica</label></li>
+                <li class="lvl2"> <label class="checkbox"><input type="checkbox"> Antarctica</label></li>
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Asia</label></li>
                 <li class="lvl2"><label class="checkbox"><input type="checkbox" checked> Europe <p class="inline"><small>All countries selected, uncheck to specify</small></p></label></li>
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Latin America</label></li>
@@ -129,7 +116,10 @@
             <li><i class="icon-minus"></i> <label class="checkbox"><input type="checkbox"> North America</label></li>
             <li class="lvl2"><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Canada</label></li>
             <li class="lvl3"><label class="checkbox"><input type="checkbox" checked> United States <p class="inline"><small>All states selected, uncheck to specify</small></p></label></li>
-          </ul>                
+          </ul>
+          
+          <p>If a node's child is selected, prevent that node from collapsing to hide the selection.</p>
+                          
           <p>Adapt the hint text depending on the level of the selected node as follows.</p>
           <table>
             <tr><th>Node Level</th><th>Hint Text</th></tr>
@@ -143,7 +133,7 @@
 
         <h2 class="page-header">Tag Selector</h2>
         <h3>Behavior</h3>
-        <div class="row">
+        <div class="row-fluid">
           <div class="span2">
             <ul class="nav nav-tabs nav-stacked">
               <li><a href=#>Geography</a></li>
@@ -156,15 +146,9 @@
           </div>
           <div class="span7 well">
             <div class="control-group">
-              <input type="text" class="span4 typeahead" data-provide="typeahead">
+              <textarea class="input-xlarge typeahead" data-provide="typeahead"></textarea>
           </div>
-          <p>Use the Typeahead Bizstrap javascript plugin to show groups, companies, and job titles matching user entered text via the API. When the user has selected an entry</p>
+          <p>Use the Typeahead Bizstrap javascript plugin to show groups, companies, and job titles matching user entered text via the API. When the user has selected an entry, pop it into the textarea as a targeting criterion using <a href="http://harvesthq.github.com/chosen/">Chosen</a>'s Multiple Select pattern.</p>
+<p>Dynamically adjust the height of the textarea to accomodate the number of tags populated.</p>
         </div>
 
-      </div>
-    </div>
-  </div>
-
-
-</body>
-</html>
