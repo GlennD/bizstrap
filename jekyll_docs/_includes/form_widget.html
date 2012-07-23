@@ -78,38 +78,7 @@
     <h3>How to use the small form</h3>
 	<p>Modals and widgets can include forms, and because of their limited horizontal space, should use a different form layout. Use the form-vertical form class that top-aligns field labels.</p>
     <p>Field hints should go below fields. Any validation messages should be displayed beneath the field and any field hints. Do not use the in-line help button pattern within a modal or widget. </p>
-    <p>No changes proposed to the standard Bootstrap modal patterns for now.</p>
   </div>  
 </div>
 
 
-<form class="form-vertical well">
-  <!-- do we need fieldset? -->
-  <fieldset>
-    <div class="control-group error">
-      <label class="control-label">Daily Budget</label>
-      <div class="controls">
-        <input type="text" placeholder="Foo" />
-        <span class="icon-question-sign">
-          <div class="popover bottom help">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-              <div class="popover-content">The maximum dollar amount you are willing to spend per day.</div>
-            </div>
-          </div>
-        </span>
-        <span class="help-inline">Required</span>
-      </div>
-    </div>
-    <div class="control-group">
-      <label class="control-label">Description</label>
-      <div class="controls">
-        <input type="text" class="span10" placeholder="..." />
-        <span class="help-inline"></span>
-      </div>
-    </div>
-    <div class="form-actions">
-      <button type="submit" class="btn">Save</button>
-    </div>
-  </fieldset>
-</form>
