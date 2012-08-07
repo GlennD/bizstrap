@@ -1,0 +1,26 @@
+// A 2x2 summary metrics box used in Reports
+
+table.metrics-box {
+  background: lighten(@blueLight, 10%);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.circle {
+  .border-radius(100%);
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+
+  &.red {
+    background: @bizored;
+  }
+
+  &.green {
+    background: @bizogreen;
+  }
+
+  &.blue {
+    background: @blue;
+  }
+}
