@@ -6,10 +6,26 @@ hr {
   border-bottom: 1px solid @hrBorderBottom;
 }
 
-// Titles with Blue gradient backgrounds
+
 // Used for headers on section pages
 h1.section-header {
+  margin-bottom: 15px;
+  color: @teal;
+  font-weight: bold;
+
+  small {
+    color: @blueFaded;
+    font-style: italic;
+    display: block;
+    letter-spacing: -1px;
+  }
+  
+}
+
+// Titles with Blue gradient backgrounds
+h1.section-header-heavy {
   padding: 30px 20px 0 20px;
+  margin-bottom: 20px;
   min-height: 100px;
   color: @teal;
   font-weight: bold;
@@ -51,4 +67,17 @@ h1.section-header {
     }
   }
   
+}
+
+
+// Page footer at bottom of BMP
+.page-footer {
+  float: right;
+  padding-top: 10px;
+    a {
+    color: @navbarLinkColor;
+	&:hover {
+	  color: @navbarLinkColorHover;
+	  }
+	}
 }

@@ -13,11 +13,37 @@
     })
     </script>
   </head>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4 bizidentity">
+          <a href="http://www.bizo.com"><img class="brand" src="../../assets/img/bizo-logo-small.png"></a><p class="navbar-text">Business Audience Marketing</p>
+        </div>
+
+        <ul class="nav pull-right">
+          <li class="navbar-text">jason@bizo.com</li>
+          <li class="divider-vertical"></li>
+          <li><a href="https://platform.bizo.com/app#account">My Account</a></li>
+          <li class="divider-vertical"></li>
+          <li><a href="mailto:bamp-feedback@bizo.com">Feedback</a></li>
+          <li class="divider-vertical"></li>          
+          <li><a class="gwt-Anchor">Logout</a></li>
+          <li class="divider-vertical"></li>
+          <a class="btn btn-small btn-info" href="http://help.bizo.com"><i class="icon-info-sign icon-white"></i> Help</a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>  
+  
   <body class="bizo-app">
     <div class="container-fluid">
       <div class="row-fluid">
         <!-- Sidebar  -->
-        <div class="span2 content"></div>
+        <div class="span2 left-nav">
+          {% include self-service-nav.html %}
+        </div>
 
         <!-- Main Content  -->
         <div class="span10 content">
@@ -27,8 +53,10 @@
       
       </div>
       
-      <div>
-        <p style="text-align:right">&copy; 2012 Bizo Inc. All rights reserved.  <a href="http://www.bizo.com/about/careers">We're Hiring</a>  |  <a href="http://www.bizo.com/businessProfessionals/privacy_policy">Privacy Policy</a>  |  <a href="mailto:bamp-feedback@bizo.com">Contact Us</a>  |  <a href="http://help.bizo.com/terms-of-service">Terms of Service</a></p>
+      <div class="page-footer">
+        <p>&copy; 2012 Bizo Inc. All rights reserved.  <a href="http://www.bizo.com/about/careers">We're Hiring</a>  |  
+        <a href="http://www.bizo.com/businessProfessionals/privacy_policy">Privacy Policy</a>  |  
+        <a href="mailto:bamp-feedback@bizo.com">Contact Us</a>  |  <a href="http://help.bizo.com/terms-of-service">Terms of Service</a></p>
       </div>
       
       

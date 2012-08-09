@@ -148,11 +148,15 @@ a:hover {
   text-decoration: underline;
 }
 body.bizo-app {
-  padding-top: 60px;
-  /* spacing due to navbar */
-
-  background-color: #d1e6eb;
-  border-top: 10px solid #1b3d46;
+  background-color: #e3f0f3;
+  background-image: -moz-linear-gradient(top, #d1e6eb, #ffffff);
+  background-image: -ms-linear-gradient(top, #d1e6eb, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d1e6eb), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #d1e6eb, #ffffff);
+  background-image: -o-linear-gradient(top, #d1e6eb, #ffffff);
+  background-image: linear-gradient(top, #d1e6eb, #ffffff);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1e6eb', endColorstr='#ffffff', GradientType=0);
 }
 body.bizo-app.with-logo {
   padding-top: 110px;
@@ -175,6 +179,12 @@ h1 {
 .content {
   background: white;
   padding: 30px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+}
+.left-nav {
+  background: white;
+  padding: 8px 0px 10px 0px;
   border: 1px solid #cccccc;
   border-radius: 6px;
 }
@@ -598,7 +608,19 @@ hr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 h1.section-header {
+  margin-bottom: 15px;
+  color: #007698;
+  font-weight: bold;
+}
+h1.section-header small {
+  color: #97c3d3;
+  font-style: italic;
+  display: block;
+  letter-spacing: -1px;
+}
+h1.section-header-heavy {
   padding: 30px 20px 0 20px;
+  margin-bottom: 20px;
   min-height: 100px;
   color: #007698;
   font-weight: bold;
@@ -615,7 +637,7 @@ h1.section-header {
   -moz-border-radius: 8px;
   border-radius: 8px;
 }
-h1.section-header small {
+h1.section-header-heavy small {
   color: #97c3d3;
   font-style: italic;
   display: block;
@@ -654,6 +676,10 @@ h1.section-header small {
 .content-box .content-box-content p {
   margin: 10px 0;
   color: #000000;
+}
+.page-footer {
+  float: right;
+  padding-top: 10px;
 }
 code,
 pre {
@@ -2139,6 +2165,10 @@ table .span24 {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+.nested {
+  list-style-type: none;
+  margin-left: 19px;
+}
 .well {
   min-height: 20px;
   padding: 19px;
@@ -2172,6 +2202,7 @@ table .span24 {
 .contentbox {
   min-height: 20px;
   padding: 0px;
+  margin-top: 20px;
   margin-bottom: 20px;
   border: 2px solid #eee;
   border: 2px solid rgba(0, 0, 0, 0.05);
@@ -3131,6 +3162,12 @@ Bizo Related Edits:
 .subnav li a:hover {
   color: #00a5dc;
 }
+.left-nav li a {
+  color: #555555;
+}
+.left-nav li a:hover {
+  color: #0095d5;
+}
 .navbar {
   *position: relative;
   *z-index: 2;
@@ -3177,17 +3214,17 @@ Bizo Related Edits:
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
-  color: #0095d5;
+  color: #555555;
 }
 .navbar .navbar-text {
   margin-bottom: 0;
   line-height: 50px;
 }
 .navbar .navbar-link {
-  color: #0095d5;
+  color: #555555;
 }
 .navbar .navbar-link:hover {
-  color: #ffffff;
+  color: #0095d5;
 }
 .navbar .btn,
 .navbar .btn-group {
@@ -3322,7 +3359,7 @@ Bizo Related Edits:
   float: none;
   padding: 16px 8px;
   line-height: 19px;
-  color: #0095d5;
+  color: #555555;
   text-decoration: none;
   -webkit-transition: background-color 0.3s, box-shadow 0.3s;
   -moz-transition: background-color 0.3s, box-shadow 0.3s;
@@ -3342,7 +3379,7 @@ Bizo Related Edits:
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #0095d5;
+  color: #555555;
   -webkit-box-shadow: inset 0 3px 0px #00a5dc;
   -moz-box-shadow: inset 0 3px 0px #00a5dc;
   box-shadow: inset 0 3px 0px #00a5dc;
@@ -3486,6 +3523,15 @@ Bizo Related Edits:
 }
 .navbar btn {
   color: #ffffff;
+}
+.navbar-inner {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding-right: 0px;
+}
+.bizidentity {
+  padding-left: 6px;
 }
 .breadcrumb {
   padding: 7px 14px;

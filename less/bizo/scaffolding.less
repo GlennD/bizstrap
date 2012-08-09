@@ -6,9 +6,9 @@
 
 // Use <body class="bizo-app">..</body> to get an instant "looks like Bizo"  look 
 body.bizo-app {
-  padding-top: 60px; /* spacing due to navbar */
-  background-color: @blueLight;
-  border-top: 10px solid @blueGreenDark;
+//  padding-top: 60px; /* spacing due to navbar */
+  #gradient > .vertical(@blueLight, @white);
+//  border-top: 10px solid @blueGreenDark;
 }
 
 // If you want a logo 
@@ -37,6 +37,13 @@ h1 {
 .content {
   background:  white;
   padding: 30px;
+  border: 1px solid @grayMedium;
+  border-radius:  6px;
+}
+
+.left-nav {
+  background:  white;
+  padding: 8px 0px 10px 0px;
   border: 1px solid @grayMedium;
   border-radius:  6px;
 }
