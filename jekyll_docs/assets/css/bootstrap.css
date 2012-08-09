@@ -182,12 +182,6 @@ h1 {
   border: 1px solid #cccccc;
   border-radius: 6px;
 }
-.left-nav {
-  background: white;
-  padding: 8px 0px 10px 0px;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
-}
 .well {
   background: #fff;
   border: solid 1px #cccccc;
@@ -680,6 +674,12 @@ h1.section-header-heavy small {
 .page-footer {
   float: right;
   padding-top: 10px;
+}
+.page-footer a {
+  color: #555555;
+}
+.page-footer a:hover {
+  color: #0095d5;
 }
 code,
 pre {
@@ -2792,7 +2792,7 @@ input[type="submit"].btn.btn-mini {
   filter: alpha(opacity=75);
 }
 .alert {
-  padding: 8px 35px 8px 14px;
+  padding: 8px 14px 0px 14px;
   margin-bottom: 18px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #fcf8e3;
@@ -2808,7 +2808,7 @@ input[type="submit"].btn.btn-mini {
 .alert .close {
   position: relative;
   top: -2px;
-  right: -21px;
+  right: -2px;
   line-height: 18px;
 }
 .alert-success {
@@ -3162,6 +3162,12 @@ Bizo Related Edits:
 .subnav li a:hover {
   color: #00a5dc;
 }
+.left-nav {
+  background: white;
+  padding: 8px 0px 10px 0px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+}
 .left-nav li a {
   color: #555555;
 }
@@ -3209,7 +3215,7 @@ Bizo Related Edits:
 .navbar .brand {
   float: left;
   display: block;
-  padding: 8px 15px 8px 0;
+  padding: 8px 15px 8px 6px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
@@ -3529,9 +3535,6 @@ Bizo Related Edits:
   -moz-border-radius: 0px;
   border-radius: 0px;
   padding-right: 0px;
-}
-.bizidentity {
-  padding-left: 6px;
 }
 .breadcrumb {
   padding: 7px 14px;
