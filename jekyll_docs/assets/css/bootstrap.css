@@ -190,6 +190,12 @@ h1 {
   background: #f3f9f9;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.widthcap {
+  max-width: 1500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .row {
   margin-left: -20px;
   *zoom: 1;
@@ -2165,8 +2171,8 @@ table .span24 {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.nested {
-  list-style-type: none;
+.indent {
+  list-style: none;
   margin-left: 19px;
 }
 .well {
