@@ -50,13 +50,14 @@
 
 Bizo Related Edits:
 - .nav-list class made less restrictive to accomidate menus that can show/hide (removed caret > rules)
-
+- added css3 transitions for exta polish 
  */
 
 .nav-list {
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 0;
+
 }
 .nav-list li a,
 .nav-list .nav-header {
@@ -67,10 +68,15 @@ Bizo Related Edits:
 .nav-list li a {
   padding: 3px 15px;
   display: block;
+  @transitionDuration: 0.3s;
+  .transition(background @transitionDuration);
+  .transition(color @transitionDuration);
 
   &:hover {
     text-decoration: none;
     background-color: @grayLighter;
+    .transition(background @transitionDuration);
+    .transition(color @transitionDuration);
   }
 }
 .nav-list .active a,
@@ -85,6 +91,17 @@ Bizo Related Edits:
 // Dividers (basically an hr) within the dropdown
 .nav-list .divider {
   .nav-divider();
+}
+
+
+.nav-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li a {
+    padding-left: 34px;
+  }
 }
 
 
