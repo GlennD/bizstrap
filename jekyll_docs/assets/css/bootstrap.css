@@ -681,6 +681,11 @@ h1.section-header-heavy small {
 .page-footer a:hover {
   color: #0095d5;
 }
+.step {
+  padding: 0 0 0 15px;
+  margin: 0 0 18px;
+  border-left: 5px solid #eeeeee;
+}
 code,
 pre {
   padding: 0 3px 2px;
