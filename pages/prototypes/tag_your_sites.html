@@ -1,0 +1,93 @@
+---
+layout: bmp
+title: Retargeting
+relativity: ../..
+---
+
+<h1 class="section-header">Tag Your Sites <small>Get up and running</small></h1>
+<div class="alert alert-info">
+  <button class="close" data-dismiss="alert">&times;</button>
+  <h3 class="alert-heading">Why is this so important?</h3>
+  <p>Most features of the Bizo platform require that the Bizo Insight tag be installed on your sites.</p>
+  <p>Once the tags are applied you can:</p>
+  <ul>
+    <li>Analyze the business audiences visiting your sites.</li>
+    <li>Build an audience for a Retargeting campaign.</li>
+    <li>Measure the users converting through your Social Marketing efforts.</li>
+  </ul>
+</div>
+
+<h3>Step 1 - Apply Bizo Insight Tags to your sites</h3>
+<div class="step">
+<p>The Bizo Insight Tag detects bizographic data on 80% of the US business population when they visit your sites.</p>
+<p>Add the following javascript code to your site's pages, preferably right before the end of the <code>&#60;body&#62;</code> tag:</p>
+</div>
+<pre>&#60;script type="text/javascript"&#62;
+  _bizo_data_partner_id = "14";
+&#60;/script&#62;
+&#60;script type="text/javascript"&#62;
+(function(){var b,a,u;a=document.createElement("script");a.type="text/javascript";a.async=true;u=(window.location.protocol==="https:"?"https://sjs.":"http://js.")+"bizographics.com/insight.min.js";a.src=u;b=document.getElementsByTagName("script")[0];return b.parentNode.insertBefore(a,b)})();
+&#60;/script&#62;
+</pre>
+<p>Depending on your site infrastructure, you may want to make the tag as a standard part of your page template or include it in your content management system to make sure it's on every page.</p>
+
+
+<p>A couple things to remember:</p>
+<ul>
+  <li>The Insight Tag automatically handles secure and non-secure pages. There is no need for separate code snippets.</li>
+  <li>The Insight Tag cannot be delivered from within an iframe, it must be applied to the page itself.</li>
+</ul>
+
+<a class="btn btn-info" target="_blank" href="http://help.bizo.com/getting-started/tagging-your-site"><i class="icon-info-sign icon-white"></i> Help installing tags</a>
+
+<hr \>
+
+<h3>Step 2 - Add tagged sites to your Bizo account</h3>
+<div class="step">
+  <p>Once a site has been tagged, add its domain to your list of sites below (we'd enter "bizo.com" for ours). Your domain should be verified within a few minutes of adding the tags.</p>
+  <p>You'll be able to view your <a href="section_page_audience_analysis.html">Audience Analytics</a> 24 hours after tagging.</p>
+</div>
+<div class="row-fluid">
+  <div class="span4">
+    <h3>Your Domains</h3>
+  </div>
+
+  <div class="span8">
+    <form class="form-search pull-right">
+      <input type="text" class="input-medium">
+      <button type="submit" class="btn">Add Domain</button>
+    </form>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Domain</th>
+      <th>Validation</th>
+      <th>Tag Type</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>amazonaws.com</td>
+      <td><i class="icon-ok"></i> Your domain has been validated</td>
+      <td>mixed</td>
+      <td><button class="btn btn-danger">Remove</button>
+      </td>
+    </tr>
+    <tr>
+      <td>b2bmarketing.bizo.com</td>
+      <td><i class="icon-warning-sign"></i> We have not detected insight tags on this domain yet</td>
+      <td>none</td>
+      <td><button class="btn btn-danger">Remove</button></td>
+    </tr>
+    <tr>
+      <td>bizo.com</td>
+      <td><i class="icon-ok"></i> Your domain has been validated</td>
+      <td>js</td>
+      <td><button class="btn btn-danger">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
