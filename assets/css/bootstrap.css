@@ -137,7 +137,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   color: #333333;
-  background-color: #d1e6eb;
+  background-color: #ffffff;
 }
 a {
   color: #00a5dc;
@@ -148,15 +148,15 @@ a:hover {
   text-decoration: underline;
 }
 body.bizo-app {
-  background-color: #e3f0f3;
-  background-image: -moz-linear-gradient(top, #d1e6eb, #ffffff);
-  background-image: -ms-linear-gradient(top, #d1e6eb, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d1e6eb), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #d1e6eb, #ffffff);
-  background-image: -o-linear-gradient(top, #d1e6eb, #ffffff);
-  background-image: linear-gradient(top, #d1e6eb, #ffffff);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -ms-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -o-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: linear-gradient(top, #eeeeee, #ffffff);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1e6eb', endColorstr='#ffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
 }
 body.bizo-app.with-logo {
   padding-top: 110px;
@@ -612,6 +612,9 @@ h1.section-header small {
   display: block;
   letter-spacing: -1px;
 }
+.paragraph-header {
+  margin-bottom: 8px;
+}
 h1.section-header-heavy {
   padding: 30px 20px 0 20px;
   margin-bottom: 20px;
@@ -683,22 +686,32 @@ h1.section-header-heavy small {
 }
 .step {
   padding: 0 0 0 15px;
-  margin: 0 0 18px;
-  border-left: 5px solid #eeeeee;
+  margin: 0 0 18px 10px;
+  border-left: 1px dashed #999999;
+}
+.step-label {
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #a6d379;
+  padding: 1px 5px 1px 5px;
+  margin-right: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 12px;
-  color: #ffffff;
+  color: #007698;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 code {
   padding: 2px 4px;
-  color: #d14;
+  color: #007698;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
 }
@@ -712,8 +725,8 @@ pre {
   word-wrap: break-word;
   white-space: pre;
   white-space: pre-wrap;
-  background-color: #222;
-  border: 1px solid #ccc;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -2373,6 +2386,7 @@ button.close {
 }
 .btn-large {
   padding: 9px 14px;
+  margin-bottom: 8px;
   font-size: 15px;
   line-height: normal;
   -webkit-border-radius: 5px;
@@ -2806,6 +2820,9 @@ input[type="submit"].btn.btn-mini {
 .alert-heading {
   color: inherit;
 }
+.button-alert-heading {
+  margin-top: 4px;
+}
 .alert .close {
   position: relative;
   top: -2px;
@@ -2850,6 +2867,28 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a:hover {
   text-decoration: none;
   background-color: #eeeeee;
+}
+.subnav {
+  border: 1px solid #cccccc;
+}
+.subnav li a {
+  color: #333333;
+}
+.subnav li a:hover {
+  color: #00a5dc;
+}
+.nav-list {
+  background: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+}
+.nav-list li a {
+  color: #555555;
+}
+.nav-list li a:hover {
+  color: #0095d5;
 }
 .nav > .pull-right {
   float: right;
@@ -3182,28 +3221,6 @@ Bizo Related Edits:
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
 }
-.subnav {
-  border: 1px solid #cccccc;
-}
-.subnav li a {
-  color: #333333;
-}
-.subnav li a:hover {
-  color: #00a5dc;
-}
-.nav-list {
-  background: #ffffff;
-  padding-top: 8px;
-  padding-bottom: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
-}
-.nav-list li a {
-  color: #555555;
-}
-.nav-list li a:hover {
-  color: #0095d5;
-}
 .navbar {
   *position: relative;
   *z-index: 2;
@@ -3214,15 +3231,15 @@ Bizo Related Edits:
   min-height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #f7f7f7;
-  background-image: -moz-linear-gradient(top, #f2f2f2, #ffffff);
-  background-image: -ms-linear-gradient(top, #f2f2f2, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #ffffff);
-  background-image: -o-linear-gradient(top, #f2f2f2, #ffffff);
-  background-image: linear-gradient(top, #f2f2f2, #ffffff);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -ms-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -o-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: linear-gradient(top, #eeeeee, #ffffff);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#ffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3445,15 +3462,15 @@ Bizo Related Edits:
   padding: 7px 10px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #f7f7f7;
-  background-image: -moz-linear-gradient(top, #f2f2f2, #ffffff);
-  background-image: -ms-linear-gradient(top, #f2f2f2, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #ffffff);
-  background-image: -o-linear-gradient(top, #f2f2f2, #ffffff);
-  background-image: linear-gradient(top, #f2f2f2, #ffffff);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -ms-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: -o-linear-gradient(top, #eeeeee, #ffffff);
+  background-image: linear-gradient(top, #eeeeee, #ffffff);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#ffffff', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
   border-color: #ffffff #ffffff #d9d9d9;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #ffffff;
