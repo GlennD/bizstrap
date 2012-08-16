@@ -6,29 +6,46 @@ relativity: ../..
 <div class="row-fluid">
   <div class="span9">
   
-    <h1 class="section-header">Tag Your Sites <small>Get up and running</small></h1>
+    <h1 class="section-header">My Account</h1>
+    
+
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#">Tag Your Sites</a></li>
+      <li><a href="#">API Info</a></li>
+      <li><a href="#">Users</a></li>
+      <li><a href="#">Change Password</a></li>
+    </ul>
+
+	<h2 class="paragraph-header">Tag Your Sites</h2>
+    
     <div class="alert alert-info">
       <button class="close" data-dismiss="alert">&times;</button>
       <h3 class="alert-heading">Why is this so important?</h3>
-      <p>The Insight Tag connects your sites to the Bizo platform.</p>
+      <p>Insight Tags read the bizographic data of your web audiences and connect your sites to the Bizo Marketing Platform.</p>
     </div>
     
-    <h3 class="paragraph-header">Step 1 - Apply Insight Tags to your sites</h3>
+    <h3 class="paragraph-header"><span class="step-label">Step 1</span> Apply Insight Tags to your sites</h3>
     <div class="step">
-      <p>The Bizo Insight Tag detects bizographic data on 80% of the US business population when they visit your sites.</p>
-      <p>Add the following javascript code to your site's pages, preferably right before the end of the <code>&#60;body&#62;</code> tag:</p>
+      <p>The Bizo Insight Tag detects bizographic data on business professionals when they visit your sites.</p>
+      <p>Add the following javascript code to <strong>every page</strong> on your sites, preferably right before the end of 
+      the <code>&#60;body&#62;</code> tag:</p>
   
       <pre>&#60;script type="text/javascript"&#62;
   _bizo_data_partner_id = "14";
 &#60;/script&#62;
 &#60;script type="text/javascript"&#62;
-  (function(){var b,a,u;a=document.createElement("script");a.type="text/javascript";a.async=true;u=(window.location.protocol==="https:"?"https://sjs.":"http://js.")+"bizographics.com/insight.min.js";a.src=u;b=document.getElementsByTagName("script")[0];return b.parentNode.insertBefore(a,b)})();
+(function(){var b,a,u;a=document.createElement("script");a.type="text/javascript";a.async=true;u=(window.location.protocol==="https:"?"https://sjs.":"http://js.")+"bizographics.com/insight.min.js";a.src=u;b=document.getElementsByTagName("script")[0];return b.parentNode.insertBefore(a,b)})();
 &#60;/script&#62;</pre>
+
+	  <p>
+	  <button class="btn">Copy Insight Tag</button>
+      </p>
+      
       <p>Depending on your site infrastructure, you may want to make the tag as a standard part of your page template or include 
       it in your content management system to make sure it's on every page.</p>
       
       
-      <p>A couple things to remember:</p>
+      <p><strong>A couple of things to remember:</strong></p>
       <ul>
         <li>The Insight Tag automatically handles secure and non-secure pages. There is no need for separate code snippets.</li>
         <li>The Insight Tag cannot be delivered from within an iframe, it must be applied to the page itself.</li>
@@ -37,10 +54,10 @@ relativity: ../..
       <a target="_blank" href="http://help.bizo.com/getting-started/tagging-your-site">Help installing tags</a>
     </div>
     
-    <h3 class="paragraph-header">Step 2 - Add tagged sites to your account</h3>
+    <h3 class="paragraph-header"><span class="step-label">Step 2</span> Add tagged sites to your account</h3>
     <div class="step">
-      <p>Once a site has been tagged, add its domain to your list of sites below (we'd enter "bizo.com" for ours). Your domain should 
-      be verified within a few minutes of adding the tags.</p>
+      <p>Once a site has been tagged, add its domain to your list of sites below (we'd enter "bizo.com" for ours). Your domain will 
+      be validated within a few minutes of adding the tags.</p>
       <p>You'll be able to view your <a href="section_page_audience_analysis.html">Audience Analytics</a> 24 hours after tagging.</p>
     </div>
     
