@@ -22,6 +22,35 @@
   background-color: @grayLighter;
 }
 
+
+//Bizo style
+.subnav {
+  border: 1px solid @grayMedium;
+
+  li a {
+    color: @grayDark;
+    &:hover {
+      color: @blue;
+    }
+  }
+}
+
+//Bizo left-nav style
+.nav-list {
+  background: @white;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border: 1px solid @grayMedium;
+  border-radius:  6px;
+
+  li a {
+    color: @navbarLinkColor;
+    &:hover {
+      color: @navbarLinkColorHover;
+    }
+  }
+}
+
 // Redeclare pull classes because of specifity
 .nav > .pull-right {
   float: right;
