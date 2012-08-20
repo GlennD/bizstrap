@@ -2,17 +2,27 @@
 // ---------
 
 .hero-unit {
-  padding: 60px;
-  margin-bottom: 30px;
-  background-color: @heroUnitBackground;
+  #gradient > .radial(lighten(@heroUnitBackground, 10%), @heroUnitBackground);
+  padding: 20px;
+  margin: 0px 0 30px 0;
+  border-bottom: 12px solid @blueDark;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.4);
   .border-radius(6px);
+
   h1 {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 60px;
     line-height: 1;
     color: @heroUnitHeadingColor;
     letter-spacing: -1px;
   }
+
+  h2 {
+    margin: 0;
+    color: @heroUnitHeadingColor;
+    font-weight: normal;
+  }
+
   p {
     font-size: 18px;
     font-weight: 200;
