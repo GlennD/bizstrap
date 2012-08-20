@@ -2857,10 +2857,10 @@ input[type="submit"].btn.btn-mini {
   color: #00a5dc;
 }
 .nav-list {
-  background: #f5f5f5;
+  margin-left: -20px;
+  background: transparent;
   padding-top: 8px;
   padding-bottom: 10px;
-  border: 1px solid #cccccc;
   border-radius: 6px;
 }
 .nav-list li a {
@@ -3230,14 +3230,15 @@ Bizo Related Edits:
 .navbar .brand {
   float: left;
   display: block;
-  padding: 8px 15px 8px 6px;
-  margin-left: -20px;
+  padding: 12px 15px 8px 6px;
+  margin-left: -30px;
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
   color: #555555;
 }
 .navbar .navbar-text {
+  margin-top: 6px;
   margin-bottom: 0;
   line-height: 50px;
 }
@@ -4393,16 +4394,16 @@ a.badge:hover {
   color: #ffffff;
 }
 .hero-unit {
-  background-color: #008aaa;
-  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#00b3dd), to(#008aaa));
-  background-image: -webkit-radial-gradient(circle, #00b3dd, #008aaa);
-  background-image: -moz-radial-gradient(circle, #00b3dd, #008aaa);
-  background-image: -ms-radial-gradient(circle, #00b3dd, #008aaa);
-  background-image: -o-radial-gradient(circle, #00b3dd, #008aaa);
+  background-color: #8dc653;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#a6d379), to(#8dc653));
+  background-image: -webkit-radial-gradient(circle, #a6d379, #8dc653);
+  background-image: -moz-radial-gradient(circle, #a6d379, #8dc653);
+  background-image: -ms-radial-gradient(circle, #a6d379, #8dc653);
+  background-image: -o-radial-gradient(circle, #a6d379, #8dc653);
   background-repeat: no-repeat;
   padding: 20px;
   margin: 0px 0 30px 0;
-  border-bottom: 12px solid #00688d;
+  border-bottom: 12px solid #406020;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
