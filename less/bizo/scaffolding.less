@@ -6,7 +6,7 @@
 
 // Use <body class="bizo-app">..</body> to get an instant "looks like Bizo"  look 
 body.bizo-app {
-  #gradient > .vertical(@grayLighter, @white);
+  background: @white;
 }
 
 // If you want a logo 
@@ -16,9 +16,7 @@ body.bizo-app.with-logo {
 }
 
 // For project documentation sites 
-body.bizo-app.documentation {
-  background: @white;
-}
+
 
 h1 {
   color: #1B3D46;
@@ -31,21 +29,9 @@ h1 {
   border-bottom: 1px solid @grayMedium;
 }
 
-// White content boxes for use against the light blue bizo background
-.content {
-  background:  white;
-  padding: 30px;
-  border: 1px solid @grayMedium;
-  border-radius:  6px;
-}
 
 // Well is a white box with slightly rounded corners
 .well {
   background: #fff;
   border: solid 1px @grayMedium;
-}
-
-.hero-unit {
-  background: #f3f9f9;
-  border: 1px solid rgba(0,0,0,.1);
 }

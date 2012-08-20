@@ -17,11 +17,10 @@
 // Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
 .navbar-inner {
   min-height: @navbarHeight;
-  padding-left:  20px;
-  padding-right: 20px;
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  padding: 0 20px 0 20px;
+  background: transparent;
+  border-top: 4px solid @blue;
   .border-radius(4px);
-  .box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
 }
 
 // Set width to auto for default container
@@ -194,6 +193,7 @@
 .navbar .nav > li {
   display: block;
   float: left;
+  margin: 0 10px 0 0;
 }
 
 // Links
@@ -225,10 +225,10 @@
   padding: ((@navbarHeight - @elementHeight) / 2 - 1) 5px ((@navbarHeight - @elementHeight) / 2);
 }
 // Hover
+
 .navbar .nav > li > a:hover {
   background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
-  color: @navbarLinkColor;
-  .box-shadow(inset 0 3px 0px @blue);
+  color: @navbarLinkColorHover;
   text-decoration: none;
 }
 
