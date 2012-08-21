@@ -582,7 +582,7 @@ hr {
 }
 h1.section-header {
   margin-bottom: 15px;
-  color: #007698;
+  color: #006386;
   font-weight: bold;
 }
 h1.section-header small {
@@ -655,9 +655,7 @@ h1.section-header-heavy small {
 }
 .page-footer {
   float: right;
-  border-top: 1px solid #eeeeee;
   margin-top: 30px;
-  padding-top: 10px;
 }
 .page-footer a {
   color: #555555;
@@ -2860,12 +2858,11 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-list {
   margin-left: -20px;
-  margin-top: -22px;
+  margin-top: 5px;
   background: transparent;
   padding-top: 5px;
   padding-bottom: 10px;
   border-radius: 6px;
-  border-right: 1px solid #eeeeee;
 }
 .nav-list li a {
   color: #555555;
@@ -4401,20 +4398,20 @@ a.badge:hover {
   color: #ffffff;
 }
 .hero-unit {
-  background-color: #8dc653;
-  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#a6d379), to(#8dc653));
-  background-image: -webkit-radial-gradient(circle, #a6d379, #8dc653);
-  background-image: -moz-radial-gradient(circle, #a6d379, #8dc653);
-  background-image: -ms-radial-gradient(circle, #a6d379, #8dc653);
-  background-image: -o-radial-gradient(circle, #a6d379, #8dc653);
+  background-color: #333333;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#4d4d4d), to(#333333));
+  background-image: -webkit-radial-gradient(circle, #4d4d4d, #333333);
+  background-image: -moz-radial-gradient(circle, #4d4d4d, #333333);
+  background-image: -ms-radial-gradient(circle, #4d4d4d, #333333);
+  background-image: -o-radial-gradient(circle, #4d4d4d, #333333);
   background-repeat: no-repeat;
   padding: 20px;
   margin: 0px 0 30px 0;
-  border-bottom: 12px solid #406020;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border-top: 6px solid #666666;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
 }
 .hero-unit h1 {
   margin: 0;
