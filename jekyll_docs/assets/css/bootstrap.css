@@ -2112,7 +2112,7 @@ table .span24 {
 .dropdown-menu .divider {
   *width: 100%;
   height: 1px;
-  margin: 8px 1px;
+  margin: 0px 1px;
   *margin: -5px 0 5px;
   overflow: hidden;
   background-color: #e5e5e5;
@@ -2858,10 +2858,12 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-list {
   margin-left: -20px;
+  margin-top: -22px;
   background: transparent;
-  padding-top: 8px;
+  padding-top: 5px;
   padding-bottom: 10px;
   border-radius: 6px;
+  border-right: 1px solid #eeeeee;
 }
 .nav-list li a {
   color: #555555;
@@ -2942,10 +2944,10 @@ Bizo Related Edits:
 .nav-list .divider {
   *width: 100%;
   height: 1px;
-  margin: 8px 1px;
+  margin: 0px 1px;
   *margin: -5px 0 5px;
   overflow: hidden;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 .nav-list ul {
@@ -3208,9 +3210,11 @@ Bizo Related Edits:
 }
 .navbar-inner {
   min-height: 40px;
-  padding: 0 20px 0 20px;
+  padding: 0 0 0 20px;
+  margin-right: -19px;
   background: transparent;
   border-top: 4px solid #00a5dc;
+  border-bottom: 1px solid #eeeeee;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3230,17 +3234,18 @@ Bizo Related Edits:
 .navbar .brand {
   float: left;
   display: block;
-  padding: 12px 15px 8px 6px;
-  margin-left: -30px;
+  padding: 8px 15px 0px 0px;
+  margin-left: -26px;
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
   color: #555555;
 }
 .navbar .navbar-text {
-  margin-top: 6px;
+  color: #555555;
+  margin-top: 3px;
   margin-bottom: 0;
-  line-height: 50px;
+  line-height: 45px;
 }
 .navbar .navbar-link {
   color: #555555;
@@ -3417,7 +3422,7 @@ Bizo Related Edits:
   margin: 0 9px;
   overflow: hidden;
   background-color: #ffffff;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #eeeeee;
 }
 .navbar .nav.pull-right {
   margin-left: 10px;
