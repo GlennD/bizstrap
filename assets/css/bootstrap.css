@@ -4581,6 +4581,9 @@ html#brand-bar-page body,
 html#brand-bar-page html {
   height: 100%;
 }
+html#brand-bar-page body {
+  overflow: hidden;
+}
 html#brand-bar-page iframe {
   display: block;
   border: none;
