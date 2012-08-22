@@ -4384,19 +4384,19 @@ a.badge:hover {
   color: #ffffff;
 }
 .hero-unit {
-  background-color: #333333;
-  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#4d4d4d), to(#333333));
-  background-image: -webkit-radial-gradient(circle, #4d4d4d, #333333);
-  background-image: -moz-radial-gradient(circle, #4d4d4d, #333333);
-  background-image: -ms-radial-gradient(circle, #4d4d4d, #333333);
-  background-image: -o-radial-gradient(circle, #4d4d4d, #333333);
+  background-color: #87c44b;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#a1d071), to(#87c44b));
+  background-image: -webkit-radial-gradient(circle, #a1d071, #87c44b);
+  background-image: -moz-radial-gradient(circle, #a1d071, #87c44b);
+  background-image: -ms-radial-gradient(circle, #a1d071, #87c44b);
+  background-image: -o-radial-gradient(circle, #a1d071, #87c44b);
   background-repeat: no-repeat;
   padding: 20px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border-top: 6px solid #666666;
-  border-bottom: 12px solid #000000;
+  border-top: 4px solid #badd98;
+  border-bottom: 12px solid #3b591d;
   margin: 8px 0 30px 0;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
