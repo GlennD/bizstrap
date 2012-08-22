@@ -169,6 +169,19 @@ h1 {
   background: #fff;
   border: solid 1px #cccccc;
 }
+.featured {
+  margin-bottom: 20px;
+}
+.featured a.thumbnail {
+  border: none;
+  padding: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.featured h3 {
+  margin: 15px 0 5px;
+}
 .row {
   margin-left: -20px;
   *zoom: 1;
