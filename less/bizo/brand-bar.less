@@ -1,0 +1,85 @@
+// Styles for the Switchboard brand bar widget
+
+html#brand-bar-page {
+  @brandBarInnerWidth: 780px;
+  @brandBarHeight: 40px;
+
+  @padding: 5px;
+  @avatarWidth: 48px;
+
+  body,html {
+    height: 100%; // allow iframe to take up entire page
+  }
+
+  iframe {
+    display: block;
+    border: none;
+    margin-top: @brandBarHeight + @padding + 5px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .brand-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @brandBarHeight;
+    padding: @padding;
+    background: @white;
+    border-top: 2px solid @blue;
+    .box-shadow(0 2px 3px rgba(0,0,0,0.3));
+
+    #close {
+      display: block;
+      position: absolute;
+      top: @padding;
+      right: @padding * 2;
+      height: @brandBarHeight;
+      line-height: @brandBarHeight;
+      padding-left: @padding * 2;
+      padding-right: @padding * 2;
+      color: #ccc;
+      font-weight: bold;
+      font-size: 22px;
+      text-align: center;
+      border-left: 1px solid #eee;
+      .transition(color 0.5s);
+
+      &:hover {
+        text-decoration: none;
+        color: @grayDark;
+        .transition(color 0.5s);
+      }
+    }
+
+    .brand-bar-inner {
+      margin: 0 auto;
+      padding: 0;
+      width: @brandBarInnerWidth;
+
+      small {
+        color: @grayLight;
+      }
+
+      [class*="span"] {
+        margin-left: 10px;
+      }
+
+      .span-avatar {
+        max-width: @avatarWidth;
+
+        img {
+          max-height: @brandBarHeight;
+          .border-radius(3px);
+        }
+
+      }
+
+      .span-brandbartweet {
+        width: @brandBarInnerWidth - @avatarWidth;
+      }
+    }
+  }
+
+}
