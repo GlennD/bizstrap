@@ -2112,7 +2112,7 @@ table .span24 {
 .dropdown-menu .divider {
   *width: 100%;
   height: 1px;
-  margin: 0px 1px;
+  margin: 8px 1px;
   *margin: -5px 0 5px;
   overflow: hidden;
   background-color: #e5e5e5;
@@ -2856,26 +2856,12 @@ input[type="submit"].btn.btn-mini {
 .subnav li a:hover {
   color: #00a5dc;
 }
-.nav-list {
-  margin-left: -20px;
-  margin-top: 5px;
-  background: transparent;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  border-radius: 6px;
-}
-.nav-list li a {
-  color: #555555;
-}
-.nav-list li a:hover {
-  color: #00a5dc;
-}
 .nav > .pull-right {
   float: right;
 }
 .nav .nav-header {
   display: block;
-  padding: 3px 15px;
+  padding: 3px 15px 3px 0;
   font-size: 11px;
   font-weight: bold;
   line-height: 18px;
@@ -2893,12 +2879,12 @@ Bizo Related Edits:
 - added css3 transitions for exta polish 
  */
 .nav-list {
-  padding-left: 15px;
-  padding-right: 15px;
+  background: transparent;
+  padding: 5px 15px 10px 0px;
   margin-bottom: 0;
 }
 .nav-list li a,
-.nav-list .nav-header {
+.nav-list .nav-list .nav-header {
   margin-left: -15px;
   margin-right: -15px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -2906,6 +2892,7 @@ Bizo Related Edits:
 .nav-list li a {
   padding: 3px 15px;
   display: block;
+  color: #555555;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   -ms-transition: background 0.3s;
@@ -2918,6 +2905,7 @@ Bizo Related Edits:
   transition: color 0.3s;
 }
 .nav-list li a:hover {
+  color: #00a5dc;
   text-decoration: none;
   background-color: #eeeeee;
   -webkit-transition: background 0.3s;
@@ -2937,16 +2925,13 @@ Bizo Related Edits:
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #00a5dc;
 }
-.nav-list [class^="icon-"] {
-  margin-right: 2px;
-}
 .nav-list .divider {
   *width: 100%;
   height: 1px;
-  margin: 0px 1px;
+  margin: 8px 1px;
   *margin: -5px 0 5px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   border-bottom: 1px solid #ffffff;
 }
 .nav-list ul {
@@ -2956,6 +2941,9 @@ Bizo Related Edits:
 }
 .nav-list ul li a {
   padding-left: 34px;
+}
+.nav-list [class^="icon-"] {
+  margin-right: 2px;
 }
 .nav-tabs,
 .nav-pills {
@@ -3209,8 +3197,7 @@ Bizo Related Edits:
 }
 .navbar-inner {
   min-height: 40px;
-  padding: 0 0 0 20px;
-  margin-right: -19px;
+  padding: 0 20px 0 20px;
   background: transparent;
   border-top: 4px solid #00a5dc;
   border-bottom: 1px solid #eeeeee;
@@ -3234,7 +3221,7 @@ Bizo Related Edits:
   float: left;
   display: block;
   padding: 8px 15px 0px 0px;
-  margin-left: -26px;
+  margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
