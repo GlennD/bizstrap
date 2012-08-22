@@ -2112,7 +2112,7 @@ table .span24 {
 .dropdown-menu .divider {
   *width: 100%;
   height: 1px;
-  margin: 0px 1px;
+  margin: 8px 1px;
   *margin: -5px 0 5px;
   overflow: hidden;
   background-color: #e5e5e5;
@@ -2856,26 +2856,12 @@ input[type="submit"].btn.btn-mini {
 .subnav li a:hover {
   color: #00a5dc;
 }
-.nav-list {
-  margin-left: -20px;
-  margin-top: 5px;
-  background: transparent;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  border-radius: 6px;
-}
-.nav-list li a {
-  color: #555555;
-}
-.nav-list li a:hover {
-  color: #00a5dc;
-}
 .nav > .pull-right {
   float: right;
 }
 .nav .nav-header {
   display: block;
-  padding: 3px 15px;
+  padding: 3px 0 3px;
   font-size: 11px;
   font-weight: bold;
   line-height: 18px;
@@ -2893,12 +2879,11 @@ Bizo Related Edits:
 - added css3 transitions for exta polish 
  */
 .nav-list {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 5px 15px 10px 0px;
   margin-bottom: 0;
 }
 .nav-list li a,
-.nav-list .nav-header {
+.nav-list .nav-list .nav-header {
   margin-left: -15px;
   margin-right: -15px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -2906,6 +2891,7 @@ Bizo Related Edits:
 .nav-list li a {
   padding: 3px 15px;
   display: block;
+  color: #555555;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   -ms-transition: background 0.3s;
@@ -2918,6 +2904,7 @@ Bizo Related Edits:
   transition: color 0.3s;
 }
 .nav-list li a:hover {
+  color: #00a5dc;
   text-decoration: none;
   background-color: #eeeeee;
   -webkit-transition: background 0.3s;
@@ -2937,25 +2924,25 @@ Bizo Related Edits:
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #00a5dc;
 }
-.nav-list [class^="icon-"] {
-  margin-right: 2px;
-}
 .nav-list .divider {
   *width: 100%;
   height: 1px;
-  margin: 0px 1px;
+  margin: 8px 1px;
   *margin: -5px 0 5px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   border-bottom: 1px solid #ffffff;
 }
 .nav-list ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 5px 0;
   padding: 0;
 }
 .nav-list ul li a {
   padding-left: 34px;
+}
+.nav-list [class^="icon-"] {
+  margin-right: 2px;
 }
 .nav-tabs,
 .nav-pills {
@@ -3209,8 +3196,7 @@ Bizo Related Edits:
 }
 .navbar-inner {
   min-height: 40px;
-  padding: 0 0 0 20px;
-  margin-right: -19px;
+  padding: 0 20px 0 20px;
   background: transparent;
   border-top: 4px solid #00a5dc;
   border-bottom: 1px solid #eeeeee;
@@ -3234,7 +3220,7 @@ Bizo Related Edits:
   float: left;
   display: block;
   padding: 8px 15px 0px 0px;
-  margin-left: -26px;
+  margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
@@ -4398,19 +4384,20 @@ a.badge:hover {
   color: #ffffff;
 }
 .hero-unit {
-  background-color: #333333;
-  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#4d4d4d), to(#333333));
-  background-image: -webkit-radial-gradient(circle, #4d4d4d, #333333);
-  background-image: -moz-radial-gradient(circle, #4d4d4d, #333333);
-  background-image: -ms-radial-gradient(circle, #4d4d4d, #333333);
-  background-image: -o-radial-gradient(circle, #4d4d4d, #333333);
+  background-color: #87c44b;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(#a1d071), to(#87c44b));
+  background-image: -webkit-radial-gradient(circle, #a1d071, #87c44b);
+  background-image: -moz-radial-gradient(circle, #a1d071, #87c44b);
+  background-image: -ms-radial-gradient(circle, #a1d071, #87c44b);
+  background-image: -o-radial-gradient(circle, #a1d071, #87c44b);
   background-repeat: no-repeat;
   padding: 20px;
-  margin: 0px 0 30px 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  border-top: 6px solid #666666;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border-top: 4px solid #badd98;
+  border-bottom: 12px solid #3b591d;
+  margin: 8px 0 30px 0;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 .hero-unit h1 {
