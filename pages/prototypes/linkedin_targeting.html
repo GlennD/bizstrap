@@ -69,33 +69,29 @@ relativity: ../..
               </ul>
             </div>
             <div class="span7 well">
-              <ul class="unstyled">
-                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Africa</label></li>
-                <li class="lvl2"> <label class="checkbox"><input type="checkbox"> Antarctica</label></li>
-                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Asia</label></li>
-                <li class="lvl2"><label class="checkbox"><input type="checkbox" checked> Europe <p class="inline"><small>All countries selected, uncheck to specify</small></p></label></li>
-                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Latin America</label></li>
-                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Middle East</label></li>
-                <li><i class="icon-minus"></i> <label class="checkbox"><input type="checkbox"> North America</label></li>
-                <li class="lvl2"><i class="icon-minus"></i> <label class="checkbox"><input type="checkbox"> Canada</label></li>
-                <li class="lvl3empty"><label class="checkbox"><input type="checkbox" checked> Alberta <p class="inline"><small>All regions selected, uncheck to specify</small></p></label></li>
-                <li class="lvl3empty"><label class="checkbox"><input type="checkbox" checked> British Columbia <p class="inline"><small>All regions selected, uncheck to specify</small></p></label></li>
-                <li class="lvl3"><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Manitoba</label></li>
-                <li class="lvl3empty"> <label class="checkbox"><input type="checkbox" checked> New Brunswick</label></li>
-                <li class="lvl3empty"> <label class="checkbox"><input type="checkbox"> Newfoundland and Labrador</label></li>
-                <li class="lvl3empty"> <label class="checkbox"><input type="checkbox"> Northwest Territories</label></li>
-                <li class="lvl3"><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Nova Scotia</label></li>
-                <li class="lvl3empty"> <label class="checkbox"><input type="checkbox"> Nunavut</label></li>
-                <li class="lvl3"><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Ontario</label></li>
-                <li class="lvl3empty"> <label class="checkbox"><input type="checkbox"> Prince Edward Island</label></li>
-                <li class="lvl3"><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Quebec</label></li>
-                <li class="lvl3empty"> <label class="checkbox"><input type="checkbox"> Saskatchewan</label></li>
-                <li class="lvl3empty"> <label class="checkbox"><input type="checkbox" checked> Yukon</label></li>
-                <li class="lvl2"><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> United States</label></li>
-                <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Oceania</label></li>
-                <li class="lvl3"></i> <label class="checkbox"><input type="checkbox" checked> Australia <p class="inline"><small>All states selected, uncheck to specify</small></p></label></li>
-              <li class="lvl2"><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> New Zealand</label></li>                  
-            </ul>
+              <ul class="tree-select">
+                <!-- Top Level -->
+                <li>
+                <i class="icon-minus"></i> 
+                <label class="checkbox"><input type="checkbox"> Africa</label>
+                <!-- Second Level Contained in 1st LI -->
+                <ul>
+                  <li class="lvl2">
+                    <i class="icon-plus"></i> 
+                    <label class="checkbox"><input type="checkbox"> Uganda</label>
+                  </li>
+                  <li class="lvl2">
+                    <i class="icon-minus"></i> 
+                    <label class="checkbox"><input type="checkbox">Zimbabwe</label>
+                    <!-- 3rd Level Contained in 2nd LI -->
+                    <ul>
+                      <li class="lvl3empty"> <label class="checkbox"><input type="checkbox"> Saskatchewan</label></li>
+                      <li class="lvl3empty"> <label class="checkbox"><input type="checkbox" checked> Yukon</label></li>
+                    </ul>
+                  </li>
+                </ul>
+                </li>
+              </ul>
           </div>
         </div>
 
