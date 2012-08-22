@@ -4661,3 +4661,15 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   margin-left: 0;
   list-style: none;
 }
+.tree-select label.checkbox {
+  display: inline-block;
+}
+.tree-select ul li {
+  padding-left: 18px;
+}
+.tree-select ul li.empty {
+  padding-left: 36px;
+}
+.tree-select p.inline {
+  display: inline;
+}

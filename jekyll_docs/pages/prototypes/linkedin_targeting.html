@@ -18,13 +18,7 @@ relativity: ../..
     </script>
 
     <style type="text/css">
-      label.checkbox {display:inline-block}
-      .cent {text-align:center; margin-top:5px; margin-bottom:15px}
-      .rght {text-align:right}
-      li.lvl2 {padding-left:18px}
-      li.lvl3 {padding-left:36px}
-      li.lvl3empty {padding-left:54px}
-      p.inline {display:inline}
+
 
     </style>
 
@@ -46,7 +40,7 @@ relativity: ../..
               </ul>
             </div>
             <div class="span7 well">
-              <ul class="unstyled">
+              <ul class="tree-select">
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Africa</label></li>
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Asia</label></li>
                 <li><i class="icon-plus"></i> <label class="checkbox"><input type="checkbox"> Europe</label></li>
@@ -73,20 +67,20 @@ relativity: ../..
                 <!-- Top Level -->
                 <li>
                 <i class="icon-minus"></i> 
-                <label class="checkbox"><input type="checkbox"> Africa</label>
+                <label class="checkbox"><input type="checkbox">Africa</label>
                 <!-- Second Level Contained in 1st LI -->
                 <ul>
-                  <li class="lvl2">
+                  <li>
                     <i class="icon-plus"></i> 
-                    <label class="checkbox"><input type="checkbox"> Uganda</label>
+                    <label class="checkbox"><input type="checkbox">Uganda</label>
                   </li>
-                  <li class="lvl2">
+                  <li>
                     <i class="icon-minus"></i> 
                     <label class="checkbox"><input type="checkbox">Zimbabwe</label>
                     <!-- 3rd Level Contained in 2nd LI -->
                     <ul>
-                      <li class="lvl3empty"> <label class="checkbox"><input type="checkbox"> Saskatchewan</label></li>
-                      <li class="lvl3empty"> <label class="checkbox"><input type="checkbox" checked> Yukon</label></li>
+                      <li class="empty"> <label class="checkbox"><input type="checkbox">Saskatchewan</label></li>
+                      <li class="empty"> <label class="checkbox"><input type="checkbox" checked> Yukon</label></li>
                     </ul>
                   </li>
                 </ul>
