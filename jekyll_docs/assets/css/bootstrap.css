@@ -4656,3 +4656,8 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-avatar img {
 html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   width: 732px;
 }
+.tree-select,
+.tree-select ul {
+  margin-left: 0;
+  list-style: none;
+}
