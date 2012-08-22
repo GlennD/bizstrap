@@ -2,11 +2,11 @@
 // ---------
 
 .hero-unit {
-  #gradient > .radial(lighten(@heroUnitBackground, 10%), @heroUnitBackground);
+  #gradient > .directional(@heroUnitBackground, lighten(@heroUnitBackground, 15%));
   padding: 20px;
   .border-radius(6px);
-  border-top: 4px solid lighten(@heroUnitBackground, 20%);
-  border-bottom: 12px solid darken(@heroUnitBackground, 30%);
+  border-top: 4px solid lighten(@heroUnitBackground, 12%);
+  border-bottom: 12px solid darken(@heroUnitBackground, 15%);
   margin: 8px 0 30px 0;
   text-shadow: 0 1px 0 rgba(0,0,0,0.4);
 
