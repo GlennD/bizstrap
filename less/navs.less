@@ -20,19 +20,6 @@
 }
 
 
-//Bizo style
-.subnav {
-  border: 1px solid @grayMedium;
-
-  li a {
-    color: @grayDark;
-    &:hover {
-      color: @blue;
-    }
-  }
-}
-
-
 // Redeclare pull classes because of specifity
 .nav > .pull-right {
   float: right;
@@ -83,7 +70,7 @@ Bizo Related Edits:
     color: @navLinkColor;
     .transition(background @transitionDuration);
     .transition(color @transitionDuration);
-
+	
     &:hover {
       color: @navLinkColorHover;
       text-decoration: none;
@@ -92,13 +79,12 @@ Bizo Related Edits:
       .transition(color @transitionDuration);
     }
   }
-
+  
   .active a, .active a:hover {
     color: @white;
     text-shadow: 0 -1px 0 rgba(0,0,0,.2);
     background-color: @linkColor;
   }
-
 
 // Dividers (basically an hr) within the dropdown
   .divider {

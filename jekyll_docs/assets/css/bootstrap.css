@@ -140,11 +140,11 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #00a5dc;
+  color: #0095d5;
   text-decoration: none;
 }
 a:hover {
-  color: #006c90;
+  color: #005f89;
   text-decoration: underline;
 }
 body.bizo-app {
@@ -163,11 +163,11 @@ h1 {
   position: relative;
   height: 70px;
   margin: 20px 0 20px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #666666;
 }
 .well {
   background: #fff;
-  border: solid 1px #cccccc;
+  border: solid 1px #666666;
 }
 .featured {
   margin-bottom: 20px;
@@ -599,7 +599,7 @@ h1.section-header {
   font-weight: bold;
 }
 h1.section-header small {
-  color: #97c3d3;
+  color: #83b7cb;
   font-style: italic;
   display: block;
   letter-spacing: -1px;
@@ -627,7 +627,7 @@ h1.section-header-heavy {
   border-radius: 8px;
 }
 h1.section-header-heavy small {
-  color: #97c3d3;
+  color: #83b7cb;
   font-style: italic;
   display: block;
   letter-spacing: -1px;
@@ -2145,7 +2145,7 @@ table .span24 {
 .dropdown-menu li.active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #00a5dc;
+  background-color: #0095d5;
 }
 .open {
   *z-index: 1000;
@@ -2429,18 +2429,18 @@ button.close {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 .btn-primary {
-  background-color: #008fdc;
-  background-image: -moz-linear-gradient(top, #00a5dc, #006edc);
-  background-image: -ms-linear-gradient(top, #00a5dc, #006edc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00a5dc), to(#006edc));
-  background-image: -webkit-linear-gradient(top, #00a5dc, #006edc);
-  background-image: -o-linear-gradient(top, #00a5dc, #006edc);
-  background-image: linear-gradient(top, #00a5dc, #006edc);
+  background-color: #0080d5;
+  background-image: -moz-linear-gradient(top, #0095d5, #0060d5);
+  background-image: -ms-linear-gradient(top, #0095d5, #0060d5);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0095d5), to(#0060d5));
+  background-image: -webkit-linear-gradient(top, #0095d5, #0060d5);
+  background-image: -o-linear-gradient(top, #0095d5, #0060d5);
+  background-image: linear-gradient(top, #0095d5, #0060d5);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00a5dc', endColorstr='#006edc', GradientType=0);
-  border-color: #006edc #006edc #004890;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095d5', endColorstr='#0060d5', GradientType=0);
+  border-color: #0060d5 #0060d5 #003d89;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #006edc;
+  *background-color: #0060d5;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2450,12 +2450,12 @@ button.close {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #006edc;
-  *background-color: #0061c3;
+  background-color: #0060d5;
+  *background-color: #0054bc;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #0054a9 \9;
+  background-color: #0049a2 \9;
 }
 .btn-warning {
   background-color: #faa732;
@@ -2487,18 +2487,18 @@ button.close {
   background-color: #c67605 \9;
 }
 .btn-danger {
-  background-color: #da4f49;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(top, #ee5f5b, #bd362f);
+  background-color: #ec4f52;
+  background-image: -moz-linear-gradient(top, #ef6a6d, #e82529);
+  background-image: -ms-linear-gradient(top, #ef6a6d, #e82529);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ef6a6d), to(#e82529));
+  background-image: -webkit-linear-gradient(top, #ef6a6d, #e82529);
+  background-image: -o-linear-gradient(top, #ef6a6d, #e82529);
+  background-image: linear-gradient(top, #ef6a6d, #e82529);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
-  border-color: #bd362f #bd362f #802420;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef6a6d', endColorstr='#e82529', GradientType=0);
+  border-color: #e82529 #e82529 #ae1216;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #bd362f;
+  *background-color: #e82529;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2508,12 +2508,12 @@ button.close {
 .btn-danger.active,
 .btn-danger.disabled,
 .btn-danger[disabled] {
-  background-color: #bd362f;
-  *background-color: #a9302a;
+  background-color: #e82529;
+  *background-color: #dc171b;
 }
 .btn-danger:active,
 .btn-danger.active {
-  background-color: #942a25 \9;
+  background-color: #c51518 \9;
 }
 .btn-success {
   background-color: #5bb75b;
@@ -2745,13 +2745,13 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #006edc;
+  background-color: #0060d5;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: #f89406;
 }
 .btn-group.open .btn-danger.dropdown-toggle {
-  background-color: #bd362f;
+  background-color: #e82529;
 }
 .btn-group.open .btn-success.dropdown-toggle {
   background-color: #51a351;
@@ -2860,15 +2860,6 @@ input[type="submit"].btn.btn-mini {
   text-decoration: none;
   background-color: #eeeeee;
 }
-.subnav {
-  border: 1px solid #cccccc;
-}
-.subnav li a {
-  color: #333333;
-}
-.subnav li a:hover {
-  color: #00a5dc;
-}
 .nav > .pull-right {
   float: right;
 }
@@ -2935,7 +2926,7 @@ Bizo Related Edits:
 .nav-list .active a:hover {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #00a5dc;
+  background-color: #0095d5;
 }
 .nav-list .divider {
   *width: 100%;
@@ -3021,7 +3012,7 @@ Bizo Related Edits:
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #00a5dc;
+  background-color: #0095d5;
 }
 .nav-stacked > li {
   float: none;
@@ -3070,14 +3061,14 @@ Bizo Related Edits:
 }
 .nav-tabs .dropdown-toggle .caret,
 .nav-pills .dropdown-toggle .caret {
-  border-top-color: #00a5dc;
-  border-bottom-color: #00a5dc;
+  border-top-color: #0095d5;
+  border-bottom-color: #0095d5;
   margin-top: 6px;
 }
 .nav-tabs .dropdown-toggle:hover .caret,
 .nav-pills .dropdown-toggle:hover .caret {
-  border-top-color: #006c90;
-  border-bottom-color: #006c90;
+  border-top-color: #005f89;
+  border-bottom-color: #005f89;
 }
 .nav-tabs .active .dropdown-toggle .caret,
 .nav-pills .active .dropdown-toggle .caret {
@@ -4004,7 +3995,7 @@ Bizo Related Edits:
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 a.thumbnail:hover {
-  border-color: #00a5dc;
+  border-color: #0095d5;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -4397,32 +4388,30 @@ a.badge:hover {
   color: #ffffff;
 }
 .hero-unit {
-  background-color: #99cd66;
+  background-color: #f7f7f7;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(45deg, #73ad39, #99cd66);
-  background-image: -ms-linear-gradient(45deg, #73ad39, #99cd66);
-  background-image: -webkit-linear-gradient(45deg, #73ad39, #99cd66);
-  background-image: -o-linear-gradient(45deg, #73ad39, #99cd66);
-  background-image: linear-gradient(45deg, #73ad39, #99cd66);
-  padding: 20px;
+  background-image: -moz-linear-gradient(#ffffff, #ffffff, #f7f7f7);
+  background-image: -ms-linear-gradient(#ffffff, #ffffff, #f7f7f7);
+  background-image: -webkit-linear-gradient(#ffffff, #ffffff, #f7f7f7);
+  background-image: -o-linear-gradient(#ffffff, #ffffff, #f7f7f7);
+  background-image: linear-gradient(#ffffff, #ffffff, #f7f7f7);
+  padding: 20px 20px 10px 20px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  border-top: 4px solid #92c95a;
-  border-bottom: 12px solid #4d7426;
+  border-bottom: 4px solid #e6e6e6;
   margin: 8px 0 30px 0;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 .hero-unit h1 {
   margin: 0;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 1;
-  color: #ffffff;
+  color: #333333;
   letter-spacing: -1px;
 }
 .hero-unit h2 {
   margin: 0;
-  color: #ffffff;
+  color: #333333;
   font-weight: normal;
 }
 .hero-unit p {
