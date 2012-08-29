@@ -593,6 +593,9 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+hr.dashed {
+  border: dashed thin #EEE;
+}
 h1.section-header {
   margin-bottom: 15px;
   color: #006386;
@@ -603,6 +606,13 @@ h1.section-header small {
   font-style: italic;
   display: block;
   letter-spacing: -1px;
+}
+.cent {
+  text-align: center;
+}
+.vert-space {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .paragraph-header {
   margin-bottom: 8px;
@@ -690,6 +700,9 @@ h1.section-header-heavy small {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+.remove-ad-variation {
+  margin-top: 45px;
 }
 code,
 pre {
@@ -929,9 +942,6 @@ input[type="checkbox"]:focus {
 .radio.inline,
 .checkbox.inline {
   display: inline-block;
-  padding-top: 5px;
-  margin-bottom: 0;
-  vertical-align: middle;
 }
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
