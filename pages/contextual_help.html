@@ -22,11 +22,12 @@ title: Contributing
   <li>A user flow is divided into several sections, to which the above criteria apply.</li>
 </ul>
 <h3>Specifications</h3>
-<p>The Bizstrap alert and alert-info classes provide the basic form of the in-line help box. The box should be displayed immediately beneath a header and immediately above the functionality it references. In most cases, the box should be made collapsible. To make the box collapsible, include the "close" button in the upper right corner, but when the button is clicked, dismiss the box and show a help icon right aligned in the header row above the box. If the icon is clicked, expand the help box to its open state. When the icon is hovered over, show a version in Bizo Light Blue (#0095D5) to indicate clickability. The state the box was last in should be stored so it can be shown the same way if the user returns to the page.</p>
+<p>The Bizstrap alert and alert-info classes provide the basic form of the in-line help box. The box should be displayed immediately beneath a header and immediately above the functionality it references, when active. In most cases, the box should be made collapsible. To make the box collapsible, include the "close" button in the upper right corner, but when the button is clicked, dismiss the box and show the label for the box type (example: FAQ) immediately after the header above. If the label is clicked, expand the help box to its open state and hide the label in the header row. When the label is hovered over, show a slight glow to indicate clickability. Hide all in-line help boxes by default.</p>
 <p>In rare cases it may make sense to remove the collapse option, or to make the box completely dismissable.</p> 
 
 <div class="well">
-  <h3>Default state</h3>
+  <h3>Closed state  <span class="label label-info">FAQ</span></h3>
+  <h3>Open state</h3>
   <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
     <h4 class="alert-heading">Creative Tips <span class="label label-info">Tips</span></h4>
     <ul>
@@ -48,7 +49,7 @@ title: Contributing
 
 
   <h3>Expandable</h3>
-  <p>The content of the box should be kept as brief as possible. If it exceeds one paragraph, it should either be condensed or moved into a separate help document and linked from within the help box. If the content exceeds four lines (including title), shorten the box to hide anything below and allow the user to click to expand the box and show the full contents.</p>
+  <p>The content of the box should be kept as brief as possible. If it exceeds one paragraph, it should either be condensed or moved into a separate help document and linked from within the help box. If the content exceeds four lines (including title), shorten the box to hide anything below and allow the user to click to expand the box and show the full contents. Use this sparingly.</p>
   <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
     <h4 class="alert-heading">Creative Tips <span class="label label-info">Tips</span></h4>
     <ul>
@@ -127,7 +128,7 @@ title: Contributing
 
 
 
-<a name="field-text"></a>
+><a name="field-text"></a>
 <h2 class="page-header">Field help text</h2>
 
 <h3>When to use</h3>
