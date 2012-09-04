@@ -170,11 +170,12 @@ h1 {
   border: solid 1px #666666;
 }
 .featured {
+  padding: 0 0 0 20px;
   margin-bottom: 20px;
 }
 .featured a.thumbnail {
+  margin-top: 20px;
   border: none;
-  padding: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1412,10 +1413,6 @@ legend + .control-group {
 }
 .form-horizontal .form-actions {
   padding-left: 160px;
-}
-.centered-form {
-  margin-left: auto;
-  margin-right: auto;
 }
 table {
   max-width: 100%;
@@ -4405,19 +4402,19 @@ a.badge:hover {
   color: #ffffff;
 }
 .hero-unit {
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(#ffffff, #ffffff, #f7f7f7);
-  background-image: -ms-linear-gradient(#ffffff, #ffffff, #f7f7f7);
-  background-image: -webkit-linear-gradient(#ffffff, #ffffff, #f7f7f7);
-  background-image: -o-linear-gradient(#ffffff, #ffffff, #f7f7f7);
-  background-image: linear-gradient(#ffffff, #ffffff, #f7f7f7);
+  background-image: -moz-linear-gradient(#f7f7f7, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(#f7f7f7, #ffffff, #ffffff);
+  background-image: -webkit-linear-gradient(#f7f7f7, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(#f7f7f7, #ffffff, #ffffff);
+  background-image: linear-gradient(#f7f7f7, #ffffff, #ffffff);
   padding: 20px 20px 10px 20px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
-  border-bottom: 4px solid #e6e6e6;
-  margin: 8px 0 30px 0;
+  border-top: 4px solid #e6e6e6;
+  margin: 8px 0 10px 0;
 }
 .hero-unit h1 {
   margin: 0;
@@ -4428,6 +4425,7 @@ a.badge:hover {
 }
 .hero-unit h2 {
   margin: 0;
+  font-size: 20px;
   color: #333333;
   font-weight: normal;
 }
