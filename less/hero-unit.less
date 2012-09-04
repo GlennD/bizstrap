@@ -2,11 +2,11 @@
 // ---------
 
 .hero-unit {
-  #gradient > .directional(@heroUnitBackground, darken(@heroUnitBackground, 3%), @heroUnitBackground);
+  #gradient > .directional(@heroUnitBackground, @heroUnitBackground, darken(@heroUnitBackground, 3%));
   padding: 20px 20px 10px 20px;
   .border-radius(6px);
-  border-bottom: 4px solid darken(@heroUnitBackground, 10%);
-  margin: 8px 0 30px 0;
+  border-top: 4px solid darken(@heroUnitBackground, 10%);
+  margin: 8px 0 10px 0;
 
 
 
@@ -20,6 +20,7 @@
 
   h2 {
     margin: 0;
+	font-size: 20px;
     color: @heroUnitHeadingColor;
     font-weight: normal;
   }
