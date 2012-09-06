@@ -21,7 +21,7 @@ end
 input  = ARGV[0]
 output = ARGV[1]
 
-regex =  /\.([a-zA-Z0-9\-\.\s\,]+)\s*\{/
+regex =  /\.([a-zA-Z0-9\-\.\s\,:\(\)]+)\s*\{/
 css_classes = Set.new
 
 File.open(ARGV[0], "r") do |f|
@@ -33,6 +33,8 @@ File.open(ARGV[0], "r") do |f|
       classes.split(",").each do |class_list|
         class_list.split(" ").each do |class_group|
           class_group.split(".").each do |class_name|
+            # gwt can't parse :nth-child(...) rules
+            class_name = class_name.gsub(/\(.+\)/, '')
             css_classes << class_name  if class_name.length > 1
           end
         end
