@@ -705,6 +705,12 @@ h1.section-header-heavy small {
 .remove-ad-variation {
   margin-top: 45px;
 }
+div.home-header h1.section-header {
+  margin-bottom: 0px;
+}
+div.home-header img {
+  margin-top: -10px;
+}
 code,
 pre {
   padding: 0 3px 2px;
@@ -2203,6 +2209,10 @@ table .span24 {
 .well blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
+}
+.well .row,
+.well .row-fluid {
+  margin-left: 0;
 }
 .well-large {
   padding: 24px;
