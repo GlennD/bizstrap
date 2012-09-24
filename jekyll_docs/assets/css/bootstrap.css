@@ -708,8 +708,10 @@ h1.section-header-heavy small {
 div.home-header h1.section-header {
   margin-bottom: 0px;
 }
-div.home-header img {
-  margin-top: -10px;
+div.home-header p {
+  color: #007698;
+  font-size: 16px;
+  margin-top: -4px;
 }
 code,
 pre {
