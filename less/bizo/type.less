@@ -99,18 +99,22 @@ h1.section-header-heavy {
 
 // Step by step instructions
 .step {
-  padding: 0 0 0 15px;
-  margin: 0 0 @baseLineHeight 10px;
-  border-left: 1px dashed @grayLight;
-}
-
-.step-label {
-  color: @white;
-  text-shadow: 0 1px 0 rgba(0,0,0,.25);
-  background-color: @grayLight;  
-  padding: 1px 5px 1px 5px;
-  margin-right: 5px;
-  .border-radius(5px);
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 8px;
+	span {
+	    color: @white;
+	    text-shadow: 0 1px 0 rgba(0,0,0,.25);
+	    background-color: @grayLight;  
+	    padding: 1px 5px 1px 5px;
+	    margin-right: 5px;
+	    .border-radius(5px);
+	}
+  }
+  div {
+    padding: 0 0 0 15px;
+    margin: 0 0 @baseLineHeight 10px;
+    border-left: 1px dashed @grayLight;
+  }
 }
 
 .remove-ad-variation {
