@@ -687,12 +687,20 @@ h1.section-header-heavy small {
 .page-footer a:hover {
   color: #0095d5;
 }
-.step {
-  padding: 0 0 0 15px;
-  margin: 0 0 18px 10px;
-  border-left: 1px dashed #999999;
+.step h1,
+.step h2,
+.step h3,
+.step h4,
+.step h5,
+.step h6 {
+  margin-bottom: 8px;
 }
-.step-label {
+.step h1 span,
+.step h2 span,
+.step h3 span,
+.step h4 span,
+.step h5 span,
+.step h6 span {
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   background-color: #999999;
@@ -702,8 +710,21 @@ h1.section-header-heavy small {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+.step div {
+  padding: 0 0 0 15px;
+  margin: 0 0 18px 10px;
+  border-left: 1px dashed #999999;
+}
 .remove-ad-variation {
   margin-top: 45px;
+}
+div.home-header h1.section-header {
+  margin-bottom: 0px;
+}
+div.home-header p {
+  color: #007698;
+  font-size: 16px;
+  margin-top: -4px;
 }
 code,
 pre {
@@ -2203,6 +2224,10 @@ table .span24 {
 .well blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
+}
+.well .row,
+.well .row-fluid {
+  margin-left: 0;
 }
 .well-large {
   padding: 24px;
