@@ -1,6 +1,7 @@
 <form class="form-horizontal">
   <h2>Standard Form</h2>
-  <p class="page-header">In a standard form, use the form-horizontal form class to save vertical space. Keep field labels right-aligned as per bootstrap default.</p>
+  <p class="page-header">In a standard form, use the form-horizontal form class to save vertical space. Keep field labels right-aligned 
+  as per bootstrap default.</p>
   <fieldset>
     <div class="control-group">
       <label class="control-label">Optional Fields</label>
@@ -17,7 +18,8 @@
       <div class="controls">
         <input type="text" class="input-xlarge" placeholder="Example" />
 		<p class="help-inline"><small>Field hint</small></p>
-        <p class="help-block">A short field hint can be displayed in place of a field-level help button as defined in <a href="contextual_help.html">Contextual Help</a>.<br />A field should never have both hint text and an in-line help button.</p>
+        <p class="help-block">A short field hint can be displayed in place of a field-level help button as defined in 
+        <a href="contextual_help.html">Contextual Help</a>.<br />A field should never have both hint text and an in-line help button.</p>
       </div>
 	</div>    
     
@@ -26,7 +28,8 @@
       <div class="controls">
         <input type="text" class="input-xlarge" placeholder="Example" />
 		<p class="help-inline"><small>Field hint</small></p>
-        <p class="help-block"><i class="icon-warning-sign"></i> Show field-level status/validation messages below fields, so they won't be blocked by open in-line help.</p>
+        <p class="help-block"><i class="icon-warning-sign"></i> Show field-level status/validation messages below fields, so they won't 
+        be blocked by open in-line help.</p>
       </div>
 	</div>    
     
@@ -35,7 +38,8 @@
       <div class="controls">      
         <div class="input-prepend input-append">
           <span class="add-on">$</span><input class="input-small" id="appendedPrependedInput" type="text"><span class="add-on">.00</span>
-          <p class="help-block">When adding an icon to a field, use the "prepend" option unless context suggests the icon be appended (such as .00 after a currency field or an edit icon after a disabled field).</p>
+          <p class="help-block">When adding an icon to a field, use the "prepend" option unless context suggests the icon be 
+          appended (such as .00 after a currency field or an edit icon after a disabled field).</p>
         </div>
         
     </div>
@@ -44,41 +48,75 @@
 </form>
 
 <div class="row-fluid">
-<form class="form-vertical span6">
-  <h2 class="page-header">Small Form <small>for modals and widgets</small></h2>
-  <fieldset>
-    <div class="control-group">
-    <label class="control-label">Field Label</label>
-      <div class="controls">
-        <input type="text" class="input-xlarge" /><p class="help-muted"><small>Hint text</small></p>
+  <form class="form-vertical span6">
+    <h2 class="page-header">Small Form <small>for modals and widgets</small></h2>
+    <fieldset>
+      <div class="control-group">
+      <label class="control-label">Field Label</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" /><p class="help-muted"><small>Hint text</small></p>
+        </div>
       </div>
-    </div>
-    
-    <div class="control-group success">
-    <label class="control-label">Field Label</label>
-      <div class="controls">
-        <input type="text" class="input-xlarge" value="398468" />
-        <p class="help-block"><i class="icon-ok"></i> Success Message</p>
+      
+      <div class="control-group success">
+      <label class="control-label">Field Label</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" value="398468" />
+          <p class="help-block"><i class="icon-ok"></i> Success Message</p>
+        </div>
+      </div>        
+  
+      <div class="control-group">
+      <label class="control-label">Field Label</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" />
+        </div>
       </div>
-	</div>        
-
-    <div class="control-group">
-    <label class="control-label">Field Label</label>
-      <div class="controls">
-        <input type="text" class="input-xlarge" />
-      </div>
-    </div>
-
-
- 
-  </fieldset>
-</form>
+  
+  
+   
+    </fieldset>
+  </form>
 
   <div class="span6 well">
     <h3>How to use the small form</h3>
-	<p>Modals and widgets can include forms, and because of their limited horizontal space, should use a different form layout. Use the form-vertical form class that top-aligns field labels.</p>
-    <p>Field hints should go below fields. Any validation messages should be displayed beneath the field and any field hints. Do not use the in-line help button pattern within a modal or widget. </p>
+	<p>Modals and widgets can include forms, and because of their limited horizontal space, should use a different form layout. 
+    Use the form-vertical form class that top-aligns field labels.</p>
+    <p>Field hints should go below fields. Any validation messages should be displayed beneath the field and any field hints. Do not use 
+    the in-line help button pattern within a modal or widget. </p>
   </div>  
 </div>
 
+<h2>Form Actions</h2>
+<p class="page-header">Standard forms (and modals) should use a form-actions section to display the buttons at the bottom of the form.</p>
 
+<h3>Creating a Campaign</h3>
+<p>When creating a new campaign, whether Retargeting, LinkedIn, or a similar type, display a form-actions section with buttons for discarding the campaign, saving the campaign (validating all information but putting it into a Paused state), or launching the campaign as shown below.</p>
+<div class="form-actions">
+  <div class="row-fluid">
+  <div class="span6">
+    <button type="button" class="btn btn-large">Discard</button>
+  </div>
+  <div class="span6">
+    <p class="pull-right">
+      <button type="button" class="btn btn-large">Save</button>
+      <button type="button" class="btn btn-large btn-primary">Launch</button>
+    </p>
+  </div>
+  </div>
+</div>
+
+<h3>Editing a Campaign</h3>
+<p>When editing an existing campaign, display a form-actions section with buttons for cancelling the changes or saving them, as shown below.</p>
+<div class="form-actions">
+  <div class="row-fluid">
+  <div class="span6">
+    <button type="button" class="btn btn-large">Cancel</button>
+  </div>
+  <div class="span6">
+    <p class="pull-right">
+      <button type="button" class="btn btn-large btn-primary">Save</button>
+    </p>
+  </div>
+  </div>
+</div>
