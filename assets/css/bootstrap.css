@@ -695,12 +695,12 @@ h1.section-header-heavy small {
 .step h6 {
   margin-bottom: 8px;
 }
-.step h1 span,
-.step h2 span,
-.step h3 span,
-.step h4 span,
-.step h5 span,
-.step h6 span {
+.step h1 > span,
+.step h2 > span,
+.step h3 > span,
+.step h4 > span,
+.step h5 > span,
+.step h6 > span {
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   background-color: #999999;
@@ -710,7 +710,7 @@ h1.section-header-heavy small {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.step div {
+.step > div {
   padding: 0 0 0 15px;
   margin: 0 0 18px 10px;
   border-left: 1px dashed #999999;
