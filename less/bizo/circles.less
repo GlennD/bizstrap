@@ -1,0 +1,22 @@
+/* 
+used for drawing colored circles in css (useful for chart legends and such)
+ */
+
+.legend-circle {
+  @circleDiameter: 20px;
+  display: inline-block;
+
+  &.blue {
+    #shapes > .circle(@circleDiameter, @blue);
+  }
+
+  &.red {
+    #shapes > .circle(@circleDiameter, @bizored);
+    background: @bizored;
+  }
+
+  &.green {
+    #shapes > .circle(@circleDiameter, @bizogreen);
+  }
+}
+

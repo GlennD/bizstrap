@@ -1,0 +1,10 @@
+// CSS3 Shape Mixins
+
+#shapes {
+  .circle(@diameter, @background) {
+    width: @diameter;
+    height: @diameter;
+    background: @background;
+    .border-radius(100%);
+  }
+}
