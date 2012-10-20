@@ -191,11 +191,19 @@ relativity: ../..
     </div>
 
     <div class="control-group">
-    <label class="control-label">Billing Information</label>
+    <label class="control-label">Payment Information</label>
       <div class="controls">
-        <div class="input-append">
-        <input class="input-medium disabled" id="disabledbilling" value="XXXX2432" type="text" disabled><span class="add-on"><i 
-        class="icon-edit"></i></span>
+        <div class="btn-group">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" id="billing">
+            MasterCard ending in 2432
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>MasterCard ending in 2432</li>
+            <li>Visa ending in 9827</li>
+            <li class="divider"></li>
+            <li>New Card</li>
+          </ul>
         </div>
       </div>
     </div>
