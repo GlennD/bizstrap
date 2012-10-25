@@ -4059,10 +4059,6 @@ a.thumbnail:hover {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #999999;
 }
-.label-control,
-.badge-control {
-  cursor: pointer;
-}
 .label {
   padding: 1px 4px 2px;
   -webkit-border-radius: 3px;
@@ -4557,6 +4553,9 @@ used for drawing colored circles in css (useful for chart legends and such)
 .help > .popover-inner > .popover-title {
   background: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.pointer {
+  cursor: pointer;
 }
 html#brand-bar-page body,
 html#brand-bar-page html {
