@@ -692,7 +692,7 @@ div.home-header p {
   font-size: 16px;
   margin-top: -4px;
 }
-div.report-metrics {
+.report-metrics {
   margin-left: -24px;
   margin-top: 5px;
 }
@@ -1662,7 +1662,7 @@ table .span24 {
   width: 1884px;
   margin-left: 0;
 }
-.ad-name {
+.cell-row {
   display: inline-block;
   margin: 0 10px 0 19px;
 }
@@ -4695,4 +4695,84 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
 }
 .tree-select p.inline {
   display: inline;
+}
+.bookmarklet {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 5px 10px;
+  height: 180px;
+  background: #ffffff;
+  width: 350px;
+  border: 1px solid #999999;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.bookmarklet h4 {
+  margin: 0 0 5px;
+}
+.bookmarklet hr {
+  margin: 0 0 10px;
+  padding: 0;
+}
+.bookmarklet textarea,
+.bookmarklet input {
+  background: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+  outline-color: transparent;
+  outline-style: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.bookmarklet input {
+  background: #ffffff;
+}
+.bookmarklet textarea {
+  width: 100%;
+  min-height: 70px;
+}
+.bookmarklet .bookmarklet-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.bookmarklet .bookmarklet-controls .popup-controls {
+  padding: 6px 0;
+  background: #e1e1e1;
+  text-align: center;
+}
+.bookmarklet .bookmarklet-controls .popup-controls .control-item {
+  display: none;
+}
+.bookmarklet .bookmarklet-controls .popup-controls .control-item.active {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.bookmarklet .bookmarklet-controls .menu-controls {
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  background: #d1e6eb;
+}
+.bookmarklet .bookmarklet-controls .btn {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.bookmarklet .bookmarklet-controls .bookmarklet-toolbar.btn-toolbar {
+  margin: 0;
+  padding: 0;
+}
+.bookmarklet .bookmarklet-controls .bookmarklet-toolbar .btn {
+  background: transparent;
+}
+.bookmarklet .bookmarklet-controls .bookmarklet-toolbar .btn.active {
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
 }
