@@ -6,6 +6,29 @@
 // UTILITY MIXINS
 // --------------------------------------------------
 
+
+// Invisble Field
+// --------
+// Form fields with no border + transparent background.
+// Used for when you need a seamless form 
+.invisible-form-field(@background: transparent) {
+  background: @background;
+  border: none;
+  resize: none;
+  outline: none;
+  .box-shadow(none);
+}
+
+
+// Two tone border 
+// --------
+// Applies a 2 1px borders with different colors, useful for adding highlight/shadows
+.two-tone-border(@topColor, @bottomColor) {
+  outline: 1px solid @topColor;
+  border-top: 1px solid @bottomColor;
+}
+
+
 // Clearfix
 // --------
 // For clearing floats like a boss h5bp.com/q

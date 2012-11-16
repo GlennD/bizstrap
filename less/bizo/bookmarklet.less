@@ -1,16 +1,19 @@
-@bookmarkletWidth: 350px;
-
 .bookmarklet {
+  @width: 350px;
+  @height: 180px;
+  @menuColor: @blueLight;
+  @popupMenuColor: darken(@grayLighter, 5%);
+  @popupPadding: 6px 0;
+
   position: fixed;
   bottom: 0;
   right: 0;
+  width: @width;
+  height: @height;
   padding: 5px 10px;
-  height: 180px;
   background: @white;
-  width: @bookmarkletWidth;
   border: 1px solid @grayLight;
   .box-shadow(0 0 5px rgba(0,0,0,.3));
-
 
   h4 {
     margin: 0 0 5px;
@@ -22,70 +25,53 @@
   }
 
   textarea, input {
-    background: transparent;
-    border: none;
-    resize: none;
-    outline: none;
-    outline-color: transparent;
-    outline-style: none;
-    .box-shadow(none);
-  }
-
-
-  input {
-    background: @white;
+    .invisible-form-field(@white);
   }
 
   textarea {
     width: 100%;
-    min-height: 70px;
   }
 
-  .bookmarklet-controls {
+  .controls {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
 
     .popup-controls {
-      padding: 6px 0;
-      background: darken(@grayLighter, 5%);
+      padding: @popupPadding;
+      background: @popupMenuColor;
       text-align: center;
 
       .control-item {
         display: none;
+        margin: 0 auto;
+        text-align: center;
 
         &.active  {
           display: block;
-          margin: 0 auto;
-          text-align: center;
         }
       }
 
     }
 
     .menu-controls {
-      outline: 1px solid rgba(0,0,0,.1);
-      border-top: 1px solid rgba(255,255,255,.3);
-      background: @blueLight;
+      .two-tone-border(rgba(0,0,0,.12), rgba(255,255,255,0.3));
+      padding: 4px 4px 0 4px;
+      background: @menuColor;
     }
 
-
-    .btn {
-      .border-radius(0px);
-    }
-
-
-    .bookmarklet-toolbar.btn-toolbar {
+    .btn-toolbar {
       margin: 0;
       padding: 0;
-    }
 
-    .bookmarklet-toolbar .btn {
-      background: transparent;
+      .btn {
+        background: transparent;
+        #gradient > .vertical(rgba(255,255,255,.2), rgba(0,0,0,.1));
 
-      &.active {
-        .box-shadow(inset 0 0 8px rgba(0,0,0,.5));
+        &.active {
+          .box-shadow(inset 0 2px 8px rgba(0,0,0,.5));
+        }
       }
     }
   }
