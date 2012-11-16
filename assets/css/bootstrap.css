@@ -735,6 +735,14 @@ li.link-attribute {
   white-space: nowrap;
   text-transform: uppercase;
 }
+.landing {
+  position: fixed;
+  top: 50%;
+  margin-top: -250px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 100px;
+}
 code,
 pre {
   padding: 0 3px 2px;
