@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+    <!-- JavaScript for widgets & charts  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"></script>
+    <script src="https://raw.github.com/jcarver989/raphy-charts/master/compiled/charts.min.js"></script>
+    <script src="../../assets/js/bootstrap-alert.js"></script>
+    <script src="../../assets/js/bootstrap-tooltip.js"></script>
+    <script>$(function(){
+      $("[rel='tooltip']").tooltip({placement: "right", trigger: "hover"});
+    })
+    </script>
+  </head>
+  
+  <body class="bizo-app">
+    
+    <!-- Add .navbar-fixed-top to the  ".navbar" div-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4">
+          <a href="https://platform.bizo.com/app#home"><img class="brand" src="../../assets/img/bizo-logo-small.png"></a><p 
+          class="navbar-text">The Bizo Marketing Platform</p>
+        </div>
+
+        <ul class="nav pull-right">
+          <li><a href="tag_your_sites.html">My Account (jason@bizo.com)</a></li>
+          <li><a href="mailto:bamp-feedback@bizo.com">Feedback</a></li>
+          <li><a href="http://help.bizo.com">Help</a></li>
+          <li><a class="gwt-Anchor">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>  
+    
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <!-- Sidebar  -->
+        <div class="span2">
+          <ul class="nav nav-list">
+  <li class="nav-header"><a href="bmp_home_page.html"><i class="icon-home"></i> Home</a></li>
+  <li class="nav-header"><a href="section_page_audience_analysis.html"><i class="icon-signal"></i> Audience Analytics</a></li>
+  <ul>
+    <li><a href="#">Insight</a></li>
+    <li><a href="#">Trends</a></li>
+    <li><a href="#">Biz Index</a></li>
+  </ul>    
+  <li class="nav-header"><a href="section_page_audience_management.html"><i class="icon-filter"></i> Audience Management</a></li>
+  <ul>
+    <li class="active"><a href="#">Actions</a></li>
+    <li><a href="#">Custom Segments</a></li>
+  </ul>
+  <li class="nav-header"><a href="section_page_retargeting.html"><i class="icon-repeat"></i> Retargeting</a></li>
+  <ul>
+    <li><a href="#">Campaigns</a></li>
+    <li><a href="#">Performance</a></li>
+  </ul>
+  <li class="nav-header"><a href="section_page_social_marketing.html"><i class="icon-bullhorn"></i> Social Marketing</a></li>
+  <ul>
+    <li><a href="easy_share.html">Easy Share</a></li>
+    <li><a href="#">SmartLinks</a></li>
+  </ul>
+</ul>
+
+        </div>
+
+        <!-- Main Content  -->
+        <div class="span10 content">
+          <h1 class="section-header">Edit Retargeting Campaign</h1>
+<h3 class="paragraph-header">Getting started <span class="label label-info pointer">FAQ</span></h3>
+<!--<div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
+  <h4>Getting Started <span class="label label-info">FAQ</span></h4>
+  <ul class="unstyled">
+    <li><i class="icon-plus"></i> How will an action help my campaign?</li>
+    <li><i class="icon-plus"></i> Do I need to tag my site to use actions?</li>
+  </ul>
+</div>-->
+
+<form class="form-horizontal">
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label">Campaign Name</label>
+        <div class="controls">
+          <input type="text" class="input-large" value="Bizo Ad Toolkit">
+        </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Associated Action</label>
+        <div class="controls">
+          <select id="actions">
+            <option>BMP Signup</option>
+          </select>
+          <p class="help-inline"><a href=# rel="tooltip" id="tooltip" title="An action is something you want to track as a result of 
+          users clicking on your ads or Bizo Switchboard links (like registrations for an event or downloads of a whitepaper). All you 
+          need is a name for the action and a URL on your site that marks its completion."><i class="icon-info-sign"></i></a></p>
+          <p class="help-muted"><small>(optional)</small></p>
+        </div>
+    </div>
+  </fieldset>
+   
+  <h3 class="paragraph-header">Choose your target audience <span class="label label-info pointer">FAQ</span></h3>
+  <!--<div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
+    <h4>Choose your target audience <span class="label label-info">FAQ</span></h4>
+    <ul class="unstyled">
+      <li><i class="icon-plus"></i> What does it mean to select a domain for targeting?</li>
+      <li><i class="icon-plus"></i> Where will my ads be shown?</li>
+      <li><i class="icon-plus"></i> How do I track the performance of my ads in my web analytics tool?</li>
+    </ul>
+    <p><i class="icon-resize-vertical"></i> <small>Show more</small></p>
+  </div>-->
+  
+  <h4 class="paragraph-header">Web Visitors</h4>
+  <div>
+    <p>Visitors to your selected domains will see your retargeting ads when they browse the web.<br />Make sure the <a href="#">Bizo 
+    Insight tag</a> is applied successfully to these domains.</p>
+    <div class="well">
+      <ul class="unstyled">
+        <li><label class="checkbox"><input type="checkbox"><strong>All</strong></label></li>
+        <li><label class="checkbox"><input type="checkbox" checked>bizo.com<span class="help-inline">
+          <a href=# rel="tooltip" id="success" title="Your domain has been verified"><i class="icon-ok"></i></a></span></label>
+        </li>
+        <li><label class="checkbox"><input type="checkbox" checked>bamp.com<span class="help-inline"><a href=# rel="tooltip" id="success" 
+        title="Your domain has been verified"><i class="icon-ok"></i></a></span></label></li>
+        <li><label class="checkbox"><input type="checkbox">amazonaws.com<span class="help-inline"><a href=# rel="tooltip" id="error" title="We 
+        are no longer seeing data from this domain"><i class="icon-remove"></i></a></span></label></li>
+        <li><label class="checkbox"><input type="checkbox">bizographics.com<span class="help-inline"><a href=# rel="tooltip" id="warning" title="We 
+        have not detected insight tags on this domain yet"><i class="icon-warning-sign"></i></a></span></label></li>
+      </ul>
+    </div>
+  </div>
+
+  <h4 class="paragraph-header">Social Retargeting</h4>
+  <div class="well">
+    <label class="checkbox"><input type="checkbox" checked>Add users who click on your <a href="#">SmartLinks</a> to your 
+    retargeting audience for this campaign (recommended)</label>
+  </div>
+
+  <h3 class="paragraph-header">Upload your ad creative <span class="label label-info pointer">FAQ</span></h3>
+  <!--<div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
+    <h4>Upload your ad creative <span class="label label-info">FAQ</span></h4>
+    <ul class="unstyled">
+      <li><i class="icon-plus"></i> Do I have to load all three creatives?</li>
+      <li><i class="icon-plus"></i> What creative formats does Bizo accept?</li>
+      <li><i class="icon-plus"></i> How does ad creative approval work?</li>
+    </ul>
+    <p><i class="icon-resize-vertical"></i> <small>Show more</small></p>
+  </div>-->
+
+    <div class="well">
+      <ul class="thumbnails" style="max-width:770px">
+        <li>
+          <div class="thumbnail">
+            <h4 class="paragraph-header">728 x 90 pixels</h4>
+            <a href="#">
+              <img src="http://placehold.it/728x90" alt="">
+            </a>
+            <div class="caption">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown" href="#">Choose Image <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Choose Image</a></li>
+                  <li><a href="#"><i class="icon-remove"></i> Delete Image</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="thumbnail">
+            <h4 class="paragraph-header">160 x 600 pixels</h4>
+            <a href="#">
+              <img src="http://placehold.it/160x600" alt="">
+            </a>
+            <div class="caption">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown" href="#">Choose Image <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Choose Image</a></li>
+                  <li><a href="#"><i class="icon-remove"></i> Delete Image</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="thumbnail">
+            <h4 class="paragraph-header">300 x 250 pixels</h4>
+            <a href="#">
+              <img src="http://placehold.it/300x250" alt="">
+            </a>
+            <div class="caption">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown" href="#">Choose Image <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Choose Image</a></li>
+                  <li><a href="#"><i class="icon-remove"></i> Delete Image</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>        
+        </li>                
+      </ul>              
+      <div class="alert alert-info">
+      <p>Ad creative must meet Bizo's ad standards. <a href="retargeting_ad_specs.html">[Show]</a></p>
+      </div>
+    </div>
+
+
+  <h3 class="paragraph-header">Set your campaign destination</h3>
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label">Landing Page <abbr class="initialism">URL</abbr></label>
+        <div class="controls">
+          <input type="text" class="input-large" placeholder="http://www.example.com" value="http://bizo.com/marketer/index">
+          <p class="help-inline"><a href=# rel="tooltip" id="tooltip" title="This is the destination that your visitors will reach after 
+          clicking your ads. If you want to use Action Tracking, make sure the Bizo Insight tag is applied successfully to the destination 
+          domain."><i class="icon-info-sign"></i></a></p>
+        </div>
+    </div>
+  </fieldset>
+
+
+  <h3 class="paragraph-header">Set your budget and billing <span class="label label-info pointer">FAQ</span></h3>
+  <!--<div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
+    <h4>Set your budget and billing <span class="label label-info">FAQ</span></h4>
+    <ul class="unstyled">
+      <li><i class="icon-plus"></i> What is the pricing model for Self-service Retargeting?</li>
+      <li><i class="icon-plus"></i> How is the CPC price determined?</li>
+      <li><i class="icon-plus"></i> What budget controls are provided?</li>
+    </ul>
+    <p><i class="icon-resize-vertical"></i> <small>Show more</small></p>
+  </div>-->
+  
+  
+  <fieldset>
+    <div class="control-group">
+     <label class="control-label">Daily Budget</label>
+     <div class="controls">
+       <div class="input-prepend">
+         <span class="add-on">$</span><input type="text" class="input-mini" value="200"><p class="help-inline"><small>$10 minimum</small></p></input>
+       </div>
+     </div>
+   </div>
+
+    <div class="control-group">
+      <label class="control-label">Campaign Start Date</label>
+      <div class="controls">
+        <div class="input-prepend">
+        <span class="add-on"><i class="icon-calendar"></i></span><input class="input-small" id="startdate" size="16" 
+        placeholder="mm/dd/yyyy" value="01/13/2012" type="text" disabled>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Payment Information</label>
+      <div class="controls">
+        <div class="btn-group">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" id="billing">
+            New Card
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>MasterCard ending in 2432</li>
+            <li>Visa ending in 9827</li>
+            <li class="divider"></li>
+            <li>New Card</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <hr />
+    
+    <div class="control-group">
+      <label class="control-label">Name on Card</label>
+      <div class="controls">
+        <input class="input-large" type="text" value="Justin Huskamp">
+      </div>
+    </div>
+    
+    <div class="control-group">
+      <label class="control-label">Card Number</label>
+      <div class="controls">
+        <input class="input-large" type="text" value="4839 5298 5671 3985">
+        <p class="help-inline"><i class="icon-ok"></i> Visa</p>
+      </div>
+    </div>
+    
+    <div class="control-group">
+      <label class="control-label">Expiration</label>
+      <div class="controls">
+        <select class="span1">
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>          
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="control-group">
+      <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox" checked disabled>
+        I authorize Bizo to charge future payments to this card
+      </label>
+      </div>
+    </div>
+    
+ </fieldset>
+</form>
+
+<div class="form-actions">
+  <div class="row-fluid">
+  <div class="span6">
+    <button type="button" class="btn btn-large">Cancel</button>
+  </div>
+  <div class="span6">
+    <p class="pull-right">
+      <button type="button" class="btn btn-large btn-primary">Save</button>
+    </p>
+  </div>
+  </div>
+</div>
+        </div>
+
+        <div class="page-footer">
+          <p>&copy; 2012 Bizo Inc. All rights reserved.  <a href="http://www.bizo.com/about/careers">We're Hiring</a>  |  
+          <a href="http://www.bizo.com/businessProfessionals/privacy_policy">Privacy Policy</a>  |  
+          <a href="mailto:bamp-feedback@bizo.com">Contact Us</a>  |  <a href="http://help.bizo.com/terms-of-service">Terms of Service</a></p>
+        </div>
+      
+      </div>
+      
+
+      
+      
+    </div>
+  </body>
+</html>
+
