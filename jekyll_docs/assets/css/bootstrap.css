@@ -4737,6 +4737,22 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
 .bookmarklet textarea {
   width: 100%;
 }
+.bookmarklet img.twitter-avatar {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0.2;
+}
+.bookmarklet img.twitter-avatar.active {
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
 .bookmarklet .bookmarklet-controls {
   position: absolute;
   bottom: 0;
