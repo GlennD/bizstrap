@@ -25,7 +25,9 @@
   }
 
   textarea, input {
-    .invisible-form-field(@white);
+    &.no-decoration {
+      .invisible-form-field(@white);
+    }
   }
 
   textarea {

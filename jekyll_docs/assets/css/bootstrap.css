@@ -4724,8 +4724,8 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   margin: 0 0 10px;
   padding: 0;
 }
-.bookmarklet textarea,
-.bookmarklet input {
+.bookmarklet textarea.no-decoration,
+.bookmarklet input.no-decoration {
   background: #ffffff;
   border: none;
   resize: none;
