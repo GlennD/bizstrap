@@ -4747,6 +4747,7 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   padding: 6px 0;
   background: #e1e1e1;
   text-align: center;
+  max-height: 30px;
 }
 .bookmarklet .bookmarklet-controls .popup-controls .control-item {
   display: none;
