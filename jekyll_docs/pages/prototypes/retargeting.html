@@ -18,9 +18,9 @@ relativity: ../..
   <fieldset>
     <div class="control-group">
       <label class="control-label">Campaign Name</label>
-        <div class="controls">
-          <input type="text" class="input-large" value="Bizo Ad Toolkit">
-        </div>
+      <div class="controls">
+        <input type="text" class="input-large" value="Bizo Ad Toolkit">
+      </div>
     </div>
 
     <div class="control-group">
@@ -29,9 +29,10 @@ relativity: ../..
           <select id="actions">
             <option>BMP Signup</option>
           </select>
-          <p class="help-inline"><a href=# rel="tooltip" id="tooltip" title="An action is something you want to track as a result of 
-          users clicking on your ads or Bizo Switchboard links (like registrations for an event or downloads of a whitepaper). All you 
-          need is a name for the action and a URL on your site that marks its completion."><i class="icon-info-sign"></i></a></p>
+          <p class="help-inline"><a href=# rel="popover" id="popover" data-placement="right" data-content="An action is something you 
+          want to track as a result of users clicking on your ads or Bizo Switchboard links (like registrations for an event or 
+          downloads of a whitepaper). All you need is a name for the action and a URL on your site that marks its completion." 
+          data-original-title="Actions"><i class="icon-info-sign"></i></a></p>
           <p class="help-muted"><small>(optional)</small></p>
         </div>
     </div>
@@ -48,30 +49,36 @@ relativity: ../..
     <p><i class="icon-resize-vertical"></i> <small>Show more</small></p>
   </div>-->
   
-  <h4 class="paragraph-header">Web Visitors</h4>
-  <div>
-    <p>Visitors to your selected domains will see your retargeting ads when they browse the web.<br />Make sure the <a href="#">Bizo 
-    Insight tag</a> is applied successfully to these domains.</p>
-    <div class="well">
-      <ul class="unstyled">
-        <li><label class="checkbox"><input type="checkbox"><strong>All</strong></label></li>
-        <li><label class="checkbox"><input type="checkbox" checked>bizo.com<span class="help-inline">
-          <a href=# rel="tooltip" id="success" title="Your domain has been verified"><i class="icon-ok"></i></a></span></label>
-        </li>
-        <li><label class="checkbox"><input type="checkbox" checked>bamp.com<span class="help-inline"><a href=# rel="tooltip" id="success" 
-        title="Your domain has been verified"><i class="icon-ok"></i></a></span></label></li>
-        <li><label class="checkbox"><input type="checkbox">amazonaws.com<span class="help-inline"><a href=# rel="tooltip" id="error" title="We 
-        are no longer seeing data from this domain"><i class="icon-remove"></i></a></span></label></li>
-        <li><label class="checkbox"><input type="checkbox">bizographics.com<span class="help-inline"><a href=# rel="tooltip" id="warning" title="We 
-        have not detected insight tags on this domain yet"><i class="icon-warning-sign"></i></a></span></label></li>
-      </ul>
+  <div class="control-group">
+    <label class="control-label">Web Visitors</label>
+    <div class="controls">
+      <div class="well span8">
+        <ul class="unstyled">
+          <li><label class="checkbox"><input type="checkbox"><strong>All</strong></label></li>
+          <li><label class="checkbox"><input type="checkbox" checked>bizo.com<span class="help-inline">
+            <a href=# rel="tooltip" id="success" title="Your domain has been verified"><i class="icon-ok"></i></a></span></label>
+          </li>
+          <li><label class="checkbox"><input type="checkbox" checked>bamp.com<span class="help-inline"><a href=# rel="tooltip" id="success" 
+          title="Your domain has been verified"><i class="icon-ok"></i></a></span></label></li>
+          <li><label class="checkbox"><input type="checkbox">amazonaws.com<span class="help-inline"><a href=# rel="tooltip" id="error" title="We 
+          are no longer seeing data from this domain"><i class="icon-remove"></i></a></span></label></li>
+          <li><label class="checkbox"><input type="checkbox">bizographics.com<span class="help-inline"><a href=# rel="tooltip" id="warning" title="We 
+          have not detected insight tags on this domain yet"><i class="icon-warning-sign"></i></a></span></label></li>
+        </ul>
+        <p><small>Visitors to your selected domains will see your retargeting ads when they browse the web.<br />Make sure the 
+        <a href="#">Bizo Insight Tag</a> is applied successfully to these domains.</small></p>
+      </div>
     </div>
   </div>
-
-  <h4 class="paragraph-header">Social Retargeting</h4>
-  <div class="well">
-    <label class="checkbox"><input type="checkbox" checked>Add users who click on your <a href="#">SmartLinks</a> to your 
-    retargeting audience for this campaign (recommended)</label>
+  
+  <div class="control-group">
+    <label class="control-label">Social Retargeting</label>
+    <div class="controls">
+      <div class="well span8">
+	    <label class="checkbox"><input type="checkbox" checked>Add users who click on your <a href="#">SmartLinks</a> 
+        to your retargeting audience for this campaign (recommended)</label>      
+      </div>
+    </div>
   </div>
 
   <h3 class="paragraph-header">Upload your ad creative <span class="label label-info pointer">FAQ</span></h3>
