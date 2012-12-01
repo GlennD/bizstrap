@@ -4643,8 +4643,12 @@ used for drawing colored circles in css (useful for chart legends and such)
   background: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+/* Mouse help classes */
 .pointer {
   cursor: pointer;
+}
+.move {
+  cursor: move;
 }
 html#brand-bar-page body,
 html#brand-bar-page html {
