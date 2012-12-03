@@ -13,6 +13,13 @@ body.bizo-app {
 body.bizo-app.with-logo {
   padding-top: 110px; /* extra spacing for logo */
   background:  url("@{bizoLogosPath}") @bizoAppPadding @bizoAppPadding no-repeat @blueLight;
+// Tried to use background gradient mixin but it's not working: #gradient > .vertical(@blueVeryFaded, @white);
+}
+
+body.accounts {
+  background:  url("@{bigFadedLogo}") no-repeat;
+  background-position: right top;
+  background-color: @blueVeryFaded;
 }
 
 // For project documentation sites 

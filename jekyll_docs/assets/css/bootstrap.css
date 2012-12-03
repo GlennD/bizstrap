@@ -156,6 +156,11 @@ body.bizo-app.with-logo {
 
   background: url("../img/logo.png") 30px 30px no-repeat #d1e6eb;
 }
+body.accounts {
+  background: url("../img/accounts/signin_bmp_target.png") no-repeat;
+  background-position: right top;
+  background-color: #d2edf8;
+}
 h1 {
   color: #1B3D46;
 }
@@ -771,6 +776,7 @@ li.link-attribute {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: 100px;
+  background-color: #ffffff;
 }
 .rightcolumn {
   padding-top: 1px;
