@@ -4768,6 +4768,11 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
 }
 .bookmarklet h4 {
   margin: 0 0 5px;
@@ -4805,25 +4810,24 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   -o-transition: opacity 1s;
   transition: opacity 1s;
 }
+.bookmarklet .popup-controls {
+  padding: 6px 0;
+  background: #e1e1e1;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.bookmarklet .popup-controls form.form-vertical {
+  margin: 0 0 0 10px;
+}
 .bookmarklet .bookmarklet-controls {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-}
-.bookmarklet .bookmarklet-controls .popup-controls {
-  padding: 6px 0;
-  background: #e1e1e1;
-  text-align: center;
-  max-height: 30px;
-}
-.bookmarklet .bookmarklet-controls .popup-controls .control-item {
-  display: none;
-  margin: 0 auto;
-  text-align: center;
-}
-.bookmarklet .bookmarklet-controls .popup-controls .control-item.active {
-  display: block;
 }
 .bookmarklet .bookmarklet-controls .menu-controls {
   outline: 1px solid rgba(0, 0, 0, 0.12);
@@ -4851,4 +4855,31 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.bookmarklet .bookmarklet-controls .disabled {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.bookmarklet .bookmarklet-controls .enabled {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.bookmarklet.settings-active {
+  height: 300px;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.bookmarklet.settings-active .popup-controls {
+  opacity: 1;
 }

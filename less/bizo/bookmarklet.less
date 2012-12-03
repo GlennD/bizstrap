@@ -14,6 +14,9 @@
   background: @white;
   border: 1px solid @grayLight;
   .box-shadow(0 0 5px rgba(0,0,0,.3));
+  .transition(height 0.5s);
+
+
 
   h4 {
     margin: 0 0 5px;
@@ -44,30 +47,22 @@
     }
   }
 
+  .popup-controls {
+    padding: @popupPadding;
+    background: @popupMenuColor;
+    opacity: 0;
+    .transition(opacity 0.5s);
+
+    form.form-vertical {
+      margin: 0 0 0 10px;
+    }
+  }
+
   .bookmarklet-controls {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-
-    .popup-controls {
-      padding: @popupPadding;
-      background: @popupMenuColor;
-      text-align: center;
-      max-height: 30px;
-
-      .control-item {
-        display: none;
-        margin: 0 auto;
-        text-align: center;
-
-        &.active  {
-          display: block;
-        }
-
-      }
-
-    }
 
     .menu-controls {
       .two-tone-border(rgba(0,0,0,.12), rgba(255,255,255,0.3));
@@ -88,5 +83,25 @@
         }
       }
     }
+
+    .disabled {
+      opacity: 0.5;
+      .transition(opacity 0.5s);
+    }
+
+    .enabled {
+      opacity: 1;
+      .transition(opacity 0.5s);
+    }
   }
+
+  &.settings-active {
+    height: 300px;
+    .transition(height 0.5s);
+
+    .popup-controls {
+      opacity: 1;
+    }
+  }
+
 }
