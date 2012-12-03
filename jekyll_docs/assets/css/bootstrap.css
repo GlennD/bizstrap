@@ -773,13 +773,17 @@ li.link-attribute {
   position: fixed;
   top: 50%;
   margin-top: -250px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
   padding: 100px;
   background-color: #ffffff;
 }
+.landing img {
+  margin-top: 121px;
+}
 .rightcolumn {
   padding-top: 1px;
+  border-left: 1px solid #eeeeee;
 }
 code,
 pre {
