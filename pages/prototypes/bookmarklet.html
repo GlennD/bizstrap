@@ -12,6 +12,12 @@ relativity: ../..
     <script src="http://media.bizo.com/bizstrap/js/bootstrap.min.js"></script>
 
     <script>
+
+
+      function getActive() {
+        return $("#settings-toggles .btn.active").length;
+      }
+
       $(function() {
         $(".btn-group a").each(function(i, item) {
           var link = $(item);
@@ -22,44 +28,36 @@ relativity: ../..
 
         $(".btn-group").on("click", "a", function(e) {
           var element = $(this);
-          element.toggleClass("active");
-
-          if (element.attr("data-toggles")) {
-            var id = "#" + element.attr("data-toggles");
-
-            element.siblings(".active").each(function(i, item) {
-              $(item).removeClass("active");
-            });
-
-            $(".popup-controls .active").each(function(i, item) {
-              $(item).removeClass("active");
-            });
-            $(id).addClass("active");
-          }
+          //element.toggleClass("active");
         });
 
 
-        $("#settings-button").on("click", function(e) {
-            $(".bookmarklet").toggleClass("settings-active");
+        $("#settings-toggles").on("click", ".btn", function(e) {
+            var btn = $(this);
+            btn.toggleClass("active");
+
+            var id = "#" + btn.attr("data-toggles");
+            console.log(id);
+            $(id).toggleClass("disabled");
+
+            var active = getActive();
+
+            if (active == 1) {
+              $(".bookmarklet").addClass("settings-active");
+            }
+
+            else if (active == 0) {
+              $(".bookmarklet").removeClass("settings-active");
+            }
         });
 
 
         $("#schedule-button").on("click", function(e) {
-            var disabled = $(".disabled");
-            var enabled = $(".enabled");
-            disabled.addClass("enabled").removeClass("disabled");
-            enabled.addClass("disabled").removeClass("enabled");
-
             var btn = $("#btn-text");
             var newText = btn.text() == "Publish"? "Schedule" : "Publish";
             console.log(newText);
             btn.text(newText);
-
-            if (!$("#settings-button").hasClass("active")) {
-              $("#settings-button").trigger("click");
-            }
         });
-
       });
     </script>
   </head>
@@ -87,15 +85,15 @@ relativity: ../..
         <div class="popup-controls">
           <form class="form-vertical">
 
-            <select id="actions" class="control-item">
+            <select id="actions" class="disabled">
               <option>Fake Actions Widget</option>
             </select>
 
-            <div class="input-prepend">
-              <span class="add-on"><i class="icon-tags"></i></span><input id="tags" class="input-large active control-item" type="text" placeholder="Tags: ex: email, campaigns" />
+            <div id="tags" class="input-prepend disabled">
+              <span class="add-on"><i class="icon-tags"></i></span><input  class="input-large" type="text" placeholder="Tags: ex: email, campaigns" />
             </div>
             
-            <div class="disabled">
+            <div id="schedule" class="disabled">
               <div class="input-prepend pull-left">
                 <span class="add-on"><i class="icon-calendar"></i></span><input class="span2" id="prependedInput" type="text" value="11/29/2012">
               </div>
@@ -131,12 +129,13 @@ relativity: ../..
           </div>
 
           <div class="btn-toolbar">
-            <div class="btn-group">
-              <a href="#" id="settings-button" class="btn" data-title="Settings" data-toggles="settings"><i class="icon-cog"></i></a>
+            <div id="settings-toggles" class="btn-group">
+              <a href="#" class="btn" data-title="Actions" data-toggles="actions"><i class="icon-check"></i></a>
+              <a href="#" class="btn" data-title="Tags" data-toggles="tags"><i class="icon-tags"></i></a>
+              <a id="schedule-button" href="#" class="btn" data-title="Schedule" data-toggles="schedule"><i class="icon-calendar"></i></a>
             </div>
 
             <div class="btn-group">
-              <a id="schedule-button" href="#" class="btn" data-title="Schedule"><i class="icon-calendar"></i></a>
               <a href="#" class="btn" data-title="Promote"><i class="icon-certificate"></i></a>
               <a href="#" class="btn" data-title="Brand Bar"><i class="icon-list"></i></a>
             </div>
