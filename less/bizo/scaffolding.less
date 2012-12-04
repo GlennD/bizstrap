@@ -2,6 +2,9 @@
 // Basic page layout stuff 
 // -------------------------------------------------------------------------------------------
 
+html,body{min-height:100%;}
+#page{min-height:90%;position:relative;overflow:hidden;}
+
 @bizoAppPadding: 30px;
 
 // Use <body class="bizo-app">..</body> to get an instant "looks like Bizo"  look 
@@ -13,13 +16,15 @@ body.bizo-app {
 body.bizo-app.with-logo {
   padding-top: 110px; /* extra spacing for logo */
   background:  url("@{bizoLogosPath}") @bizoAppPadding @bizoAppPadding no-repeat @blueLight;
-// Tried to use background gradient mixin but it's not working: #gradient > .vertical(@blueVeryFaded, @white);
 }
 
 body.accounts {
-  background:  url("@{bigFadedLogo}") no-repeat;
-  background-position: right top;
-  background-color: @blueVeryFaded;
+  #gradient > .horizontal(@white, @blueVeryFaded);
+  img.fadedlogobckgrnd {  
+    position:absolute;
+	top:0px;
+	right:0px;
+  }
 }
 
 // For project documentation sites 

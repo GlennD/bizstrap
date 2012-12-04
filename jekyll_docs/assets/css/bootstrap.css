@@ -147,6 +147,15 @@ a:hover {
   color: #005f89;
   text-decoration: underline;
 }
+html,
+body {
+  min-height: 100%;
+}
+#page {
+  min-height: 90%;
+  position: relative;
+  overflow: hidden;
+}
 body.bizo-app {
   background: #ffffff;
 }
@@ -157,9 +166,20 @@ body.bizo-app.with-logo {
   background: url("../img/logo.png") 30px 30px no-repeat #d1e6eb;
 }
 body.accounts {
-  background: url("../img/accounts/signin_bmp_target.png") no-repeat;
-  background-position: right top;
   background-color: #d2edf8;
+  background-image: -moz-linear-gradient(left, #ffffff, #d2edf8);
+  background-image: -ms-linear-gradient(left, #ffffff, #d2edf8);
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#ffffff), to(#d2edf8));
+  background-image: -webkit-linear-gradient(left, #ffffff, #d2edf8);
+  background-image: -o-linear-gradient(left, #ffffff, #d2edf8);
+  background-image: linear-gradient(left, #ffffff, #d2edf8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d2edf8', GradientType=1);
+}
+body.accounts img.fadedlogobckgrnd {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 h1 {
   color: #1B3D46;
@@ -778,7 +798,7 @@ li.link-attribute {
   padding: 100px;
   background-color: #ffffff;
 }
-.landing img {
+.landing .identity {
   margin-top: 121px;
 }
 .rightcolumn {
