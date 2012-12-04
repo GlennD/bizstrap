@@ -20,6 +20,23 @@
 }
 
 
+
+// Fade In 
+// --------
+// Element is faded out by default, adding an .active class to it fades it in using
+// a css transition
+
+.fade-in(@startOpacity: 0.2, @duration: 1s) {
+  opacity: @startOpacity;
+  .transition(opacity @duration); 
+
+  &.active {
+    opacity: 1;
+    .transition(opacity @duration); 
+  }
+}
+
+
 // Two tone border 
 // --------
 // Applies a 2 1px borders with different colors, useful for adding highlight/shadows

@@ -25,24 +25,13 @@
     padding: 0;
   }
 
-  textarea, input {
-    &.no-decoration {
-      .invisible-form-field(@white);
-    }
-  }
-
-  textarea {
+  textarea.no-decoration {
+    .invisible-form-field(@white);
     width: 100%;
   }
 
   img.twitter-avatar {
-    .transition(opacity 1s); 
-    opacity: 0.2;
-
-    &.active {
-      opacity: 1;
-      .transition(opacity 1s); 
-    }
+    .fade-in(0.2, 1s);
   }
 
   .popup-controls {
@@ -83,6 +72,7 @@
     }
 
     .disabled {
+      pointer-events: none;
       opacity: 0.5;
       .transition(opacity 0.5s);
     }
