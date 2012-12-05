@@ -2,21 +2,61 @@
 used for drawing colored circles in css (useful for chart legends and such)
  */
 
-.legend-circle {
-  @circleDiameter: 20px;
-  display: inline-block;
+.with-colored-circles(@diameter) {
+  #shapes > .circle(@diameter, transparent);
+  border: 2px solid #888;
 
   &.blue {
-    #shapes > .circle(@circleDiameter, @blue);
+    #shapes > .circle(@diameter, @blue);
+    border: 2px solid @blue;
   }
 
   &.red {
-    #shapes > .circle(@circleDiameter, @bizored);
+    #shapes > .circle(@diameter, @bizored);
     background: @bizored;
+    border: 2px solid @bizored;
   }
 
   &.green {
-    #shapes > .circle(@circleDiameter, @bizogreen);
+    #shapes > .circle(@diameter, @bizogreen);
+    border: 2px solid @bizogreen;
   }
 }
 
+.legend-circle {
+  display: inline-block;
+  .with-colored-circles(20px);
+}
+
+
+.circle-btn {
+  display: inline-block;
+  margin-right: 20px;
+  @diameter: 30px;
+  @iconWidth: 14px;
+
+  .with-colored-circles(@diameter);
+  .transition(border-color 0.5s);
+
+  &.active {
+    border-color: @blue;
+  }
+
+  &:hover {
+    border-color: @blue;
+
+    &.blue, &.active {
+      border-color: darken(@blue, 20%);
+    }
+
+    &.warning {
+        border-color: @orange;
+      }
+  }
+
+  // center icons
+  [class^="icon-"],[class*=" icon-"] {
+    margin-left: @diameter / 2 - @iconWidth / 2;
+    margin-top: @diameter / 2 - @iconWidth / 2;
+  }
+}

@@ -4581,6 +4581,13 @@ used for drawing colored circles in css (useful for chart legends and such)
  */
 .legend-circle {
   display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid #888;
 }
 .legend-circle.blue {
   width: 20px;
@@ -4589,6 +4596,7 @@ used for drawing colored circles in css (useful for chart legends and such)
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
+  border: 2px solid #00a5dc;
 }
 .legend-circle.red {
   width: 20px;
@@ -4598,6 +4606,7 @@ used for drawing colored circles in css (useful for chart legends and such)
   -moz-border-radius: 100%;
   border-radius: 100%;
   background: #e82529;
+  border: 2px solid #e82529;
 }
 .legend-circle.green {
   width: 20px;
@@ -4606,6 +4615,69 @@ used for drawing colored circles in css (useful for chart legends and such)
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
+  border: 2px solid #a6d379;
+}
+.circle-btn {
+  display: inline-block;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid #888;
+  -webkit-transition: border-color 0.5s;
+  -moz-transition: border-color 0.5s;
+  -ms-transition: border-color 0.5s;
+  -o-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+}
+.circle-btn.blue {
+  width: 30px;
+  height: 30px;
+  background: #00a5dc;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid #00a5dc;
+}
+.circle-btn.red {
+  width: 30px;
+  height: 30px;
+  background: #e82529;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  background: #e82529;
+  border: 2px solid #e82529;
+}
+.circle-btn.green {
+  width: 30px;
+  height: 30px;
+  background: #a6d379;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid #a6d379;
+}
+.circle-btn.active {
+  border-color: #00a5dc;
+}
+.circle-btn:hover {
+  border-color: #00a5dc;
+}
+.circle-btn:hover.blue,
+.circle-btn:hover.active {
+  border-color: #005976;
+}
+.circle-btn:hover.warning {
+  border-color: #f89406;
+}
+.circle-btn [class^="icon-"],
+.circle-btn [class*=" icon-"] {
+  margin-left: 8px;
+  margin-top: 8px;
 }
 .pull-right {
   float: right;
