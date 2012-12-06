@@ -4636,11 +4636,6 @@ used for drawing colored circles in css (useful for chart legends and such)
   -ms-transition: border-color 0.5s;
   -o-transition: border-color 0.5s;
   transition: border-color 0.5s;
-  -webkit-transition: border-width 0.2s;
-  -moz-transition: border-width 0.2s;
-  -ms-transition: border-width 0.2s;
-  -o-transition: border-width 0.2s;
-  transition: border-width 0.2s;
 }
 .circle-btn.blue {
   width: 35px;
@@ -4676,9 +4671,9 @@ used for drawing colored circles in css (useful for chart legends and such)
 }
 .circle-btn:hover {
   border-color: #00a5dc;
-  border-width: 17.5px;
 }
-.circle-btn:hover.active {
+.circle-btn:hover.active,
+.circle-btn:hover.blue {
   border-color: #003243;
 }
 .circle-btn:hover.warning {

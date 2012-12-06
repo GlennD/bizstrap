@@ -41,7 +41,6 @@ used for drawing colored circles in css (useful for chart legends and such)
 
   .with-colored-circles(@diameter);
   .transition(border-color 0.5s);
-  .transition(border-width 0.2s);
 
   &.active {
     background: darken(@blue, 20%);
@@ -50,9 +49,8 @@ used for drawing colored circles in css (useful for chart legends and such)
 
   &:hover {
     border-color: @blue;
-    border-width: @diameter / 2;
 
-    &.active {
+    &.active, &.blue {
       border-color: darken(@blue, 30%);
     }
 
