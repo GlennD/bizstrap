@@ -31,22 +31,29 @@ used for drawing colored circles in css (useful for chart legends and such)
 
 .circle-btn {
   display: inline-block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;        
   margin-right: 20px;
-  @diameter: 30px;
+  @diameter: 35px;
   @iconWidth: 14px;
 
   .with-colored-circles(@diameter);
   .transition(border-color 0.5s);
+  .transition(border-width 0.2s);
 
   &.active {
-    border-color: @blue;
+    background: darken(@blue, 20%);
+    border-color: darken(@blue, 20%);
   }
 
   &:hover {
     border-color: @blue;
+    border-width: @diameter / 2;
 
-    &.blue, &.active {
-      border-color: darken(@blue, 20%);
+    &.active {
+      border-color: darken(@blue, 30%);
     }
 
     &.warning {
@@ -56,7 +63,8 @@ used for drawing colored circles in css (useful for chart legends and such)
 
   // center icons
   [class^="icon-"],[class*=" icon-"] {
-    margin-left: @diameter / 2 - @iconWidth / 2;
-    margin-top: @diameter / 2 - @iconWidth / 2;
+    position: absolute;
+    top: @diameter / 2 - @iconWidth / 2 - 1px;
+    left: @diameter / 2 - @iconWidth / 2 - 1px;
   }
 }

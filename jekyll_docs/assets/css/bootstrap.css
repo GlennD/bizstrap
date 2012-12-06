@@ -4619,9 +4619,13 @@ used for drawing colored circles in css (useful for chart legends and such)
 }
 .circle-btn {
   display: inline-block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin-right: 20px;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background: transparent;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -4632,10 +4636,15 @@ used for drawing colored circles in css (useful for chart legends and such)
   -ms-transition: border-color 0.5s;
   -o-transition: border-color 0.5s;
   transition: border-color 0.5s;
+  -webkit-transition: border-width 0.2s;
+  -moz-transition: border-width 0.2s;
+  -ms-transition: border-width 0.2s;
+  -o-transition: border-width 0.2s;
+  transition: border-width 0.2s;
 }
 .circle-btn.blue {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background: #00a5dc;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -4643,8 +4652,8 @@ used for drawing colored circles in css (useful for chart legends and such)
   border: 2px solid #00a5dc;
 }
 .circle-btn.red {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background: #e82529;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -4653,8 +4662,8 @@ used for drawing colored circles in css (useful for chart legends and such)
   border: 2px solid #e82529;
 }
 .circle-btn.green {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background: #a6d379;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -4662,22 +4671,24 @@ used for drawing colored circles in css (useful for chart legends and such)
   border: 2px solid #a6d379;
 }
 .circle-btn.active {
-  border-color: #00a5dc;
+  background: #005976;
+  border-color: #005976;
 }
 .circle-btn:hover {
   border-color: #00a5dc;
+  border-width: 17.5px;
 }
-.circle-btn:hover.blue,
 .circle-btn:hover.active {
-  border-color: #005976;
+  border-color: #003243;
 }
 .circle-btn:hover.warning {
   border-color: #f89406;
 }
 .circle-btn [class^="icon-"],
 .circle-btn [class*=" icon-"] {
-  margin-left: 8px;
-  margin-top: 8px;
+  position: absolute;
+  top: 9.5px;
+  left: 9.5px;
 }
 .pull-right {
   float: right;
