@@ -6,7 +6,6 @@ Quick start
 
 Copy the starter code from http://code.bizo.com/bizstrap and off you go!
 
-
 Contributing 
 -----------
 
@@ -33,5 +32,3 @@ Deployment is based off of the latest git tag, eg. 2.0.3.1, you can compile & de
 Versioning
 ----------
 Bizstrap follows the Boostrap release convention, only we append an additional version number: eg. bizstrap.2.0.3.x.css
-
-

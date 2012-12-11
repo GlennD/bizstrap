@@ -1,9 +1,16 @@
-// HERO UNIT
-// ---------
+//
+// Hero unit
+// --------------------------------------------------
+
 
 .hero-unit {
-  #gradient > .directional(@heroUnitBackground, @heroUnitBackground, darken(@heroUnitBackground, 3%));
-  padding: 20px 20px 10px 20px;
+  padding: 60px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+  color: @heroUnitLeadColor;
+  background-color: @heroUnitBackground;
   .border-radius(6px);
   border-top: 4px solid darken(@heroUnitBackground, 10%);
   margin: 8px 0 10px 0;
@@ -30,5 +37,8 @@
     font-weight: 200;
     line-height: @baseLineHeight * 1.5;
     color: @heroUnitLeadColor;
+
+  li {
+    line-height: @baseLineHeight * 1.5; // Reset since we specify in type.less
   }
 }

@@ -36,3 +36,4 @@ nbproject
 node_modules
 docs/bizo
 jekyll_docs/_site
+dist
