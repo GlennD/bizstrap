@@ -5867,18 +5867,10 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
 }
 .bookmarklet .bookmarklet-controls .btn-toolbar {
   margin: 0;
-  padding: 0;
+  padding: 0 0 4px 0;
 }
 .bookmarklet .bookmarklet-controls .btn-toolbar .btn {
-  background: transparent;
-  background-color: rgba(165, 165, 165, 0.16);
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 0.2)), to(rgba(0, 0, 0, 0.1)));
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ffffff', endColorstr='#1a000000', GradientType=0);
+  background: #00a5dc;
 }
 .bookmarklet .bookmarklet-controls .btn-toolbar .btn.active {
   -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
