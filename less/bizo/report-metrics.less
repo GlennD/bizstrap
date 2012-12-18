@@ -1,9 +1,10 @@
-//Report Metrics
+//Report Metrics in the top row
 .report-metrics {
   margin-left:-24px;
   margin-top:5px;
 }
 
+// The top row metric value and label unit
 li.metric-unit {
   display:inline-block;
   margin: 10px 60px 0px 0px;
@@ -12,6 +13,17 @@ li.metric-unit {
   }
 }
 
+.unselected-label {
+  font-size: @baseFontSize * .846;
+  font-weight: bold;
+  line-height: 14px; // ensure proper line-height if floated
+  color: @grayDark;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+// Styling for displaying metrics in top row and table
 .metric {
   font-size:32px;
   font-weight:bold;
@@ -30,11 +42,18 @@ li.metric-unit {
   text-align:right;
 }
 
-.sub-item {
-  font-size:16px;
-  font-weight:normal;
+//Reduces the prominence of metrics in child rows
+tr.sub-item {
+  label.checkbox {
+    margin-left: 43px;
+  }
+  .metric-medium {
+	font-size:16px;
+	font-weight:normal;
+  }
 }
 
+//Smart Link attribute styling
 li.link-attribute {
   display:inline-block;
   font-size:12px;
@@ -46,22 +65,9 @@ li.link-attribute {
   text-overflow:ellipsis;
 }
 
+//LinkedIn Ad Styling
 .linkedin-ad-copy {
   display:inline-block;
   margin: 0 10px 0 22px;
 }
 
-.unselected-label {
-  font-size: @baseFontSize * .846;
-  font-weight: bold;
-  line-height: 14px; // ensure proper line-height if floated
-  color: @grayDark;
-  vertical-align: baseline;
-  white-space: nowrap;
-  text-transform: uppercase;
-}
-
-//Report Item
-.report-item label{
-  display:inline-block;
-  }
