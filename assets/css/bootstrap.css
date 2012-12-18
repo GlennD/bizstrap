@@ -1010,6 +1010,9 @@ li.metric-unit span .label {
   color: #333333;
   text-decoration: none;
 }
+.table td.metric-medium {
+  text-align: right;
+}
 .sub-item {
   font-size: 16px;
   font-weight: normal;
@@ -1024,6 +1027,10 @@ li.link-attribute {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.linkedin-ad-copy {
+  display: inline-block;
+  margin: 0 10px 0 22px;
+}
 .unselected-label {
   font-size: 10.998px;
   font-weight: bold;
@@ -1032,6 +1039,9 @@ li.link-attribute {
   vertical-align: baseline;
   white-space: nowrap;
   text-transform: uppercase;
+}
+.report-item label {
+  display: inline-block;
 }
 .landing {
   position: fixed;
@@ -2147,9 +2157,9 @@ table th[class*="span"],
 .table-hover tbody tr.info:hover td {
   background-color: #c4e3f3;
 }
-.cell-row {
+.report-table td > label {
   display: inline-block;
-  margin: 0 10px 0 19px;
+  margin: 0 10px 0 22px;
 }
 [class^="icon-"],
 [class*=" icon-"] {
