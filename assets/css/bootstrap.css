@@ -913,6 +913,7 @@ h1.section-header-heavy small {
 }
 .footer {
   margin-top: -15px;
+  color: #999999;
 }
 .footer a {
   color: #999999;
@@ -997,6 +998,15 @@ li.metric-unit {
 li.metric-unit span .label {
   text-transform: uppercase;
 }
+.unselected-label {
+  font-size: 10.998px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #333333;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
 .metric {
   font-size: 32px;
   font-weight: bold;
@@ -1013,7 +1023,10 @@ li.metric-unit span .label {
 .table td.metric-medium {
   text-align: right;
 }
-.sub-item {
+tr.sub-item label.checkbox {
+  margin-left: 43px;
+}
+tr.sub-item .metric-medium {
   font-size: 16px;
   font-weight: normal;
 }
@@ -1030,18 +1043,6 @@ li.link-attribute {
 .linkedin-ad-copy {
   display: inline-block;
   margin: 0 10px 0 22px;
-}
-.unselected-label {
-  font-size: 10.998px;
-  font-weight: bold;
-  line-height: 14px;
-  color: #333333;
-  vertical-align: baseline;
-  white-space: nowrap;
-  text-transform: uppercase;
-}
-.report-item label {
-  display: inline-block;
 }
 .landing {
   position: fixed;
@@ -4468,6 +4469,11 @@ Bizo Related Edits:
 }
 .navbar btn {
   color: #ffffff;
+}
+.navbar .navbar-text {
+  padding: 16px 8px 0px;
+  line-height: 19px;
+  color: #555555;
 }
 .navbar-inner {
   -webkit-border-radius: 0px;
