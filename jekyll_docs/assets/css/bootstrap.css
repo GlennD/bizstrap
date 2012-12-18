@@ -913,6 +913,7 @@ h1.section-header-heavy small {
 }
 .footer {
   margin-top: -15px;
+  color: #999999;
 }
 .footer a {
   color: #999999;
@@ -4468,6 +4469,11 @@ Bizo Related Edits:
 }
 .navbar btn {
   color: #ffffff;
+}
+.navbar .navbar-text {
+  padding: 16px 8px 0px;
+  line-height: 19px;
+  color: #555555;
 }
 .navbar-inner {
   -webkit-border-radius: 0px;
