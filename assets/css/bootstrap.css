@@ -1024,7 +1024,7 @@ li.metric-unit span .label {
   text-align: right;
 }
 tr.sub-item label.checkbox {
-  margin-left: 43px;
+  margin-left: 21px;
 }
 tr.sub-item .metric-medium {
   font-size: 16px;
@@ -2170,7 +2170,7 @@ table th[class*="span"],
 }
 .report-table td > label {
   display: inline-block;
-  margin: 0 10px 0 22px;
+  margin: 0 10px 0 0px;
 }
 [class^="icon-"],
 [class*=" icon-"] {
