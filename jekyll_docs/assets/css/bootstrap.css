@@ -1024,7 +1024,7 @@ li.metric-unit span .label {
   text-align: right;
 }
 tr.sub-item label.checkbox {
-  margin-left: 43px;
+  margin-left: 21px;
 }
 tr.sub-item .metric-medium {
   font-size: 16px;
@@ -1046,18 +1046,28 @@ li.link-attribute {
 }
 .landing {
   position: fixed;
+  width: 100%;
   top: 50%;
-  margin-top: -250px;
+  margin-top: -300px;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  padding: 100px;
+  padding: 100px 0 100px;
   background-color: #ffffff;
 }
+.landing .relative {
+  position: relative;
+}
 .landing .identity {
-  margin-top: 121px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.landing h4 {
+  font-weight: normal;
 }
 .rightcolumn {
-  padding-top: 1px;
+  margin-left: 40px;
+  padding-left: 40px;
   border-left: 1px solid #eeeeee;
 }
 code,
@@ -2160,7 +2170,7 @@ table th[class*="span"],
 }
 .report-table td > label {
   display: inline-block;
-  margin: 0 10px 0 22px;
+  margin: 0 10px 0 0px;
 }
 [class^="icon-"],
 [class*=" icon-"] {
