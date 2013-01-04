@@ -4697,7 +4697,7 @@ Bizo Related Edits:
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -4709,7 +4709,7 @@ Bizo Related Edits:
 }
 .modal {
   position: fixed;
-  top: 10%;
+  top: 20%;
   left: 50%;
   z-index: 1050;
   width: 560px;
