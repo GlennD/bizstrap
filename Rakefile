@@ -88,7 +88,7 @@ task :update_docs do |t|
 end
 
 desc "Updates gh-pages branch & pushes it to github"
-task :update_gh_pages => :update_docs do |t|
+task :update_gh_pages do |t|
   # pull docs from bizo branch into gh-pages branch
   Git.checkout "gh-pages"
   Git.checkout "bizo -- jekyll_docs" 
@@ -98,7 +98,7 @@ task :update_gh_pages => :update_docs do |t|
   FileUtils.rm_rf "jekyll_docs"
 
   Git.add "-A"
-  Git.commit "-m synching gh-pages docs to bizo branch"
+  Git.commit "-m \"synching gh-pages docs to bizo branch\""
   Git.push "origin gh-pages"
 
   puts "Synched gh-pages docs to bizo branch on github".green
