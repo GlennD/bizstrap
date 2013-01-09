@@ -43,7 +43,7 @@ task :compile_stub do |t|
 end
 
 desc "Deploys bizstrap to s3 under a new git tag, runs compile & compile_stub first"
-task :deploy => [:compile, :compile_stub, :tick_tag_version, :deploy_to_s3] do |t|
+task :deploy => [:compile, :tick_tag_version, :compile_stub,  :deploy_to_s3] do |t|
   puts "make sure to 'rake update_gh_pages' to sync the github documentation".yellow
 end
 
