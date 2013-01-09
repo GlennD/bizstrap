@@ -21,7 +21,8 @@
   .identity {
     position: absolute;
     bottom: 0;
-    left: 0;
+    // make image left corner flush with row's contents
+    left: @gridGutterWidth; 
   }
 
   h4 {
