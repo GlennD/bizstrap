@@ -1110,7 +1110,7 @@ li.link-attribute {
 .landing .identity {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 20px;
 }
 .landing h4 {
   font-weight: normal;
