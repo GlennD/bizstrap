@@ -1044,6 +1044,10 @@ li.metric-unit:hover.active {
 li.metric-unit:hover:first-child {
   *margin-left: 0;
 }
+.table-report-metrics {
+  margin-left: -24px;
+  margin-top: 5px;
+}
 .unselected-label {
   font-size: 10.998px;
   font-weight: bold;
