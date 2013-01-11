@@ -1,0 +1,4 @@
+# Prod docs Configuration used by the Rakefile
+css: "http://media.bizo.com/bizstrap/css/bizstrap-VERSION.css"  
+responsive_css: "http://media.bizo.com/bizstrap/css/bizstrap-responsive-VERSION.css"
+

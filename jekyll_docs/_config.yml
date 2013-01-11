@@ -1,0 +1,3 @@
+# Used for local development
+css: "/assets/css/bootstrap.css" 
+responsive_css: "/assets/css/bootstrap-responsive.css"
