@@ -5,6 +5,7 @@ require './lib/file_watcher'
 require './lib/css_stub_generator'
 require './lib/git'
 require './lib/s3'
+require './lib/jekyll'
 
 BASE_DIR               = File.dirname __FILE__
 SOURCE                 = File.join BASE_DIR, "less", "bootstrap.less"
@@ -51,7 +52,7 @@ end
 task :deploy_to_s3 do |t|
   tag      = Git.latest_tag
   bucket   = "com-bizo-public"
-  css_path = "bizstrap/css/bootstrap-#{tag}.css"
+  css_path = "bizstrap/css/bizstrap-#{tag}.css"
   S3.upload JEKYLL_BIZSTRAP_FILE, bucket, css_path, "text/css"
 
   puts ""
@@ -62,7 +63,7 @@ task :deploy_to_s3 do |t|
 end
 
 # Create a new tag, one version higher than the last eg 2.2.2 => 2.2.3
-task :tick_tag_version do |t, args|
+task :tick_tag_version do |t|
   # next available tag version, eg. v2.2 => v2.3
   parts = Git.latest_tag.split(".")
   parts[-1] = (parts[-1].to_i + 1).to_s
@@ -87,24 +88,44 @@ task :update_docs do |t|
   puts "updated starter code in jekyll_docs to: bizstrap-#{latest_tag}.css"
 end
 
+
 desc "Updates gh-pages branch & pushes it to github"
-task :update_gh_pages do |t|
-  # pull docs from bizo branch into gh-pages branch
-  Git.checkout "gh-pages"
-  Git.checkout "bizo -- jekyll_docs" 
+task :deploy_docs do |t|
+  source_dir           = File.join(".", "jekyll_docs")
+  jekyll_config        = File.join source_dir, "_config.yml"
+  jekyll_config_local  = File.join source_dir, "_config.local.yml"
+  jekyll_config_prod   = File.join source_dir, "_config.prod.yml"
 
-  # Github wants everything in the root dir of the branch, so extract
-  FileUtils.cp_r Dir.glob("jekyll_docs/*"), "."
-  FileUtils.rm_rf "jekyll_docs"
 
-  Git.add "-A"
-  Git.commit "-m \"synching gh-pages docs to bizo branch\""
-  Git.push "origin gh-pages"
+  # Flip to using the "prod" config which uses the production bizstrap css file vs the local repo one
+  # jekyll will then generate the static site with the "real" bizstrap-version.css file
+  FileUtils.mv  jekyll_config, jekyll_config_local
 
-  puts "Synched gh-pages docs to bizo branch on github".green
+  latest_tag = Git.latest_tag
 
-  # return to bizo branch
-  Git.checkout "bizo" 
+  File.open(jekyll_config, 'w') do |f|
+    f.write File.read(jekyll_config_prod).gsub("VERSION", latest_tag)
+  end
+
+  out_dir    = Dir.mktmpdir("jekyll")
+  Jekyll.build source_dir, out_dir 
+
+  # put the local config back after we're done
+  FileUtils.mv  jekyll_config_local, jekyll_config
+
+  bucket    = "com-bizo-public"
+  docs_path = "bizstrap/docs/#{latest_tag.gsub('.', '-')}"
+  puts "Uploading docs to s3".green
+
+  S3.upload_dir out_dir, bucket, docs_path
+  puts "Uploading of docs to s3 complete: http://media.bizo.com/bizstrap/docs/#{latest_tag}".green
 end
+
+
+desc "Start Jekyll server with automatic updates when files change"
+task :jekyll do |t, args|
+  Jekyll.start_server File.join(".", "jekyll_docs")
+end
+
 
 
