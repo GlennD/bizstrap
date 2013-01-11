@@ -7,9 +7,8 @@ require './lib/git'
 require './lib/s3'
 require './lib/jekyll'
 
-BASE_DIR               = File.dirname __FILE__
-SOURCE                 = File.join BASE_DIR, "less", "bootstrap.less"
-JEKYLL_BIZSTRAP_FILE   = File.join BASE_DIR, "jekyll_docs", "assets", "css", "bootstrap.css"
+SOURCE                 = File.join ".", "less", "bootstrap.less"
+JEKYLL_BIZSTRAP_FILE   = File.join ".", "jekyll_docs", "assets", "css", "bootstrap.css"
 
 desc "Compile less files to jekyll_docs/assets/css/bootstrap.css, rake compile[watch] to compile when files change"
 task :compile, :compile_mode do |t, args|
@@ -38,7 +37,7 @@ desc "Generate css stub file for usage in GWT"
 task :compile_stub do |t|
   latest_tag = Git.latest_tag
   stubfile = "bizstrap-stub-#{latest_tag}.css"
-  output = File.join BASE_DIR, stubfile
+  output = File.join ".", stubfile
   CssStubGenerator.new(JEKYLL_BIZSTRAP_FILE).write(output)
   puts "created css stubfile for GWT: #{stubfile}"
 end
@@ -77,7 +76,7 @@ end
 # Update the starter code documentation to use the latest bizstrap version
 task :update_docs do |t|
   latest_tag = Git.latest_tag
-  file_location = File.join(BASE_DIR, "jekyll_docs", "pages", "index.html")
+  file_location = File.join(".", "jekyll_docs", "pages", "index.html")
 
   # update the tag in the stater code
   text = File.read(file_location)
@@ -89,9 +88,9 @@ task :update_docs do |t|
 end
 
 
-desc "Updates gh-pages branch & pushes it to github"
+desc "Uploads a versioned set of docs to s3, where the version is based off of the latest tag"
 task :deploy_docs do |t|
-  source_dir           = File.join(".", "jekyll_docs")
+  source_dir           = File.join ".", "jekyll_docs"
   jekyll_config        = File.join source_dir, "_config.yml"
   jekyll_config_local  = File.join source_dir, "_config.local.yml"
   jekyll_config_prod   = File.join source_dir, "_config.prod.yml"
@@ -113,12 +112,13 @@ task :deploy_docs do |t|
   # put the local config back after we're done
   FileUtils.mv  jekyll_config_local, jekyll_config
 
+  web_tag   = latest_tag.gsub('.', '-')
   bucket    = "com-bizo-public"
-  docs_path = "bizstrap/docs/#{latest_tag.gsub('.', '-')}"
+  docs_path = "bizstrap/docs/#{web_tag}"
   puts "Uploading docs to s3".green
 
   S3.upload_dir out_dir, bucket, docs_path
-  puts "Uploading of docs to s3 complete: http://media.bizo.com/bizstrap/docs/#{latest_tag}".green
+  puts "Uploading of docs to s3 complete: http://media.bizo.com/bizstrap/docs/#{web_tag}/pages/index.html".green
 end
 
 
