@@ -23,6 +23,8 @@ task :compile, :compile_mode do |t, args|
     p `lessc #{source} #{output}`
   end
 
+  build.call
+
   if mode == :watch
     puts "watching for additional changes control-c to kill me".yellow
     FileWatcher.new(:load_path => "./less", :glob_str => "**/*.less") do 
@@ -30,7 +32,6 @@ task :compile, :compile_mode do |t, args|
     end
   end
 
-  build.call
 end
 
 
