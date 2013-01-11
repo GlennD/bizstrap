@@ -4,8 +4,7 @@ require 'colorize'
 module S3
   class << self
     def upload_dir(directory, s3bucket, s3path)
-      files = Dir.glob(directory + "/**/*")
-      files.each do |f| 
+      Dir.glob("#{directory}/**/*").each do |f| 
         next if File.directory?(f)
         relative_path = f[directory.length..f.length]
         s3_file = "#{s3path}#{relative_path}"

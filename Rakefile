@@ -9,6 +9,7 @@ require './lib/jekyll'
 
 SOURCE                 = File.join ".", "less", "bootstrap.less"
 JEKYLL_BIZSTRAP_FILE   = File.join ".", "jekyll_docs", "assets", "css", "bootstrap.css"
+S3_BUCKET              = "com-bizo-public"
 
 desc "Compile less files to jekyll_docs/assets/css/bootstrap.css, rake compile[watch] to compile when files change"
 task :compile, :compile_mode do |t, args|
@@ -42,17 +43,16 @@ task :compile_stub do |t|
   puts "created css stubfile for GWT: #{stubfile}"
 end
 
-desc "Deploys bizstrap to s3 under a new git tag, runs compile & compile_stub first"
-task :deploy => [:compile, :tick_tag_version, :compile_stub,  :deploy_to_s3] do |t|
-  puts "make sure to 'rake update_gh_pages' to sync the github documentation".yellow
+desc "Deploys bizstrap + versioned docs to s3 under a new git tag, runs compile & compile_stub first"
+task :deploy => [:compile, :tick_tag_version, :compile_stub,  :deploy_to_s3, :deploy_docs] do |t|
+  puts "make sure to 'git push --tags' to push your new tag to github".yellow
 end
 
 # Deploy #{JEKYLL_BIZSTRAP_FILE} to s3, no desc line to keep it "private"
 task :deploy_to_s3 do |t|
   tag      = Git.latest_tag
-  bucket   = "com-bizo-public"
   css_path = "bizstrap/css/bizstrap-#{tag}.css"
-  S3.upload JEKYLL_BIZSTRAP_FILE, bucket, css_path, "text/css"
+  S3.upload JEKYLL_BIZSTRAP_FILE, S3_BUCKET, css_path, "text/css"
 
   puts ""
   puts "bizstrap-#{tag} deployed:"  
@@ -87,43 +87,60 @@ task :update_docs do |t|
   puts "updated starter code in jekyll_docs to: bizstrap-#{latest_tag}.css"
 end
 
+# sets up redirect 
+# media.bizo.com/bizstrap/docs/current/index.html =>
+# media.bizo.com/bizstrap/docs/#{latest_version}/pages/index.html
+task :tick_docs_current_pointer do |t|
+  web_tag   = Git.latest_tag.gsub('.', '-')
+  latest_bizstrap = "http://media.bizo.com/bizstrap/docs/#{web_tag}/pages/index.html" 
+  html_file = File.join(Dir.tmpdir, "index.html")
 
-desc "Uploads a versioned set of docs to s3, where the version is based off of the latest tag"
-task :deploy_docs do |t|
+  File.open(html_file, 'w') do |f|
+    f.write <<-HTML
+    <html>
+      <head>
+        <meta http-equiv="Refresh" content="0; url=#{latest_bizstrap}" />
+      </head>
+      <body>
+        <p>Latest Bizstrap is: <a href="#{latest_bizstrap}">this link</a>.</p>
+      </body>
+    </html>
+    HTML
+  end
+
+  S3.upload html_file, S3_BUCKET, "bizstrap/docs/current/index.html", "text/html"
+end
+
+
+# Uploads a versioned set of docs to s3, where the version == Git.latest_tag
+task :deploy_docs => :update_docs do |t|
   source_dir           = File.join ".", "jekyll_docs"
   jekyll_config        = File.join source_dir, "_config.yml"
   jekyll_config_local  = File.join source_dir, "_config.local.yml"
   jekyll_config_prod   = File.join source_dir, "_config.prod.yml"
 
+  latest_tag = Git.latest_tag
 
   # Flip to using the "prod" config which uses the production bizstrap css file vs the local repo one
   # jekyll will then generate the static site with the "real" bizstrap-version.css file
-  FileUtils.mv  jekyll_config, jekyll_config_local
-
-  latest_tag = Git.latest_tag
-
-  File.open(jekyll_config, 'w') do |f|
-    f.write File.read(jekyll_config_prod).gsub("VERSION", latest_tag)
-  end
-
-  out_dir    = Dir.mktmpdir("jekyll")
-  Jekyll.build source_dir, out_dir 
-
-  # put the local config back after we're done
-  FileUtils.mv  jekyll_config_local, jekyll_config
+  out_dir = Jekyll.build_with_prod_config(
+              source_dir, 
+              jekyll_config, 
+              jekyll_config_prod, 
+              latest_tag
+            )
 
   web_tag   = latest_tag.gsub('.', '-')
-  bucket    = "com-bizo-public"
   docs_path = "bizstrap/docs/#{web_tag}"
   puts "Uploading docs to s3".green
 
-  S3.upload_dir out_dir, bucket, docs_path
-  puts "Uploading of docs to s3 complete: http://media.bizo.com/bizstrap/docs/#{web_tag}/pages/index.html".green
+  S3.upload_dir out_dir, S3_BUCKET, docs_path
+  puts "Uploading of docs to s3 complete: ".green
 end
 
 
 desc "Start Jekyll server with automatic updates when files change"
-task :jekyll do |t, args|
+task :server do |t, args|
   Jekyll.start_server File.join(".", "jekyll_docs")
 end
 
