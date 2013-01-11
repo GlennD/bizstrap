@@ -7,7 +7,7 @@ module Jekyll
     end
 
     def start_server(source_dir)
-      `jekyll #{source_dir} --server --auto`
+      `jekyll #{source_dir} #{Dir.mktmpdir} --server --auto`
     end
   end
 end
