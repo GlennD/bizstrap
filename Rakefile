@@ -70,7 +70,7 @@ task :tick_tag_version do |t|
   next_tag = parts.join(".")
 
   # don't need a message, git log v2.2.1..2.2.2 is more useful anyways 
-  Git.tag "-a #{next_tag} -m #{next_tag}"
+  Git.create_tag next_tag
   puts "Created git tag: #{next_tag}"
 end
 
