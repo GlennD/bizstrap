@@ -12,6 +12,8 @@ module Jekyll
     end
 
     def build_with_prod_config(source_dir, config_path, prod_config_path, version)
+      # you can't tell jekyll which _config.yml to use
+      # hence swap in the prod config & put the local one back when it's done.
       FileUtils.mv config_path, "#{config_path}.tmp" 
       File.open(config_path, 'w') do |f|
         f.write File.read(prod_config_path).gsub("VERSION", version)

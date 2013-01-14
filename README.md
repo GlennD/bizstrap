@@ -9,7 +9,7 @@ See documentation at: http://code.bizo.com/bizstrap
 Setting Up Your System to Contribute
 -----------
 
-Make sure you have ruby installed (you're systems default should suffice)
+Make sure you have ruby installed (your systems default should suffice)
 
 1. Install npm, easiest way is via installing node.js (http://nodejs.org/download/)
 2. npm install -g less

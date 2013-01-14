@@ -36,22 +36,31 @@ end
 
 
 desc "Generate css stub file for usage in GWT"
-task :compile_stub do |t|
-  latest_tag = Git.latest_tag
-  stubfile = "bizstrap-stub-#{latest_tag}.css"
+task :compile_stub, :version do |t, args|
+  version = args[:version] || Git.latest_tag
+  stubfile = "bizstrap-stub-#{version}.css"
   output = File.join ".", stubfile
   CssStubGenerator.new(JEKYLL_BIZSTRAP_FILE).write(output)
   puts "created css stubfile for GWT: #{stubfile}"
 end
 
 desc "Deploys bizstrap + versioned docs to s3 under a new git tag, runs compile & compile_stub first"
-task :deploy => [:compile, :tick_tag_version, :compile_stub,  :deploy_to_s3, :deploy_docs] do |t|
+task :deploy_prod => [:compile, :tick_tag_version, :compile_stub,  :deploy_to_s3, :deploy_docs] do |t|
   puts "make sure to 'git push --tags' to push your new tag to github".yellow
 end
 
+desc "Deploys release cantidate bizstrap + docs to s3, runs compile & compile_stub first"
+task :deploy_rc do |t|
+  # can't pass params to dependent tasks, so call them like so
+  Rake::Task["compile"].invoke
+  Rake::Task["compile_stub"].invoke("rc")
+  Rake::Task["deploy_to_s3"].invoke("rc")
+  Rake::Task["deploy_docs"].invoke("rc")
+end
+
 # Deploy #{JEKYLL_BIZSTRAP_FILE} to s3, no desc line to keep it "private"
-task :deploy_to_s3 do |t|
-  tag      = Git.latest_tag
+task :deploy_to_s3, :version do |t, args|
+  tag      = args[:version] || Git.latest_tag
   css_path = "bizstrap/css/bizstrap-#{tag}.css"
   S3.upload JEKYLL_BIZSTRAP_FILE, S3_BUCKET, css_path, "text/css"
 
@@ -75,17 +84,17 @@ task :tick_tag_version do |t|
 end
 
 # Update the starter code documentation to use the latest bizstrap version
-task :update_docs do |t|
-  latest_tag = Git.latest_tag
+task :update_docs, :version do |t, args|
+  version = args[:version] || Git.latest_tag
   file_location = File.join(".", "jekyll_docs", "pages", "index.html")
 
   # update the tag in the stater code
   text = File.read(file_location)
-  text.gsub!(/http:\/\/media.bizo.com\/bizstrap\/css\/bizstrap-v([^\s]+).css/, "http://media.bizo.com/bizstrap/css/bizstrap-#{latest_tag}.css")
+  text.gsub!(/http:\/\/media.bizo.com\/bizstrap\/css\/bizstrap-v([^\s]+).css/, "http://media.bizo.com/bizstrap/css/bizstrap-#{version}.css")
 
   File.open(file_location, 'w') { |f| f.write(text) }
 
-  puts "updated starter code in jekyll_docs to: bizstrap-#{latest_tag}.css"
+  puts "updated starter code in jekyll_docs to: bizstrap-#{version}.css"
 end
 
 # sets up redirect 
@@ -114,13 +123,13 @@ end
 
 
 # Uploads a versioned set of docs to s3, where the version == Git.latest_tag
-task :deploy_docs => :update_docs do |t|
+task :deploy_docs, [:version] => :update_docs do |t, args|
   source_dir           = File.join ".", "jekyll_docs"
   jekyll_config        = File.join source_dir, "_config.yml"
   jekyll_config_local  = File.join source_dir, "_config.local.yml"
   jekyll_config_prod   = File.join source_dir, "_config.prod.yml"
 
-  latest_tag = Git.latest_tag
+  version = args[:version] || Git.latest_tag
 
   # Flip to using the "prod" config which uses the production bizstrap css file vs the local repo one
   # jekyll will then generate the static site with the "real" bizstrap-version.css file
@@ -128,10 +137,10 @@ task :deploy_docs => :update_docs do |t|
               source_dir, 
               jekyll_config, 
               jekyll_config_prod, 
-              latest_tag
+              version
             )
 
-  web_tag   = latest_tag.gsub('.', '-')
+  web_tag   = version.gsub('.', '-')
   docs_path = "bizstrap/docs/#{web_tag}"
   puts "Uploading docs to s3".green
 
