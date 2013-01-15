@@ -29,7 +29,7 @@ STUB_HEADER = <<STUB_HEADER
 STUB_HEADER
 
 class CssStubGenerator
-  @@regex =  /\.([a-zA-Z0-9\-\.\s\,:\(\)]+)\s*\{/
+  @@regex =  /\.([a-zA-Z0-9\-\.\s\,:\(\)\>]+)\s*\{/
 
     def initialize(input_filepath)
       @cssfile = input_filepath
@@ -61,7 +61,7 @@ class CssStubGenerator
             class_group.split(".").each do |class_name|
               # gwt can't parse :nth-child(...) rules
               class_name = class_name.gsub(/\(.+\)/, '')
-              css_classes << class_name  if class_name.length > 1
+              css_classes << class_name  if class_name.length > 1 && !class_name.include?(":")
             end
           end
         end
