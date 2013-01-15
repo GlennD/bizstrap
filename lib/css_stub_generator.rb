@@ -29,7 +29,7 @@ STUB_HEADER = <<STUB_HEADER
 STUB_HEADER
 
 class CssStubGenerator
-  @@regex =  /\.([a-zA-Z0-9\-\.\s\,:\(\)\>]+)\s*\{/
+  @@regex =  /^\.([^0-9][a-zA-Z0-9\-\.\s\,:\(\)\>]+)\s*(\{|,)/
 
     def initialize(input_filepath)
       @cssfile = input_filepath
@@ -52,7 +52,6 @@ class CssStubGenerator
     File.open(@cssfile, "r") do |f|
       f.each do |line|
         next unless line =~ @@regex
-
         classes = line.match(@@regex)[1]
 
         # take care of rules like .foo.boo,.mooo .shu {}
