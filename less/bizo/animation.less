@@ -1,0 +1,107 @@
+#animation {
+  .duration(@duration: 1s) {
+    -webkit-animation-duration: @duration;
+    -moz-animation-duration: @duration;
+    -o-animation-duration: @duration;
+    animation-duration: @duration;
+  }
+
+  .fill-mode(@type) {
+    -webkit-animation-fill-mode: @type;
+    -moz-animation-fill-mode: @type;
+    -o-animation-fill-mode: @type;
+    animation-fill-mode: @type;
+  }
+
+  .apply(@name) {
+    -webkit-animation-name: @name;
+    -moz-animation-name: @name;
+    -o-animation-name: @name;
+    animation-name: @name;
+  }
+
+  .delay(@time) {
+    -webkit-animation-delay: @time;
+    -moz-animation-delay: @time;
+    -o-animation-delay: @time;
+    animation-fill-mode: @time;
+  }
+
+  .translate(@x, @y) {
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+  }
+}
+
+// Mxins for effects 
+.fade(@startOpacity, @endOpacity) {
+  from { 
+    opacity: @startOpacity; 
+  }
+
+  to { 
+    opacity: @endOpacity;   
+  }
+}
+
+.fade-and-move(@startOpacity, @endOpacity, @startX, @endX, @startY, @endY) {
+  from { 
+    .translate(@startX, @startY);
+    opacity: @startOpacity; 
+  }
+
+  to   { 
+    .translate(@endX, @endY);
+    opacity: @endOpacity;   
+  }
+}
+
+
+// Animation Keyframes 
+@translate: 50px;
+
+@-webkit-keyframes fade-in { .fade(0, 1); } 
+@-moz-keyframes    fade-in { .fade(0, 1); } 
+@-o-keyframes      fade-in { .fade(0, 1); } 
+@keyframes         fade-in { .fade(0, 1); } 
+
+@-webkit-keyframes fade-in-down { .fade-and-move(0,1,0,0,-@translate,0); } 
+@-moz-keyframes    fade-in-down { .fade-and-move(0,1,0,0,-@translate,0); } 
+@-o-keyframes      fade-in-down { .fade-and-move(0,1,0,0,-@translate,0); } 
+@keyframes         fade-in-down { .fade-and-move(0,1,0,0,-@translate,0); } 
+
+@-webkit-keyframes fade-in-left { .fade-and-move(0,1,-@translate,0,0,0); } 
+@-moz-keyframes    fade-in-left { .fade-and-move(0,1,-@translate,0,0,0); } 
+@-o-keyframes      fade-in-left { .fade-and-move(0,1,-@translate,0,0,0); } 
+@keyframes         fade-in-left { .fade-and-move(0,1,-@translate,0,0,0); } 
+
+@-webkit-keyframes fade-out { .fade(1,0); } 
+@-moz-keyframes    fade-out { .fade(1,0); } 
+@-o-keyframes      fade-out { .fade(1,0); } 
+@keyframes         fade-out { .fade(1,0); } 
+
+@-webkit-keyframes fade-out-down { .fade-and-move(1,0,0,0,0,@translate); } 
+@-moz-keyframes    fade-out-down { .fade-and-move(1,0,0,0,0,@translate); } 
+@-o-keyframes      fade-out-down { .fade-and-move(1,0,0,0,0,@translate); } 
+@keyframes         fade-out-down { .fade-and-move(1,0,0,0,0,@translate); } 
+
+
+// Actual animation classes
+.animated {
+  #animation > .fill-mode(both);
+  #animation > .duration(1s);
+
+  &.delayed-1    { #animation > .delay(0.25s); }
+  &.delayed-2    { #animation > .delay(0.50s); }
+  &.delayed-3    { #animation > .delay(1.00s); }
+  &.delayed-4    { #animation > .delay(2.00s); }
+
+  &.fade-in       { #animation > .apply(fade-in); }
+  &.fade-in-down  { #animation > .apply(fade-in-down); }
+  &.fade-in-left  { #animation > .apply(fade-in-left); }
+
+  &.fade-out      { #animation > .apply(fade-out); }
+  &.fade-out-down { #animation > .apply(fade-out-down); }
+}

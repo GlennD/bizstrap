@@ -1,0 +1,69 @@
+---
+layout: default 
+title: Animations 
+---
+
+<div class="page-header">
+  <h1 class="animated fade-in-down">
+    Animations 
+    <small>make that page sizzle</small>
+  </h1>
+</div>
+
+
+<p>To animate any html node simply apply the <code>animated</code> class to it. Then apply an effect class to it, ex: <code>fade-in</code>. The animation will start as soon as the effect class is applied, allowing you to trigger animations on page load, on click, or any other event you can think up</p>
+
+<div name="content-boxes" class="code-example">
+  <p>
+    <button class="btn btn-large btn-primary animated fade-in">fade in</button>
+  </p>
+</div>
+
+<h3 class="animated delayed-2 fade-in-left">Available Effects</h3>
+<div class="animated delayed-3 fade-in">
+  Possible animation effects are:
+  <ul>
+    <li><code>fade-in</code></li>
+    <li><code>fade-in-down</code></li>
+    <li><code>fade-in-left</code></li>
+    <li><code>fade-out</code></li>
+    <li><code>fade-out-down</code></li>
+  </ul>
+
+
+  <p>Here are some examples that trigger on click</p>
+  <button class="btn btn-large animated click" data-animation="fade-in">fade-in example</button>
+  <button class="btn btn-large animated click" data-animation="fade-in-down">fade-in-down example</button>
+  <button class="btn btn-large animated click" data-animation="fade-in-left">fade-in-left example</button>
+  <button class="btn btn-large animated click" data-animation="fade-out">fade-out example</button>
+  <button class="btn btn-large animated click" data-animation="fade-out-down">fade-out-down example</button>
+
+
+  <div id="effect-example" class="well" style="margin-top: 30px; height: 100px; position: relative;"></div>
+</div>
+
+<h3>Delaying Animations</h3>
+<p>You can also delay animations for extra effect. To do so simply add a <code>delayed-x</code> class in addtion to the other classes, where x is 1-4</p> 
+
+
+<p>The delay classes correspond to the following times:</p>
+<ul>
+  <li><code>delayed-1</code>: delay 0.25s</li>
+  <li><code>delayed-2</code>: delay 0.5s</li>
+  <li><code>delayed-3</code>: delay 1s</li>
+  <li><code>delayed-4</code>: delay 2s</li>
+</ul>
+
+<script>
+  $("button.click").on("click", function(e) {
+    e.preventDefault()
+    var obj = this
+    var elm = $(this)
+
+    var msg = $("<div class='alert alert-success animated'><button type='button' class='close' data-dismiss='alert'>&times;</button><strong>Hello!</strong> This is an animated message</div>")
+
+    msg.css({ position: "absolute", top: "10px", left: "10px" })
+    msg.addClass(elm.attr("data-animation"))
+    $("#effect-example").append(msg)
+  });
+</script>
