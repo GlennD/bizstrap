@@ -1,0 +1,197 @@
+---
+layout: default 
+title: Feedback Messaging
+---
+
+<div class="page-header">
+  <h1>Design Patterns for Feedback Messaging</h1>
+</div>
+
+<p>Defined here are a few of the design patterns for providing feedback messaging in BMP, as well as proposed content.</p>
+
+<h2>Sticky Alert</h2>
+<hr />
+
+<p><strong><a href="prototypes/alert-sticky.html" target="_blank">Example Sticky Alert</a></strong></p>
+
+<h3>When to use</h3>
+<ul>
+  <li>To confirm an action a user has just taken</li>
+  <li>To display a limitation that would normally be shown in-line but can't be due to page layout (in a report table, for example)</li>
+</ul>
+
+<h3>Specifications</h3>
+<p>Use the <code>alert-sticky-backdrop</code>, <code>alert-sticky</code>, and <code>alert-inverse</code> classes as shown below to create an appropriate-looking alert message that's fixed to the top of the viewport. The <code>alert-inverse</code> class was created just for this purpose,
+so try not to use the other alert styles with this pattern.</p>
+<p>Use CSS transitions to fade the message in, display it for 2 seconds, and then fade it out.</p>
+<pre>
+&lt;div class="alert-sticky-backdrop"&gt;
+  &lt;div class="alert alert-inverse alert-sticky"&gt;
+    &lt;p&gt;&lt;i class="icon-ok icon-white"&gt;&lt;/i&gt; Share added to Brand Bar display rotation&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h3>Proposed Sticky Alerts</h3>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Message Text</th>            
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A Retargeting or LinkedIn campaign is updated and saved</td>
+      <td><i class="icon-ok"></i> Campaign updated</td>
+    </tr>    
+    <tr>
+      <td>A domain is added on the Tag Your Sites page</td>
+      <td><i class="icon-ok"></i> Domain added. Validation may take up to one hour.</td>
+    </tr>        
+    <tr>
+      <td>A new action is created</td>
+      <td><i class="icon-ok"></i> Action created</td>
+    </tr>        
+    <tr>
+      <td>A new custom segment is created</td>
+      <td><i class="icon-ok"></i> Custom segment created</td>
+    </tr>        
+    <tr>
+      <td>A user is added on the Users page</td>
+      <td><i class="icon-ok"></i> User added</td>
+    </tr>        
+    <tr>
+      <td>A share is published from Easy Share</td>
+      <td><i class="icon-ok"></i> Share published</td>
+    </tr>        
+    <tr>
+      <td>A share is scheduled from Easy Share</td>
+      <td><i class="icon-ok"></i> Share scheduled</td>
+    </tr>        
+    <tr>
+      <td>The BMP password is changed</td>
+      <td><i class="icon-ok"></i> Password saved</td>
+    </tr>        
+    <tr>
+      <td>An ad is turned off on the Campaign Performance report</td>
+      <td><i class="icon-minus-sign"></i> Ad will no longer be served</td>
+    </tr>        
+    <tr>
+      <td>An ad is turned back on on the Campaign Performance report</td>
+      <td><i class="icon-ok"></i> Ad is ready to be served</td>
+    </tr>        
+    <tr>
+      <td>A campaign is paused on the Campaign Performance report</td>
+      <td><i class="icon-pause"></i> Campaign paused</td>
+    </tr>        
+    <tr>
+      <td>A campaign is unpaused on on the Campaign Performance report</td>
+      <td><i class="icon-play"></i> Campaign running</td>
+    </tr>            
+    <tr>
+      <td>A campaign is archived on the Campaign Performance report</td>
+      <td><i class="icon-hdd"></i> Campaign archived</td>
+    </tr>  
+    <tr>
+      <td>A share is promoted on the Campaign Performance report</td>
+      <td><i class="icon-ok"></i> Share added to Brand Bar display rotation</td>
+    </tr>                  
+    <tr>
+      <td>The Brand Bar is added to a share</td>
+      <td><i class="icon-ok"></i> Brand Bar will display when SmartLink is clicked</td>
+    </tr>            
+    <tr>
+      <td>Six items are selected on the Campaign Performance chart</td>
+      <td><i class="icon-exclamation-sign"></i> Maximum number selected</td>
+    </tr>            
+    <tr>
+      <td>User tries to unpause a campaign that expired</td>
+      <td><i class="icon-remove"></i> Campaign has expired. Remove end date to enable.</td>
+    </tr>            
+  </tbody>
+</table>
+
+<h2>Modals</h2>
+<hr />
+
+<p><strong><a href="modals.html" target="_blank">Modal Component</a></strong></p>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Headline</th>
+      <th>Body</th>
+      <th>Buttons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Required fields not completed in a form</td>
+      <td>[none]</td>
+      <td>Please complete the required fields.</td>
+      <td>OK[btn-primary], &times;[close]</td>
+    </tr>
+    <tr>
+      <td>No creative uploaded in a new Retargeting or LinkedIn campaign</td>
+      <td>Upload ad creative</td>
+      <td>Create an ad for your campaign.</td>
+      <td>OK[btn-primary], &times;</td>
+    </tr>    
+    <tr>
+      <td>Retargeting campaign created but selected domain not tagged</td>
+      <td><a href="prototypes/retargeting_modal_1.html" target="_blank">Mockup</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>New campaign created</td>
+      <td><a href="prototypes/retargeting_modal_2.html" target="_blank">Mockup</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Signed out for inactivity</td>
+      <td>Signed out</td>
+      <td>We signed you out after a period of inactivity.</td>
+      <td>Sign In[btn-primary]</td>
+    </tr>            
+    <tr>
+      <td>Action created for domain that hasn't been validated</td>
+      <td>[none]</td>
+      <td>Your action <abbr class="initialism">URL</abbr> is on a domain that hasn't been tagged. The action won't be tracked until you apply
+      the Bizo Insight Tag to the domain.</td>
+      <td>Tag Your Site[btn-primary], &times;[close]</td>
+    </tr>    
+    <tr>
+      <td>Delete domain</td>
+      <td>Please confirm</td>
+      <td>Are you sure you want to remove this domain?</td>
+      <td>Cancel[btn], Delete[btn-danger]</td>
+    </tr>       
+    <tr>
+      <td>Delete action</td>
+      <td>Please confirm</td>
+      <td>Are you sure you want to remove this action?</td>
+      <td>Cancel[btn], Delete[btn-danger]</td>
+    </tr>           
+    <tr>
+      <td>Delete custom segment</td>
+      <td>Please confirm</td>
+      <td>Are you sure you want to remove this custom segment?</td>
+      <td>Cancel[btn], Delete[btn-danger]</td>
+    </tr>               
+    <tr>
+      <td>Delete user</td>
+      <td>Please confirm</td>
+      <td>Are you sure you want to remove this user?</td>
+      <td>Cancel[btn], Delete[btn-danger]</td>
+    </tr>               
+  </tbody>
+</table>
+
+<h2>Inline Messaging</h2>
+<p>BMP supports inline field validation and should validate fields upon completion. See the <a href="forms.html" target="_blank">Forms</a> doc for more info.</p>
+
+<p>Inline messaging may also use the <a href="contextual_help.html" target="_blank">Contextual Help</a> patterns and the standard Bootstrap alert classes depending on the case.</p>

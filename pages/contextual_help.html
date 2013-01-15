@@ -13,17 +13,8 @@ title: Contributing
 <p>Contextual help is help available to the user along with its subject functions, without requiring an external document. Contextual help may link to external help documents for topics that are too long to be covered in-context.</p>
 
 <a name="help-box"></a>
-<h2 class="page-header">In-line Help Box</h2>
-
-<h3>When to use</h3>
-<ul>
-  <li>The user needs an introduction to the interface, not just to its functionality but to it's purpose or value.</li>
-  <li>Several related interface elements combine to provide complex functionality, and need to be explained as a group.</li>
-  <li>A user flow is divided into several sections, to which the above criteria apply.</li>
-</ul>
-<h3>Specifications</h3>
-<p>The Bizstrap alert and alert-info classes provide the basic form of the in-line help box. The box should be displayed immediately beneath a header and immediately above the functionality it references, when active. In most cases, the box should be made collapsible. To make the box collapsible, include the "close" button in the upper right corner, but when the button is clicked, dismiss the box and show the label for the box type (example: FAQ) immediately after the header above. If the label is clicked, expand the help box to its open state and hide the label in the header row. When the label is hovered over, show a slight glow to indicate clickability. Hide all in-line help boxes by default.</p>
-<p>In rare cases it may make sense to remove the collapse option, or to make the box completely dismissable.</p> 
+<h2>In-line Help Box</h2>
+<hr />
 
 <div class="well">
   <h3>Closed state  <span class="label label-info pointer">FAQ</span></h3>
@@ -76,23 +67,21 @@ title: Contributing
     </ul>
     <p><i class="icon-share-alt"></i><small> <a target="#">Read more</a></small></p>
   </div>
-
-  <row><div class="span5"><h3>Collapsed state</h3></div><div style="text-align:right"><span class="label label-info">FAQ</span></div></row>
-
 </div>
-
-
-<a name="field-button"></a>
-<h2 class="page-header">Field level help button</h2>
 
 <h3>When to use</h3>
 <ul>
-  <li>The help content pertains to a specific element AND</li>
-  <li>The help content provides more context or explanation of the element but is not critical for proper use.</li>
-</ul>	
+  <li>The user needs an introduction to the interface, not just to its functionality but to it's purpose or value.</li>
+  <li>Several related interface elements combine to provide complex functionality, and need to be explained as a group.</li>
+  <li>A user flow is divided into several sections, to which the above criteria apply.</li>
+</ul>
 <h3>Specifications</h3>
-<p>The glyphicon icon-info-sign provides the visual cue that field level help is available. Ideally the icon should be placed to the right of the subject element. When the icon is hovered over, show a version in Bizo Light Blue (#0095D5) to indicate clickability. When the user clicks the icon, show the help popover.</p>
-<p>If the content of the popover is more than five lines tall, cap its height and include a scrollbar for viewing more content.</p>
+<p>The Bizstrap alert and alert-info classes provide the basic form of the in-line help box. The box should be displayed immediately beneath a header and immediately above the functionality it references, when active. In most cases, the box should be made collapsible. To make the box collapsible, include the "close" button in the upper right corner, but when the button is clicked, dismiss the box and show the label for the box type (example: FAQ) immediately after the header above. If the label is clicked, expand the help box to its open state and hide the label in the header row. When the label is hovered over, show a slight glow to indicate clickability. Hide all in-line help boxes by default.</p>
+<p>In rare cases it may make sense to remove the collapse option, or to make the box completely dismissable.</p> 
+
+<a name="field-button"></a>
+<h2>Field level help button</h2>
+<hr />
 
 <div class="well">
   <h3>Closed state</h3>
@@ -110,9 +99,22 @@ title: Contributing
   <img src="../assets/img/popover-open.png">         
 </div>
 
+<h3>When to use</h3>
+<ul>
+  <li>The help content pertains to a specific element AND</li>
+  <li>The help content provides more context or explanation of the element but is not critical for proper use.</li>
+</ul>	
+<h3>Specifications</h3>
+<p>The glyphicon icon-info-sign provides the visual cue that field level help is available. Ideally the icon should be placed to the right of the subject element. When the icon is hovered over, show a version in Bizo Light Blue (#0095D5) to indicate clickability. When the user clicks the icon, show the help popover.</p>
+<p>If the content of the popover is more than five lines tall, cap its height and include a scrollbar for viewing more content.</p>
 
+<h2>Button hints</h2>
+<hr />
 
-<h2 class="page-header">Button hints</h2>
+<div class="well">
+<h3>Button hint shown</h3>
+<img src="../assets/img/bizstrap-docs/button-hint.png" />
+</div>
 
 <h3>When to use</h3>
 <ul>
@@ -121,15 +123,29 @@ title: Contributing
 </ul>
 <h3>Specifications</h3>
 <p>Button hints are very short text hints displayed in a tooltip when the user hovers over the button. They should be placed to the left or below the button, depending on where it makes sense in the UI. Content in the button hint should not exceed 4 lines, though it is OK to include links to an external help doc.</p>
+
+<a name="field-text"></a>
+<h2>Field help text</h2>
+<hr />
+
 <div class="well">
-<h3>Button hint shown</h3>
-<img src="../assets/img/bizstrap-docs/button-hint.png" />
-</div
+  <h3>Right Field Help</h3>
+  <div class="control-group">
+    <div class="controls">
+      <select id="actions">
+        <option>BMP Signup</option></select><p class="help-inline"><small>Help text</small></p>
+    </div>
+  </div>                
 
-
-
-><a name="field-text"></a>
-<h2 class="page-header">Field help text</h2>
+  <h3>Below Field Help</h3>
+  <div class="control-group">
+    <div class="controls">
+      <select id="actions">
+        <option>BMP Signup</option></select>
+      <p class="help-block muted"><small>Help text</small></p>
+    </div>
+  </div>                                
+</div>                    
 
 <h3>When to use</h3>
 <ul>
@@ -140,54 +156,3 @@ title: Contributing
 
 <h3>Specifications</h3>
 <p>Field help text is subtle text that accompanies a field and provides important information for using the field. The text must be kept extremely brief. If more information is required, consider using an in-line help box or linking to an external help document. Depending on whether the form is a standard BMP form or a small form used in a modal or widget, the field help text may be placed either to the right or below the control as defined in <a href="forms.html">Forms</a>.</p>
-  <div class="well">
-    <h3>Right Field Help</h3>
-    <div class="control-group">
-      <div class="controls">
-        <select id="actions">
-          <option>BMP Signup</option></select><p class="help-inline"><small>Help text</small></p>
-      </div>
-    </div>                
-
-    <h3>Below Field Help</h3>
-    <div class="control-group">
-      <div class="controls">
-        <select id="actions">
-          <option>BMP Signup</option></select>
-        <p class="help-block muted"><small>Help text</small></p>
-      </div>
-    </div>                                
-</div>                    
-
-
-<a name="easyshare"></a>                
-<h2 class="page-header">Switchboard EasyShare Help</h2>
-
-<div class="alert alert-info">
-  <p><strong>Note:</strong> This design pattern won't be implemented in the September release due to resource constraints, but I'm keeping it here for later.</p>
-</div>
-
-<h3>When to use</h3>
-<ul>
-  <li>The entire interface is small enough to fit on one screen without scrolling, with extra space around it on multiple sides.</li>
-  <li>The help text for each element is brief.</li>
-  <li>Minimal impact of help features on the UI is desired by expert users.</li>
-</ul>
-
-<h3>Specifications</h3>
-<p>Several controls on the interface have tooltips associated with them. Instead having a separate button to launch each tooltip, there is a single button used to activate all tooltips at once. When the button is clicked and the help text is active, the user may continue to use the rest of the interface as normal. Clicking the help button again deactivates all help messages.</p>
-
-
-<div class="well">
-  <h3>Closed state</h3>
-  <img src="../assets/img/off.png">
-
-  <h3>Active state</h3>
-  <p>In the active state, all tooltips must be small enough to not overlap each other or any content of the interface.</p>                
-  <img src="../assets/img/on.png">
-
-  <h3>Focus state</h3>            
-  <p>When a control in the interface has focus, any tooltip associated with it highlights to become more prominent.</p>
-  <img src="../assets/img/focus.png">
-</div>
-
