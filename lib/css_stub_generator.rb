@@ -29,7 +29,7 @@ STUB_HEADER = <<STUB_HEADER
 STUB_HEADER
 
 class CssStubGenerator
-  @@regex =  /^\.([^0-9][a-zA-Z0-9\-\.\s\,:\(\)\>]+)\s*(\{|,)/
+  @@regex =  /\.([^0-9][a-zA-Z0-9\-\.\s\,:\(\)\>]+)\s*(\{|,)/
 
     def initialize(input_filepath)
       @cssfile = input_filepath

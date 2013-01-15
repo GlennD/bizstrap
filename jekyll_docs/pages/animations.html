@@ -19,8 +19,8 @@ title: Animations
   </p>
 </div>
 
-<h3 class="animated delayed-2 fade-in-left">Available Effects</h3>
-<div class="animated delayed-3 fade-in">
+<h3 class="animated delayed-05s fade-in-left">Available Effects</h3>
+<div class="animated delayed-1s fade-in">
   Possible animation effects are:
   <ul>
     <li><code>fade-in</code></li>
@@ -28,16 +28,19 @@ title: Animations
     <li><code>fade-in-left</code></li>
     <li><code>fade-out</code></li>
     <li><code>fade-out-down</code></li>
+    <li><code>hinge</code></li>
   </ul>
 
 
   <p>Here are some examples that trigger on click</p>
-  <button class="btn btn-large animated click" data-animation="fade-in">fade-in example</button>
-  <button class="btn btn-large animated click" data-animation="fade-in-down">fade-in-down example</button>
-  <button class="btn btn-large animated click" data-animation="fade-in-left">fade-in-left example</button>
-  <button class="btn btn-large animated click" data-animation="fade-out">fade-out example</button>
-  <button class="btn btn-large animated click" data-animation="fade-out-down">fade-out-down example</button>
-
+  <div class="btn-group">
+    <button class="btn animated click" data-animation="fade-in">fade-in</button>
+    <button class="btn animated click" data-animation="fade-in-down">fade-in-down</button>
+    <button class="btn animated click" data-animation="fade-in-left">fade-in-left</button>
+    <button class="btn animated click" data-animation="fade-out">fade-out</button>
+    <button class="btn animated click" data-animation="fade-out-down">fade-out-down</button>
+    <button class="btn animated click" data-animation="hinge">hinge</button>
+  </div>
 
   <div id="effect-example" class="well" style="margin-top: 30px; height: 100px; position: relative;"></div>
 </div>
@@ -48,10 +51,10 @@ title: Animations
 
 <p>The delay classes correspond to the following times:</p>
 <ul>
-  <li><code>delayed-1</code>: delay 0.25s</li>
-  <li><code>delayed-2</code>: delay 0.5s</li>
-  <li><code>delayed-3</code>: delay 1s</li>
-  <li><code>delayed-4</code>: delay 2s</li>
+  <li><code>delayed-025s</code>: delay 0.25s</li>
+  <li><code>delayed-05s</code>: delay 0.5s</li>
+  <li><code>delayed-1s</code>: delay 1s</li>
+  <li><code>delayed-2s</code>: delay 2s</li>
 </ul>
 
 <script>

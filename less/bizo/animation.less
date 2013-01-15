@@ -27,11 +27,25 @@
     animation-fill-mode: @time;
   }
 
-  .translate(@x, @y) {
-    -webkit-transform: translate(@x, @y);
-    -moz-transform: translate(@x, @y);
-    -o-transform: translate(@x, @y);
-    transform: translate(@x, @y);
+  .transform(@fn) {
+    -webkit-transform: @fn;
+    -moz-transform: @fn;
+    -o-transform: @fn;
+    transform: @fn;
+  }
+
+  .transform-origin(@origin) {
+    -webkit-transform-origin: @origin;
+    -moz-transform-origin: @origin;
+    -o-transform-origin: @origin;
+    transform-origin: @origin;
+  }
+
+  .timing-function(@fn) {
+    -webkit-animation-timing-function: @fn;
+    -moz-animation-timing-function: @fn;
+    -o-animation-timing-function: @fn;
+    animation-timing-function: @fn;
   }
 }
 
@@ -46,15 +60,42 @@
   }
 }
 
-.fade-and-move(@startOpacity, @endOpacity, @startX, @endX, @startY, @endY) {
+.fade-and-move(@startOpacity, @endOpacity, @startTransformation, @endTransformation) {
   from { 
-    .translate(@startX, @startY);
+    #animation > .transform(@startTransformation);
     opacity: @startOpacity; 
   }
 
   to   { 
-    .translate(@endX, @endY);
+    #animation > .transform(@endTransformation);
     opacity: @endOpacity;   
+  }
+}
+
+// borrowed from https://github.com/daneden/animate.css/blob/master/source/hinge.css
+.hinge {
+	0% { 
+    #animation > .transform(rotate(0)); 
+    #animation > .transform-origin(top left);
+    #animation > .timing-function(ease-in-out);
+  }	
+
+  20%, 60% {
+    #animation > .transform(rotate(80deg)); 
+    #animation > .transform-origin(top left);
+    #animation > .timing-function(ease-in-out);
+  }
+
+  40%, 80% {
+    #animation > .transform(rotate(60deg)); 
+    #animation > .transform-origin(top left);
+    #animation > .timing-function(ease-in-out); 
+    opacity: 1;
+  }
+
+  100% {
+    #animation > .transform(translate(0, 700px)); 
+    opacity: 0;
   }
 }
 
@@ -67,25 +108,31 @@
 @-o-keyframes      fade-in { .fade(0, 1); } 
 @keyframes         fade-in { .fade(0, 1); } 
 
-@-webkit-keyframes fade-in-down { .fade-and-move(0,1,0,0,-@translate,0); } 
-@-moz-keyframes    fade-in-down { .fade-and-move(0,1,0,0,-@translate,0); } 
-@-o-keyframes      fade-in-down { .fade-and-move(0,1,0,0,-@translate,0); } 
-@keyframes         fade-in-down { .fade-and-move(0,1,0,0,-@translate,0); } 
+@-webkit-keyframes fade-in-down { .fade-and-move(0,1, translate(0,-@translate), translate(0, 0)); } 
+@-moz-keyframes    fade-in-down { .fade-and-move(0,1, translate(0,-@translate), translate(0, 0)); } 
+@-o-keyframes      fade-in-down { .fade-and-move(0,1, translate(0,-@translate), translate(0, 0)); } 
+@keyframes         fade-in-down { .fade-and-move(0,1, translate(0,-@translate), translate(0, 0)); } 
 
-@-webkit-keyframes fade-in-left { .fade-and-move(0,1,-@translate,0,0,0); } 
-@-moz-keyframes    fade-in-left { .fade-and-move(0,1,-@translate,0,0,0); } 
-@-o-keyframes      fade-in-left { .fade-and-move(0,1,-@translate,0,0,0); } 
-@keyframes         fade-in-left { .fade-and-move(0,1,-@translate,0,0,0); } 
+@-webkit-keyframes fade-in-left { .fade-and-move(0,1, translate(-@translate, 0), translate(0, 0)); } 
+@-moz-keyframes    fade-in-left { .fade-and-move(0,1, translate(-@translate, 0), translate(0, 0)); } 
+@-o-keyframes      fade-in-left { .fade-and-move(0,1, translate(-@translate, 0), translate(0, 0)); } 
+@keyframes         fade-in-left { .fade-and-move(0,1, translate(-@translate, 0), translate(0, 0)); } 
 
 @-webkit-keyframes fade-out { .fade(1,0); } 
 @-moz-keyframes    fade-out { .fade(1,0); } 
 @-o-keyframes      fade-out { .fade(1,0); } 
 @keyframes         fade-out { .fade(1,0); } 
 
-@-webkit-keyframes fade-out-down { .fade-and-move(1,0,0,0,0,@translate); } 
-@-moz-keyframes    fade-out-down { .fade-and-move(1,0,0,0,0,@translate); } 
-@-o-keyframes      fade-out-down { .fade-and-move(1,0,0,0,0,@translate); } 
-@keyframes         fade-out-down { .fade-and-move(1,0,0,0,0,@translate); } 
+@-webkit-keyframes fade-out-down { .fade-and-move(1,0, translate(0,0), translate(0, @translate)); } 
+@-moz-keyframes    fade-out-down { .fade-and-move(1,0, translate(0,0), translate(0, @translate)); } 
+@-o-keyframes      fade-out-down { .fade-and-move(1,0, translate(0,0), translate(0, @translate)); } 
+@keyframes         fade-out-down { .fade-and-move(1,0, translate(0,0), translate(0, @translate)); } 
+
+@-webkit-keyframes hinge { .hinge(); } 
+@-moz-keyframes    hinge { .hinge(); } 
+@-o-keyframes      hinge { .hinge(); } 
+@keyframes         hinge { .hinge(); } 
+
 
 
 // Actual animation classes
@@ -93,10 +140,10 @@
   #animation > .fill-mode(both);
   #animation > .duration(1s);
 
-  &.delayed-1    { #animation > .delay(0.25s); }
-  &.delayed-2    { #animation > .delay(0.50s); }
-  &.delayed-3    { #animation > .delay(1.00s); }
-  &.delayed-4    { #animation > .delay(2.00s); }
+  &.delayed-025s    { #animation > .delay(0.25s); }
+  &.delayed-05s     { #animation > .delay(0.50s); }
+  &.delayed-1s      { #animation > .delay(1.00s); }
+  &.delayed-2s      { #animation > .delay(2.00s); }
 
   &.fade-in       { #animation > .apply(fade-in); }
   &.fade-in-down  { #animation > .apply(fade-in-down); }
@@ -104,4 +151,6 @@
 
   &.fade-out      { #animation > .apply(fade-out); }
   &.fade-out-down { #animation > .apply(fade-out-down); }
+
+  &.hinge         { #animation > .apply(hinge); }
 }
