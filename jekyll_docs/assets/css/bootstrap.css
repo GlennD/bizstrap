@@ -5972,6 +5972,9 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   background: #00a5dc;
 }
 .bookmarklet .bookmarklet-controls .btn-toolbar .btn.active {
+  /* \9 is a hack for IE8 and below, since they do not support box shadow */
+
+  background: #005976 \9;
   -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5);

@@ -64,6 +64,8 @@
         background: @menuColor;
 
         &.active {
+          /* \9 is a hack for IE8 and below, since they do not support box shadow */
+          background: darken(@menuColor, 20%) ~"\9"; 
           .box-shadow(inset 0 2px 8px rgba(0,0,0,.5));
         }
       }
