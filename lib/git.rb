@@ -1,5 +1,3 @@
-require 'rugged'
-
 module Git
   class << self
     def latest_tag
