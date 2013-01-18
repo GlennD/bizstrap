@@ -1,7 +1,7 @@
 module Git
   class << self
     def latest_tag
-      `git describe --tags`.split("-")[0].strip
+      `git tag`.split("\n")[-1].strip
     end
 
     def create_tag(name)
