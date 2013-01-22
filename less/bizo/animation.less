@@ -118,6 +118,11 @@
 @-o-keyframes      fade-in-left { .fade-and-move(0,1, translate(-@translate, 0), translate(0, 0)); } 
 @keyframes         fade-in-left { .fade-and-move(0,1, translate(-@translate, 0), translate(0, 0)); } 
 
+@-webkit-keyframes fade-in-up { .fade-and-move(0,1, translate(0, @translate), translate(0, 0)); } 
+@-moz-keyframes    fade-in-up { .fade-and-move(0,1, translate(0, @translate), translate(0, 0)); } 
+@-o-keyframes      fade-in-up { .fade-and-move(0,1, translate(0, @translate), translate(0, 0)); } 
+@keyframes         fade-in-up { .fade-and-move(0,1, translate(0, @translate), translate(0, 0)); } 
+
 @-webkit-keyframes fade-out { .fade(1,0); } 
 @-moz-keyframes    fade-out { .fade(1,0); } 
 @-o-keyframes      fade-out { .fade(1,0); } 
@@ -146,6 +151,7 @@
   &.delayed-2s      { #animation > .delay(2.00s); }
 
   &.fade-in       { #animation > .apply(fade-in); }
+  &.fade-in-up    { #animation > .apply(fade-in-up); }
   &.fade-in-down  { #animation > .apply(fade-in-down); }
   &.fade-in-left  { #animation > .apply(fade-in-left); }
 

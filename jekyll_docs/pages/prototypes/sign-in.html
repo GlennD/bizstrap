@@ -2,41 +2,57 @@
 layout: accounts
 title: Sign In
 ---
-<img class="fadedlogobckgrnd" src="../../assets/img/accounts/signin_bmp_target.png" />
 
-<div class="landing span12">
-  <div class="container">
-    <h1 class="section-header">Bizo Marketing Platform</h1>
-    <div class="row-fluid">
-      <div class="span6">
-        <h3>Sign in to your account</h3>
-        <img class="identity" src="../../assets/img/accounts/bizo_logo_with_tag.png" />
+<div class="logo-container">
+  <img id="logo" src="../../assets/img/bizo_logo_tag.png" />
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="span7">
+        <img class="animated fade-in-left delayed-05s" src="../../assets/img/accounts/screenshot.png" />
       </div>
-      <div class="span6 rightcolumn">
-       <form class="form-horizontal">
-         <fieldset>
-           <div class="control-group">
-             <label class="control-label">Email Address</label>
-             <div class="controls">
-               <input type="text" class="input-large" />
-             </div>
-           </div>
-           <div class="control-group">
-             <label class="control-label">Password</label>
-             <div class="controls">
-               <input type="password" class="input-large" />
-               <p class="help-muted"><small><a href="#">Forgot it?</a></small></p>               
-             </div>
-           </div>           
-           <div class="control-group">
-             <div class="controls">
-               <button type="submit" class="btn btn-primary btn-large">Sign in</button> 
-               <p><small><a href="create-account.html">Need a new account?</a></small></p>               
-             </div>
-           </div>
-         </fieldset>
-       </form>
+      <div class="span5 rightcolumn">
+        <h2>Welcome Back</h2>
+
+        <form class="form">
+          <fieldset>
+            <div class="control-group">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-user"></i></span>
+                <input id="email" placeholder="Email" type="text" class="input-large" />
+              </div>
+            </div>
+
+            <div class="control-group">
+              <div class="input-prepend">
+                <span class="add-on"><i class="icon-lock"></i></span>
+                <input placeholder="Password" type="password" class="input-large" />
+              </div>
+            </div>
+
+            <div class="btn-group">
+              <button type="submit" class="btn btn-primary btn-large">Sign in</button> 
+            </div>
+            <p><small><a href="create-account.html">Need a new account?</a></small></p>
+          </fieldset>
+        </form>
       </div>
     </div>
-  </div>
 </div>
+
+<script>
+  $("input").on("focus", function() {
+    $(this).siblings(".add-on").addClass("active")
+  })
+
+  $("input").on("blur", function() {
+    $(this).siblings(".add-on").removeClass("active")
+  })
+
+  $(document).ready(function() {
+    setTimeout(function() {
+      $("#email").focus()
+    }, 1000)
+  })
+</script>

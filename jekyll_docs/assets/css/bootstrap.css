@@ -238,66 +238,6 @@ a:hover {
   -moz-border-radius: 500px;
   border-radius: 500px;
 }
-html,
-body {
-  min-height: 100%;
-}
-#page {
-  min-height: 90%;
-  position: relative;
-  overflow: hidden;
-}
-body.bizo-app {
-  background: #ffffff;
-}
-body.bizo-app.with-logo {
-  padding-top: 110px;
-  /* extra spacing for logo */
-
-  background: url("../img/logo.png") 30px 30px no-repeat #d1e6eb;
-}
-body.accounts {
-  background-color: #d2edf8;
-  background-image: -moz-linear-gradient(left, #ffffff, #d2edf8);
-  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#ffffff), to(#d2edf8));
-  background-image: -webkit-linear-gradient(left, #ffffff, #d2edf8);
-  background-image: -o-linear-gradient(left, #ffffff, #d2edf8);
-  background-image: linear-gradient(to right, #ffffff, #d2edf8);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffd2edf8', GradientType=1);
-}
-body.accounts img.fadedlogobckgrnd {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-h1 {
-  color: #1B3D46;
-}
-.header {
-  position: relative;
-  height: 70px;
-  margin: 20px 0 20px;
-  border-bottom: 1px solid #666666;
-}
-.well {
-  background: #fff;
-  border: solid 1px #666666;
-}
-.featured {
-  padding: 0 0 0 20px;
-  margin-bottom: 20px;
-}
-.featured a.thumbnail {
-  margin-top: 20px;
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.featured h3 {
-  margin: 15px 0 5px;
-}
 .row {
   margin-left: -20px;
   *zoom: 1;
@@ -604,6 +544,13 @@ h1 {
 .container-fluid:after {
   clear: both;
 }
+.full-page {
+  width: 100%;
+}
+.reading-optimized {
+  width: 100%;
+  max-width: 600px;
+}
 p {
   margin: 0 0 10px;
 }
@@ -720,7 +667,7 @@ h4 small {
 }
 .page-header h1 {
   line-height: 1;
-  color: #008aaa;
+  color: #007698;
   letter-spacing: -1px;
   font-weight: normal;
 }
@@ -1094,31 +1041,36 @@ li.link-attribute {
   display: inline-block;
   margin: 0 10px 0 22px;
 }
-.landing {
-  position: fixed;
-  width: 100%;
-  top: 50%;
-  margin-top: -300px;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  padding: 100px 0 100px;
+body.login {
+  border-top: 3px solid #00a5dc;
+}
+body.login .container {
+  width: 940px;
+  margin-top: 80px;
+  padding: 0;
   background-color: #ffffff;
 }
-.landing .relative {
-  position: relative;
-}
-.landing .identity {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-}
-.landing h4 {
-  font-weight: normal;
-}
-.rightcolumn {
-  margin-left: 40px;
-  padding-left: 40px;
+body.login .container .rightcolumn {
+  padding: 0 0 0 40px;
   border-left: 1px solid #eeeeee;
+}
+body.login .container .add-on {
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  transition: background 0.5s;
+}
+body.login .container .add-on.active {
+  background: #66b2ff;
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  transition: background 0.5s;
+}
+body.login .logo-container {
+  width: 940px;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 code,
 pre {
@@ -2874,8 +2826,8 @@ table th[class*="span"],
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #666666;
+  border: 1px solid #545454;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -6217,6 +6169,70 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
     opacity: 1;
   }
 }
+@-webkit-keyframes fade-in-up {
+  from {
+    -webkit-transform: translate(0, 50px);
+    -moz-transform: translate(0, 50px);
+    -o-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in-up {
+  from {
+    -webkit-transform: translate(0, 50px);
+    -moz-transform: translate(0, 50px);
+    -o-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@-o-keyframes fade-in-up {
+  from {
+    -webkit-transform: translate(0, 50px);
+    -moz-transform: translate(0, 50px);
+    -o-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-up {
+  from {
+    -webkit-transform: translate(0, 50px);
+    -moz-transform: translate(0, 50px);
+    -o-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes fade-out {
   from {
     opacity: 1;
@@ -6568,6 +6584,12 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   -moz-animation-name: fade-in;
   -o-animation-name: fade-in;
   animation-name: fade-in;
+}
+.animated.fade-in-up {
+  -webkit-animation-name: fade-in-up;
+  -moz-animation-name: fade-in-up;
+  -o-animation-name: fade-in-up;
+  animation-name: fade-in-up;
 }
 .animated.fade-in-down {
   -webkit-animation-name: fade-in-down;

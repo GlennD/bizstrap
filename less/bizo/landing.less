@@ -1,37 +1,42 @@
 // Landing
 // -------
 
-.landing {
+body.login {
   @landingHeight: 500px;
-  @landingPadding: 100px;
+  @containerWidth: 940px;
+  @paddingOffset: 40px;
+  @offset: @gridColumnWidth;
 
-  position: fixed;
-  width: 100%;
-  top: 50%;
-  margin-top: -1 * (@landingHeight / 2 + @landingPadding /2);
-  border-top: 1px solid @grayLighter;
-  border-bottom: 1px solid @grayLighter;
-  padding: @landingPadding 0 @landingPadding;
-  background-color: @white;
+  border-top: 3px solid @blue;
 
-  .relative {
-    position: relative;
+  .container {
+    width: @containerWidth;
+    margin-top: 80px;
+    padding: 0;
+    background-color: @white;
+
+    .rightcolumn {
+      padding: 0 0 0 @paddingOffset;
+      border-left: 1px solid @grayLighter;
+    }
+
+    .add-on {
+      @transition: background 0.5s;
+      .transition(@transition);
+
+      &.active {
+        background: lighten(#007eff, 20%);
+        .transition(@transition);
+      }
+    }
   }
 
-  .identity {
-    position: absolute;
-    bottom: 0;
-    // make image left corner flush with row's contents
-    left: @gridGutterWidth; 
-  }
+  .logo-container {
+    width: @containerWidth;
+    margin: 0 auto;
+    padding-top: 20px;
+    img {
 
-  h4 {
-    font-weight: normal;
+    }
   }
-}
-
-.rightcolumn {
-  margin-left: 40px;
-  padding-left: 40px;
-  border-left: 1px solid @grayLighter;
 }
