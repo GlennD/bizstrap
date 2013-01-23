@@ -1,101 +1,88 @@
 ---
 layout: default
 title: Bizstrap
+layouts_path: "/pages/layout_examples"
 ---
 
 <div class="page-header">
   <h1>
-    Bizstrap Quickstart 
-    <small>just copy and paste the following code below</small>
+    Get Started with Bizstrap 
+    <small></small>
   </h1>
 </div>
 
-<pre class="prettyprint">
-            <code>
-&lt;!DOCTYPE HTML&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;link href="http://media.bizo.com/bizstrap/css/bizstrap-rc.css" rel="stylesheet"&gt;
-  &lt;/head&gt;
+<h2>Pick a layout</h2>
+<div class="row-fluid well well-large well-featured animated fade-in-up delayed-05s">
+  <div class="span4">
+    <h3>Full Screen App</h3>
+    <p><img src="{{{site.prefix}}/assets/img/docs/full-screen-icon.png" /></p>
+    <p>Use this layout when you have a full screen app. If your app has charts, tables, reports etc then this is where you want to start</p>
+    <div class="btn-group">
+      <a href="{{site.prefix}}{{page.layouts_path}}/full-screen-app.html" target="_blank" class="btn btn-large btn-inverse source-link">See it</a>
+      <a href="view-source:" target="_blank" class="btn  btn-large">code</a>
+    </div>
+  </div>
 
-  &lt;body class="bizo-app"&gt;
-    &lt;div class="navbar"&gt;
-      &lt;div class="navbar-inner"&gt;
-        &lt;div class="container-fluid"&gt;
-          &lt;div class="row-fluid"&gt;
-            &lt;div class="span4"&gt;
-              &lt;a href="http://www.bizo.com"&gt;&lt;img class="brand" src="http://media.bizo.com/bizstrap/img/bizo-logo-small.png"&gt;&lt;/a&gt;&lt;p class="navbar-text"&gt;Business Audience Marketing&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;ul class="nav pull-right"&gt;
-              &lt;li class="dropdown"&gt;
-              &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;
-                Dropdown Menu 
-              &lt;/a&gt;
-              &lt;ul class="dropdown-menu"&gt;
-                &lt;li&gt;&lt;a href="content_boxes.html"&gt;Content Boxes&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-              &lt;/li&gt;
+  <div class="span4">
+    <h3>940px Centered</h3>
+    <p><img src="{{site.prefix}}/assets/img/docs/centered-icon.png" /></p>
+    <p>This layout should be used for sites that need a fixed width layout - useful for marketing style websites, product tour pages and the like</p>
+    <div class="btn-group">
+      <a href="{{site.prefix}}{{page.layouts_path}}/940px-centered.html" target="_blank" class="btn btn-large btn-inverse source-link">See it</a>
+      <a href="view-source:" target="_blank" class="btn  btn-large">code</a>
+    </div>
+  </div>
 
-
-              &lt;li class="dropdown"&gt;
-              &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;
-                Link #2 
-              &lt;/a&gt;
-              &lt;/li&gt;
-
-              &lt;li class="dropdown"&gt;
-              &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;
-                Link #3 
-              &lt;/a&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="container-fluid"&gt;
-      &lt;div class="row-fluid"&gt;
-        &lt;div class="span2"&gt;
-
-          &lt;ul class="nav nav-list"&gt; 
-            &lt;li class="nav-header active"&gt; 
-              &lt;a href="#"&gt;&lt;i class="icon-home"&gt;&lt;/i&gt; Home &lt;/a&gt; 
-            &lt;/li&gt; 
-
-            &lt;li&gt; 
-              &lt;a href="#"&gt;Sublink #1&lt;/a&gt; 
-            &lt;/li&gt; 
-
-            &lt;li&gt; 
-              &lt;a href="#"&gt;Sublink #2&lt;/a&gt; 
-            &lt;/li&gt; 
-
-            &lt;li class="nav-header"&gt; 
-              &lt;a href="#"&gt;&lt;i class="icon-signal"&gt;&lt;/i&gt; Analytics&lt;/a&gt; 
-            &lt;/li&gt; 
-          &lt;/div&gt;
-
-          &lt;div class="span10"&gt;
-            &lt;h1 class="section-header"&gt;Bizstrap Starter Page&lt;/h1&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;!-- JavaScript for widgets & charts  --&gt;
-      &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"&gt;&lt;/script&gt;
-      &lt;script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"&gt;&lt;/script&gt;
-      &lt;script src="https://raw.github.com/jcarver989/raphy-charts/master/compiled/charts.min.js"&gt;&lt;/script&gt;
-      &lt;script src="http://media.bizo.com/bizstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
-    &lt;/body&gt;
-  &lt;/html&gt;
-
-
-            </code>
-            </pre>
+  <div class="span4">
+    <h3>Reading Optimized</h3>
+    <p><img src="{{site.prefix}}/assets/img/docs/reading-optimized-icon.png" /></p>
+    <p>Some pages in your app might be text heavy. For these types of pages use this layout to avoid having the line width get too wide for comfort</p> 
+    <div class="btn-group">
+      <a href="{{site.prefix}}{{page.layouts_path}}/reading-optimized.html" target="_blank" class="btn btn-large btn-inverse source-link">See it</a>
+      <a href="view-source:" target="_blank" class="btn  btn-large">code</a>
+    </div>
+  </div>
+</div>
 
 
 <div class="row-fluid">
-  <div class="span12">
+  <div class="span6">
+    <h2>Just the CSS</h2>
+    <p>
+    <span class="label label-inverse">http</span>
+      <code>media.bizo.com/bizstrap/css/bizstrap-{{site.version}}.css</code>
+    </p>
 
+    <p>
+      <span class="label label-inverse">https</span>
+      <code>d357yvvzeewyka.cloudfront.net/bizstrap/css/bizstrap-{{site.version}}.css</code>
+    </p>
+
+    <p>If you don't need any starter code, link directly to the bizstrap css file below. It's served from the CloudFront cdn so performance shouldn't be a concern</p>
   </div>
+
+  <div class="span6">
+    <h2>Bleeding Edge</h2>
+    <p>
+      <span class="label label-inverse">http</span>
+      <code>http://media.bizo.com/bizstrap/css/bizstrap-rc.css</code>
+    </p>
+
+    <p>
+      <span class="label label-inverse">https</span>
+      <code>d357yvvzeewyka.cloudfront.net/bizstrap/css/bizstrap-rc.css</code>
+    </p>
+
+    <p>Bizstrap has a release cantidate, which is updated regularly before versioned releases. If you always want the latest & greatest and don't mind occassional breakages, feel free to use it. <strong>Please do not use the release cantidate for prod apps</strong></p>
+  </div>
+</div>
+
+<script>
+  var parts = window.location.href.split("/")
+  var prefix = "view-source:" + parts[0] + "//" + parts[2]
+  $(".source-link").each(function(i, item) {
+    var link = $(item)
+    var href = link.attr("href")
+    link.siblings("a").attr("href", prefix + href)
+  });
+</script>

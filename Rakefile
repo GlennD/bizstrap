@@ -83,20 +83,6 @@ task :tick_tag_version do |t|
   puts "Created git tag: #{next_tag}"
 end
 
-# Update the starter code documentation to use the latest bizstrap version
-task :update_docs, :version do |t, args|
-  version = args[:version] || Git.latest_tag
-  file_location = File.join(".", "jekyll_docs", "pages", "index.html")
-
-  # update the tag in the stater code
-  text = File.read(file_location)
-  text.gsub!(/http:\/\/media.bizo.com\/bizstrap\/css\/bizstrap-v([^\s]+).css/, "http://media.bizo.com/bizstrap/css/bizstrap-#{version}.css")
-
-  File.open(file_location, 'w') { |f| f.write(text) }
-
-  puts "updated starter code in jekyll_docs to: bizstrap-#{version}.css"
-end
-
 # sets up redirect 
 # media.bizo.com/bizstrap/docs/current/index.html =>
 # media.bizo.com/bizstrap/docs/#{latest_version}/pages/index.html
@@ -123,7 +109,7 @@ end
 
 
 # Uploads a versioned set of docs to s3, where the version == Git.latest_tag
-task :deploy_docs, [:version] => :update_docs do |t, args|
+task :deploy_docs, :version   do |t, args|
   source_dir           = File.join ".", "jekyll_docs"
   jekyll_config        = File.join source_dir, "_config.yml"
   jekyll_config_local  = File.join source_dir, "_config.local.yml"

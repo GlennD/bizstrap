@@ -1,4 +1,6 @@
 # Prod docs Configuration used by the Rakefile
+prefix: "/bizstrap/docs/VERSION"
 css: "http://media.bizo.com/bizstrap/css/bizstrap-VERSION.css"  
 responsive_css: "http://media.bizo.com/bizstrap/css/bizstrap-responsive-VERSION.css"
+version: "VERSION"
 

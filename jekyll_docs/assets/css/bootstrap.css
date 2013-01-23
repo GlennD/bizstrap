@@ -544,12 +544,13 @@ a:hover {
 .container-fluid:after {
   clear: both;
 }
-.full-page {
+.full-screen {
   width: 100%;
 }
 .reading-optimized {
   width: 100%;
   max-width: 600px;
+  overflow: hidden;
 }
 p {
   margin: 0 0 10px;
@@ -2826,8 +2827,8 @@ table th[class*="span"],
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #666666;
-  border: 1px solid #545454;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -2854,6 +2855,13 @@ table th[class*="span"],
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+.well-featured {
+  background: #007698;
+  color: #fff;
+}
+.well-featured .btn-group {
+  margin-top: 10px;
 }
 .contentbox {
   min-height: 20px;

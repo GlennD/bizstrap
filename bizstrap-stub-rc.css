@@ -47,7 +47,6 @@
 .bar-info {}
 .bar-success {}
 .bar-warning {}
-.bizo-app {}
 .bizodarkblue {}
 .bizogreen {}
 .bizolightblue {}
@@ -126,7 +125,6 @@
 .fade-in-up {}
 .fade-out {}
 .fade-out-down {}
-.featured {}
 .focused {}
 .footer {}
 .form {}
@@ -135,6 +133,7 @@
 .form-inline {}
 .form-search {}
 .form-vertical {}
+.full-screen {}
 .google-maps {}
 .green {}
 .h1 {}
@@ -143,7 +142,6 @@
 .h4 {}
 .h5 {}
 .h6 {}
-.header {}
 .help {}
 .help-block {}
 .help-inline {}
@@ -418,6 +416,7 @@
 .pull-left {}
 .pull-right {}
 .radio {}
+.reading-optimized {}
 .red {}
 .remove-ad-variation {}
 .report-metrics {}
@@ -491,6 +490,6 @@
 .vert-space {}
 .warning {}
 .well {}
+.well-featured {}
 .well-large {}
 .well-small {}
-.with-logo {}
