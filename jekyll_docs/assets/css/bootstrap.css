@@ -1038,6 +1038,9 @@ li.link-attribute {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+li.link-attribute > a {
+  color: #333333;
+}
 .linkedin-ad-copy {
   display: inline-block;
   margin: 0 10px 0 22px;
