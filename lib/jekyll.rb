@@ -16,7 +16,8 @@ module Jekyll
       # hence swap in the prod config & put the local one back when it's done.
       FileUtils.mv config_path, "#{config_path}.tmp" 
       File.open(config_path, 'w') do |f|
-        f.write File.read(prod_config_path).gsub("VERSION", version)
+        text = File.read(prod_config_path)
+        f.write text.gsub("HYPHENATED-VERSION", version.gsub(".", "-")).gsub("VERSION", version)
       end
 
       out_dir    = Dir.mktmpdir("jekyll")
