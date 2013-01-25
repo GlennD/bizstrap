@@ -1064,6 +1064,10 @@ body.login .container .rightcolumn {
   padding: 0 0 0 40px;
   border-left: 1px solid #eeeeee;
 }
+body.login .container .input-prepend input.active {
+  background-color: transparent;
+  border-color: #eeeeee;
+}
 body.login .container .add-on {
   -webkit-transition: background 0.5s;
   -moz-transition: background 0.5s;
@@ -1071,7 +1075,6 @@ body.login .container .add-on {
   transition: background 0.5s;
 }
 body.login .container .add-on.active {
-  border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;

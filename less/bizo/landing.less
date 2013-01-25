@@ -20,12 +20,20 @@ body.login {
       border-left: 1px solid @grayLighter;
     }
 
+
+    .input-prepend {
+      input.active {
+        // override the default green
+        background-color: transparent;
+        border-color: @grayLighter;
+      }
+    }
+
     .add-on {
       @transition: background 0.5s;
       .transition(@transition);
 
       &.active {
-        border: none;
         .box-shadow(none);
         background: lighten(#007eff, 20%);
         .transition(@transition);
