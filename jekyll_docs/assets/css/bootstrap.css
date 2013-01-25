@@ -1021,6 +1021,12 @@ li.metric-unit:hover:first-child {
 .table td.metric-medium {
   text-align: right;
 }
+.table td.metric {
+  text-align: right;
+}
+.table .pagination-right {
+  text-align: right;
+}
 tr.sub-item label.checkbox {
   margin-left: 21px;
 }
