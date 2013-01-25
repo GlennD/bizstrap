@@ -1071,6 +1071,10 @@ body.login .container .add-on {
   transition: background 0.5s;
 }
 body.login .container .add-on.active {
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   background: #66b2ff;
   -webkit-transition: background 0.5s;
   -moz-transition: background 0.5s;
