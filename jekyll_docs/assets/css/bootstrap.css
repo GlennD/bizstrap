@@ -5241,6 +5241,14 @@ a.badge:hover {
 .badge-bizored[href] {
   background-color: #c51518;
 }
+.label-bizopurple,
+.badge-bizopurple {
+  background-color: #613591;
+}
+.label-bizoorange,
+.badge-bizoorange {
+  background-color: #c67605;
+}
 .btn .label,
 .btn .badge {
   position: relative;
