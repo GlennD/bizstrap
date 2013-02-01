@@ -2187,7 +2187,7 @@ table th[class*="span"],
 .table-hover tbody tr.info:hover td {
   background-color: #c4e3f3;
 }
-.report-table td > label {
+.report-table td label {
   display: inline-block;
   margin: 0 10px 0 0px;
 }
