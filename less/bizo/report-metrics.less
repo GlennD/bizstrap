@@ -25,6 +25,10 @@ li.metric-unit {
   span .label {
   text-transform: uppercase;
   }
+}
+
+//I wanted to not show the hover clickability for the page you're on, but a:hover doesn't require an anchor element to activate so I had to do it this janky way. Wonder if there's a more elegant way to do this?
+li.metric-unit.clickable {
   &:hover {
   .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
   border: 1px solid @btnBorder;
