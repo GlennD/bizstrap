@@ -1037,7 +1037,8 @@ li.metric-unit.clickable:hover:first-child {
   margin-top: 8px;
 }
 .metric-medium {
-  font-size: 16px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .metric a {
   color: #333333;
@@ -1051,13 +1052,6 @@ li.metric-unit.clickable:hover:first-child {
 }
 .table .pagination-right {
   text-align: right;
-}
-tr.sub-item label.checkbox {
-  margin-left: 21px;
-}
-tr.sub-item .metric-medium {
-  font-size: 16px;
-  font-weight: normal;
 }
 li.link-attribute {
   display: inline-block;
@@ -2213,8 +2207,20 @@ table th[class*="span"],
   background-color: #c4e3f3;
 }
 .report-table td label {
-  display: inline-block;
   margin: 0 10px 0 0px;
+}
+.report-table .sub-label {
+  display: inline-block;
+  white-space: nowrap;
+}
+.report-table .sub-label label.checkbox {
+  margin-left: 21px;
+}
+.report-table .sub-row .metric-medium {
+  font-weight: normal;
+}
+.report-table .well {
+  margin: 12px 0px 5px 21px;
 }
 [class^="icon-"],
 [class*=" icon-"] {

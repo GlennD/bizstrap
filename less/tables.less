@@ -237,7 +237,22 @@ table th[class*="span"],
 }
 
 //Report Table (used for ads in campaign report tables)
-.report-table td label {
-  display:inline-block;
-  margin: 0 10px 0 0px;
+.report-table {
+  td label {
+    margin: 0 10px 0 0px;
+  }
+  .sub-label {
+    display:inline-block;
+	white-space:nowrap;
+	label.checkbox {
+	  margin-left: 21px;
+	}
+  }
+  .sub-row .metric-medium {
+	font-weight: normal;
+  }  
+  .well {
+
+	margin: 12px 0px 5px 21px;
+  }
 }
