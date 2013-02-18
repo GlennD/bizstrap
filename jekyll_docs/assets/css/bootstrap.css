@@ -2216,10 +2216,14 @@ table th[class*="span"],
 .report-table .sub-label label.checkbox {
   margin-left: 21px;
 }
+.report-table .sub-row {
+  background-color: #f9f9f9;
+}
 .report-table .sub-row .metric-medium {
   font-weight: normal;
 }
 .report-table .well {
+  background-color: #ffffff;
   margin: 12px 0px 5px 21px;
 }
 [class^="icon-"],
