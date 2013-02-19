@@ -1019,7 +1019,7 @@ li.metric-unit.clickable:hover.active {
 li.metric-unit.clickable:hover:first-child {
   *margin-left: 0;
 }
-.table-report-metrics {
+.smartlink-attributes {
   margin-left: -24px;
   margin-top: 5px;
 }
@@ -1043,15 +1043,6 @@ li.metric-unit.clickable:hover:first-child {
 .metric a {
   color: #333333;
   text-decoration: none;
-}
-.table td.metric-medium {
-  text-align: right;
-}
-.table td.metric {
-  text-align: right;
-}
-.table .pagination-right {
-  text-align: right;
 }
 li.link-attribute {
   display: inline-block;
@@ -2225,6 +2216,9 @@ table th[class*="span"],
 .report-table .well {
   background-color: #ffffff;
   margin: 12px 0px 5px 21px;
+}
+.table .pagination-right {
+  text-align: right;
 }
 [class^="icon-"],
 [class*=" icon-"] {
