@@ -10,16 +10,21 @@ title: New Custom Segment
     <div class="control-group">
       <label class="control-label">Title</label>
       <div class="controls">
-        <input type="text" class="input-large">
-        <p class="help-inline"><small>e.g. "Product Line A"</small></p>
+        <input type="text" class="input-large" />
+        <p class="help-inline">
+          <a href="#" rel="tooltip" data-original-title="Name your custom segment for the section of your site you're 
+          targeting (e.g. &quot;Product Line A Pages&quot;)">
+          <i class="icon-info-sign"></i></a>
+        </p>
       </div>
     </div>
     <div class="control-group">
       <label class="control-label">Segment <abbr class="initialism">URL</abbr></label>
       <div class="controls">
-        <input type="text" class="input-large">
+        <input type="text" class="input-large" />
         <p class="help-inline">
-          <a href="#" rel="tooltip" data-original-title="Define a subset of one of your domains for more precise targeting and analysis"><i class="icon-info-sign"></i></a>
+          <a href="#" rel="tooltip" data-original-title="Define a subset of one of your domains for more precise 
+          targeting and analysis"><i class="icon-info-sign"></i></a>
         </p>        
       </div>
     </div>
@@ -28,16 +33,30 @@ title: New Custom Segment
       <div class="controls">
         <select class="input-medium">
           <option>Exact</option>
-          <option selected>Starts with</option>
-          <option>Regex</option>
-        </select>
-        <button class="btn">Test URL</button>        
+          <option>Starts with</option>
+          <option selected="selected">Regex</option>
+        </select>  
+      </div>
+    </div>
+    <!-- Only show this control group if Regex is selected. Starts With and Exact don't really need it and it can confuse some users. -->
+    <div class="control-group">
+      <label class="control-label">Test <abbr class="initialism">URL</abbr></label>
+      <div class="controls">
+        <input type="text" class="input-large" />
+        <button class="btn">Test</button>
+        <p class="help-inline">
+          <a href="#" rel="tooltip" data-original-title="Enter an actual URL from your site that matches the regular expression 
+          above"><i class="icon-info-sign"></i></a>
+        </p>          
       </div>
     </div>
     <div class="well span6">
       <h4>Pixel Piggybacking <small>(optional)</small></h4>
-      <p>Pixel piggybacking allows other systems such as ad servers to track visitors to this custom segment. Enter up to 10 pixels you wish to piggyback. Enter the pixels as URLs and do not include HTML or JavaScript (e.g. http://ad.doubleclick.net/activity;src=2524098).</p>
-      <p><small><strong>Note:</strong> Image pixels only support piggybacking a single pixel. Only the first pixel will be piggybacked on pages tagged with Image Pixels. Your highest priority pixel should be entered into the Pixel 1 position. Pages instrumented with the Analyze JavaScript Tag will piggyback all pixels defined in this interface.</small></p>
+      <p>Pixel piggybacking allows other systems such as ad servers to track visitors to this custom segment. Enter up to 10 pixels 
+      you wish to piggyback. Enter the pixels as URLs and do not include HTML or JavaScript (e.g. http://ad.doubleclick.net/activity;src=2524098).</p>
+      <p><small><strong>Note:</strong> Image pixels only support piggybacking a single pixel. Only the first pixel will be piggybacked 
+      on pages tagged with Image Pixels. Your highest priority pixel should be entered into the Pixel 1 position. Pages instrumented with 
+      the Analyze JavaScript Tag will piggyback all pixels defined in this interface.</small></p>
       <label class="checkbox"><input type="checkbox">Add AppNexus Pixel</label>
       <div class="alert alert-success"><p><i class="icon-ok"></i> AppNexus Advertiser ID: 1285</p></div>
       <div class="control-group">
