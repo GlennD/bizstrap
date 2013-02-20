@@ -90,30 +90,32 @@ title: Eloqua Performance
   </div>
 </div>
 
-<table class="table table-striped table-bordered table-hover report-table">
+<table class="table table-bordered report-table">
   <tr>
     <th>Campaigns</th>
-    <th><span class="pull-right">Impressions</span></th>
-    <th><span class="pull-right">Clicks</span></th>    
-    <th><span class="pull-right">CTR</span></th>
-    <th><span class="pull-right">Actions</span></th>
-    <th><span class="pull-right">Post-Click Actions</span></th>
-    <th><span class="pull-right">Post-View Actions</span></th>
+    <th>Current Status</th>
+    <th class="pagination-right">Impressions</th>
+    <th class="pagination-right">Clicks</th>    
+    <th class="pagination-right">CTR</th>
+    <th class="pagination-right">Actions</th>
+    <th class="pagination-right">Post-Click Actions</th>
+    <th class="pagination-right">Post-View Actions</th>
   </tr>
   <tr>
     <td><label class="checkbox"><input type="checkbox"><strong>Total</strong></label></td>
-    <td><span class="metric-medium pull-right">1,128,266</span></td>
-    <td><span class="metric-medium pull-right">1,322</span></td>    
-    <td><span class="metric-medium pull-right">.11%</span></td>    
-    <td><span class="metric-medium pull-right">5,632</span></td>    
-    <td><span class="metric-medium pull-right">296</span></td>    
-    <td><span class="metric-medium pull-right">202</span></td>    
+    <td></td>
+    <td class="metric-medium">1,128,266</td>
+    <td class="metric-medium">1,322</td>    
+    <td class="metric-medium">.11%</td>    
+    <td class="metric-medium">5,632</td>    
+    <td class="metric-medium">296</td>    
+    <td class="metric-medium">202</td>    
   </tr>  
   <tr>
     <td>
       <div class="row-fluid">
         <div class="span11">
-          <label class="checkbox"><input type="checkbox" checked>Wave 1: B2B Branding Guide</label>
+          <label class="checkbox"><input type="checkbox" checked><i class="icon-tasks"></i> Wave 1: B2B Branding Guide</label>
         </div>
         <div class="span1">
           <div class="btn-group pull-right">
@@ -129,6 +131,7 @@ title: Eloqua Performance
         </div>
       </div>
     </td>
+    <td class="success"><small>Running</small></td>
     <td class="metric-medium">81,219</td>
     <td class="metric-medium">29</td>
     <td class="metric-medium">.04%</td>
@@ -136,15 +139,17 @@ title: Eloqua Performance
     <td class="metric-medium">12</td>
     <td class="metric-medium">10</td>
   </tr>
-  <tr class="sub-item">
-    <td><label class="checkbox"><input type="checkbox">160x600</label>
-      <img class="table-thumb" src="../../assets/img/160x600widget.png" 
-      width="10px">
+  <tr class="sub-row">
+    <td><div class="sub-label"><label class="checkbox"><input type="checkbox">160 x 600</label></div>
       <div class="btn-group pull-right">
         <button class="btn btn-mini" title="Serve this ad when campaign is running">On</button>
         <button class="btn btn-mini active" title="Do not serve this ad"><span class="important">Off</span></button>
-      </div>    
+      </div>
+      <div class="well well-small">
+		<img src="../../assets/img/160x600widget_cropped.png" />
+      </div>
     </td>
+    <td class="important"><small>Off</small></td>
     <td class="metric-medium">21,498</td>
     <td class="metric-medium">9</td>
     <td class="metric-medium">.04%</td>
@@ -152,14 +157,17 @@ title: Eloqua Performance
     <td class="metric-medium">3</td>
     <td class="metric-medium">2</td>
   </tr>  
-  <tr class="sub-item">
-    <td><label class="checkbox"><input type="checkbox" checked>300x250</label>
-      <img class="table-thumb" src="../../assets/img/300x250widget.png" width="42px">
+  <tr class="sub-row">
+    <td><div class="sub-label"><label class="checkbox"><input type="checkbox">300 x 250</label></div>
       <div class="btn-group pull-right">
-        <button class="btn btn-mini active"><span class="success">On</span></button>
-        <button class="btn btn-mini">Off</button>
-      </div>        
+        <button class="btn btn-mini active" title="Serve this ad when campaign is running"><span class="success">On</span></button>
+        <button class="btn btn-mini" title="Do not serve this ad">Off</button>
+      </div>
+      <div class="well well-small">
+		<img src="../../assets/img/300x250widget_cropped.png" />
+      </div>
     </td>
+    <td class="success"><small>On</small></td>
     <td class="metric-medium">59,721</td>
     <td class="metric-medium">20</td>
     <td class="metric-medium">.03%</td>
@@ -167,13 +175,17 @@ title: Eloqua Performance
     <td class="metric-medium">9</td>
     <td class="metric-medium">8</td>
   </tr>    
-  <tr class="sub-item">
-    <td><label class="checkbox"><input type="checkbox" disabled="disabled">728x90</label>
-      <img class="table-thumb" src="../../assets/img/728x90widget.png" width="150px">
-      <div class="pull-right">
-        <p><small><span class="warning">Pending Approval</span></small></p>
-      </div>        
+  <tr class="sub-row">
+    <td><div class="sub-label"><label class="checkbox"><input type="checkbox">729 x 90</label></div>
+      <div class="btn-group pull-right">
+        <button class="btn btn-mini" disabled="disabled" title="Serve this ad when campaign is running">On</button>
+        <button class="btn btn-mini" disabled="disabled" title="Do not serve this ad">Off</button>
+      </div>
+      <div class="well well-small">
+		<img src="../../assets/img/728x90widget_cropped.png" />
+      </div>
     </td>
+    <td class="warning"><small>Pending Approval</small></td>
     <td class="metric-medium">-</td>
     <td class="metric-medium">-</td>
     <td class="metric-medium">-</td>
@@ -185,7 +197,7 @@ title: Eloqua Performance
     <td>
       <div class="row-fluid">
         <div class="span11">
-          <label class="checkbox"><input type="checkbox" checked>Wave 2: Display Advertising Toolkit</label>
+          <label class="checkbox"><input type="checkbox" checked><i class="icon-tasks"></i> Wave 2: Display Advertising Toolkit</label>
         </div>
         <div class="span1">
           <div class="btn-group pull-right">
@@ -201,6 +213,7 @@ title: Eloqua Performance
         </div>
       </div>
     </td>
+    <td class="warning"><small>Past End Date</small></td>
     <td class="metric-medium">982,987</td>
     <td class="metric-medium">1,179</td>    
     <td class="metric-medium">.12%</td>    
@@ -208,11 +221,11 @@ title: Eloqua Performance
     <td class="metric-medium">254</td>    
     <td class="metric-medium">178</td>
   </tr>  
-  <tr class="error">
+  <tr>
     <td>
       <div class="row-fluid">
         <div class="span11">
-          <label class="checkbox"><input type="checkbox" checked>Wave 3: Guide to Generating Leads with Display</label>
+          <label class="checkbox"><input type="checkbox" checked><i class="icon-tasks"></i> Wave 3: Guide to Generating Leads with Display</label>
         </div>
         <div class="span1">
           <div class="btn-group pull-right">
@@ -228,6 +241,7 @@ title: Eloqua Performance
         </div>
       </div>
     </td>
+    <td class="important"><small>Paused</small></td>
     <td class="metric-medium">59,782</td>
     <td class="metric-medium">23</td>    
     <td class="metric-medium">.04%</td>    
@@ -239,7 +253,7 @@ title: Eloqua Performance
     <td>
       <div class="row-fluid">
         <div class="span11">
-          <label class="checkbox"><input type="checkbox" />Wave 4: 5 Minute Primer on Display</label>
+          <label class="checkbox"><input type="checkbox" checked="checked" /><i class="icon-tasks"></i> Wave 4: 5 Minute Primer on Display</label>
         </div>
         <div class="span1">
           <div class="btn-group pull-right">
@@ -255,6 +269,7 @@ title: Eloqua Performance
         </div>
       </div>
     </td>
+    <td class="success"><small>Running</small></td>
     <td class="metric-medium">4,278</td>
     <td class="metric-medium">91</td>    
     <td class="metric-medium">.02%</td>    
@@ -263,3 +278,15 @@ title: Eloqua Performance
     <td class="metric-medium">3</td>        
   </tr>
 </table>
+
+<div class="pagination pull-right">
+  <ul>
+    <li class="active"><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+</div>

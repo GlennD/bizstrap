@@ -2220,6 +2220,9 @@ table th[class*="span"],
 .table .pagination-right {
   text-align: right;
 }
+.table .metric-medium {
+  text-align: right;
+}
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
