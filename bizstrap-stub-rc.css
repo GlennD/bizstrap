@@ -45,8 +45,13 @@
 .badge-success {}
 .badge-warning {}
 .bar {}
+.bar-bizodarkblue {}
+.bar-bizogreen {}
+.bar-bizolightblue {}
+.bar-bizored {}
 .bar-danger {}
 .bar-info {}
+.bar-lightgray {}
 .bar-success {}
 .bar-warning {}
 .bizodarkblue {}
@@ -412,8 +417,13 @@
 .prev {}
 .previous {}
 .progress {}
+.progress-bizodarkblue {}
+.progress-bizogreen {}
+.progress-bizolightblue {}
+.progress-bizored {}
 .progress-danger {}
 .progress-info {}
+.progress-lightgray {}
 .progress-striped {}
 .progress-success {}
 .progress-warning {}
@@ -436,6 +446,7 @@
 .settings-active {}
 .show {}
 .small {}
+.smartlink-attributes {}
 .span {}
 .span-avatar {}
 .span-brandbartweet {}
@@ -462,7 +473,6 @@
 .table-bordered {}
 .table-condensed {}
 .table-hover {}
-.table-report-metrics {}
 .table-striped {}
 .tabs-below {}
 .tabs-left {}
