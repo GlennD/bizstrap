@@ -2338,6 +2338,7 @@ table th[class*="span"],
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
+  font-size: 14px;
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   /* sprites.less reset */
