@@ -5365,6 +5365,18 @@ Bizo Related Edits:
   border-radius: 0px;
   padding-right: 0px;
 }
+.navbar .nav > li.primary {
+  border-right: 1px solid #eeeeee;
+  margin: 0px;
+}
+.navbar .nav > li.primary a {
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.navbar .nav > li.primary:first-child {
+  border-left: 1px solid #eeeeee;
+}
 .breadcrumb {
   padding: 8px 15px;
   margin: 0 0 20px;
