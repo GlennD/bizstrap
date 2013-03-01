@@ -4468,7 +4468,7 @@ Bizo Related Edits:
 .nav-list li a {
   padding: 3px 15px;
   display: block;
-  color: #555555;
+  color: #333333;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   -o-transition: background 0.3s;
@@ -4850,7 +4850,7 @@ Bizo Related Edits:
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-  color: #555555;
+  color: #333333;
   text-shadow: 0 1px 0 #333333;
 }
 .navbar .brand:hover {
@@ -4864,16 +4864,15 @@ Bizo Related Edits:
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
-  color: #555555;
+  color: #333333;
 }
 .navbar .brand .navbar-text {
-  color: #555555;
   margin-top: 3px;
   margin-bottom: 0;
   line-height: 45px;
 }
 .navbar .brand .navbar-link {
-  color: #555555;
+  color: #333333;
 }
 .navbar .brand .navbar-link:hover {
   color: #ffffff;
@@ -5038,7 +5037,7 @@ Bizo Related Edits:
   float: none;
   padding: 16px 8px;
   line-height: 19px;
-  color: #555555;
+  color: #333333;
   text-decoration: none;
   -webkit-transition: background-color 0.3s, box-shadow 0.3s;
   -moz-transition: background-color 0.3s, box-shadow 0.3s;
@@ -5181,8 +5180,8 @@ Bizo Related Edits:
   color: #ffffff;
 }
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
-  border-top-color: #555555;
-  border-bottom-color: #555555;
+  border-top-color: #333333;
+  border-bottom-color: #333333;
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle .caret,
 .navbar .nav li.dropdown.active > .dropdown-toggle .caret,
@@ -5355,7 +5354,7 @@ Bizo Related Edits:
 .navbar .navbar-text {
   padding: 16px 8px 0px;
   line-height: 19px;
-  color: #555555;
+  color: #333333;
 }
 .navbar-inner {
   -webkit-border-radius: 0px;
@@ -5374,6 +5373,15 @@ Bizo Related Edits:
   display: block;
   padding-left: 15px;
   padding-right: 15px;
+}
+.navbar .nav > li.secondary {
+  margin: 0px;
+}
+.navbar .nav > li.secondary i {
+  display: block;
+  padding-left: 7px;
+  padding-right: 7px;
+  line-height: 19px;
 }
 .navbar .nav > li.primary:first-child {
   border-left: 1px solid #eeeeee;
