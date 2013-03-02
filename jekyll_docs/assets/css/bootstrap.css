@@ -212,11 +212,11 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #0095d5;
+  color: #00a5dc;
   text-decoration: none;
 }
 a:hover {
-  color: #005f89;
+  color: #006c90;
   text-decoration: underline;
 }
 .img-rounded {
@@ -876,7 +876,7 @@ h1.section-header-heavy small {
   color: #999999;
 }
 .footer a:hover {
-  color: #0095d5;
+  color: #00a5dc;
 }
 .step h1,
 .step h2,
@@ -942,7 +942,7 @@ div.home-header p {
   color: #006386;
 }
 .bizolightblue {
-  color: #0095d5;
+  color: #00a5dc;
 }
 .bizored {
   color: #e82529;
@@ -3435,28 +3435,28 @@ ul.icons li [class*=" icon-"] {
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #008ecb;
-  background-image: -moz-linear-gradient(top, #0095d5, #0083bc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0095d5), to(#0083bc));
-  background-image: -webkit-linear-gradient(top, #0095d5, #0083bc);
-  background-image: -o-linear-gradient(top, #0095d5, #0083bc);
-  background-image: linear-gradient(to bottom, #0095d5, #0083bc);
+  background-color: #009dd2;
+  background-image: -moz-linear-gradient(top, #00a5dc, #0092c3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00a5dc), to(#0092c3));
+  background-image: -webkit-linear-gradient(top, #00a5dc, #0092c3);
+  background-image: -o-linear-gradient(top, #00a5dc, #0092c3);
+  background-image: linear-gradient(to bottom, #00a5dc, #0092c3);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0095d5', endColorstr='#ff0083bc', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00a5dc', endColorstr='#ff0092c3', GradientType=0);
 }
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #008ecb;
-  background-image: -moz-linear-gradient(top, #0095d5, #0083bc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0095d5), to(#0083bc));
-  background-image: -webkit-linear-gradient(top, #0095d5, #0083bc);
-  background-image: -o-linear-gradient(top, #0095d5, #0083bc);
-  background-image: linear-gradient(to bottom, #0095d5, #0083bc);
+  background-color: #009dd2;
+  background-image: -moz-linear-gradient(top, #00a5dc, #0092c3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00a5dc), to(#0092c3));
+  background-image: -webkit-linear-gradient(top, #00a5dc, #0092c3);
+  background-image: -o-linear-gradient(top, #00a5dc, #0092c3);
+  background-image: linear-gradient(to bottom, #00a5dc, #0092c3);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0095d5', endColorstr='#ff0083bc', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00a5dc', endColorstr='#ff0092c3', GradientType=0);
 }
 .dropdown-menu .disabled > a,
 .dropdown-menu .disabled > a:hover {
@@ -3631,6 +3631,9 @@ ul.icons li [class*=" icon-"] {
 .contentbox blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
+}
+.contentbox .form-actions {
+  margin-bottom: 0px;
 }
 .contentbox-header {
   padding: 9px 15px;
@@ -3859,17 +3862,17 @@ input[type="button"].btn-block {
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #0079d5;
-  background-image: -moz-linear-gradient(top, #0095d5, #004ed5);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0095d5), to(#004ed5));
-  background-image: -webkit-linear-gradient(top, #0095d5, #004ed5);
-  background-image: -o-linear-gradient(top, #0095d5, #004ed5);
-  background-image: linear-gradient(to bottom, #0095d5, #004ed5);
+  background-color: #0088dc;
+  background-image: -moz-linear-gradient(top, #00a5dc, #005cdc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00a5dc), to(#005cdc));
+  background-image: -webkit-linear-gradient(top, #00a5dc, #005cdc);
+  background-image: -o-linear-gradient(top, #00a5dc, #005cdc);
+  background-image: linear-gradient(to bottom, #00a5dc, #005cdc);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0095d5', endColorstr='#ff004ed5', GradientType=0);
-  border-color: #004ed5 #004ed5 #003289;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00a5dc', endColorstr='#ff005cdc', GradientType=0);
+  border-color: #005cdc #005cdc #003c90;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #004ed5;
+  *background-color: #005cdc;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -3880,12 +3883,12 @@ input[type="button"].btn-block {
 .btn-primary.disabled,
 .btn-primary[disabled] {
   color: #ffffff;
-  background-color: #004ed5;
-  *background-color: #0045bc;
+  background-color: #005cdc;
+  *background-color: #0051c3;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #003ba2 \9;
+  background-color: #0046a9 \9;
 }
 .btn-warning {
   color: #ffffff;
@@ -4079,7 +4082,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #0095d5;
+  color: #00a5dc;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4088,7 +4091,7 @@ input[type="submit"].btn.btn-mini {
   border-radius: 0;
 }
 .btn-link:hover {
-  color: #005f89;
+  color: #006c90;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4234,7 +4237,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #004ed5;
+  background-color: #005cdc;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: #f89406;
@@ -4495,7 +4498,7 @@ Bizo Related Edits:
 .nav-list .active a:hover {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0095d5;
+  background-color: #00a5dc;
 }
 .nav-list .divider {
   *width: 100%;
@@ -4589,7 +4592,7 @@ Bizo Related Edits:
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #0095d5;
+  background-color: #00a5dc;
 }
 .nav-stacked > li {
   float: none;
@@ -4652,13 +4655,13 @@ Bizo Related Edits:
   border-radius: 6px;
 }
 .nav .dropdown-toggle .caret {
-  border-top-color: #0095d5;
-  border-bottom-color: #0095d5;
+  border-top-color: #00a5dc;
+  border-bottom-color: #00a5dc;
   margin-top: 6px;
 }
 .nav .dropdown-toggle:hover .caret {
-  border-top-color: #005f89;
-  border-bottom-color: #005f89;
+  border-top-color: #006c90;
+  border-bottom-color: #006c90;
 }
 /* move down carets for tabs */
 .nav-tabs .dropdown-toggle .caret {
@@ -5952,7 +5955,7 @@ Bizo Related Edits:
   transition: all 0.2s ease-in-out;
 }
 a.thumbnail:hover {
-  border-color: #0095d5;
+  border-color: #00a5dc;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -6090,11 +6093,11 @@ a.badge:hover {
 }
 .label-bizolightblue,
 .badge-bizolightblue {
-  background-color: #0095d5;
+  background-color: #00a5dc;
 }
 .label-bizolightblue[href],
 .badge-bizolightblue[href] {
-  background-color: #0071a2;
+  background-color: #007fa9;
 }
 .label-bizogreen,
 .badge-bizogreen {
@@ -6324,18 +6327,18 @@ a.badge:hover {
 }
 .progress-bizolightblue .bar,
 .progress .bar-bizolightblue {
-  background-color: #15adee;
-  background-image: -moz-linear-gradient(top, #22bdff, #0095d5);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#22bdff), to(#0095d5));
-  background-image: -webkit-linear-gradient(top, #22bdff, #0095d5);
-  background-image: -o-linear-gradient(top, #22bdff, #0095d5);
-  background-image: linear-gradient(to bottom, #22bdff, #0095d5);
+  background-color: #19bbf1;
+  background-image: -moz-linear-gradient(top, #2acaff, #00a5dc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2acaff), to(#00a5dc));
+  background-image: -webkit-linear-gradient(top, #2acaff, #00a5dc);
+  background-image: -o-linear-gradient(top, #2acaff, #00a5dc);
+  background-image: linear-gradient(to bottom, #2acaff, #00a5dc);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff22bdff', endColorstr='#ff0095d5', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2acaff', endColorstr='#ff00a5dc', GradientType=0);
 }
 .progress-bizolightblue.progress-striped .bar,
 .progress-striped .bar-bizolightblue {
-  background-color: #22bdff;
+  background-color: #2acaff;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
