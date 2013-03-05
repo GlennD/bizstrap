@@ -2341,6 +2341,7 @@ table th[class*="span"],
   font-size: 14px;
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
+  color: #333;
   /* sprites.less reset */
 
   display: inline;
@@ -2352,6 +2353,10 @@ table th[class*="span"],
   background-position: 0% 0%;
   background-repeat: repeat;
   margin-top: 0;
+}
+[class^="icon-"]:hover,
+[class*=" icon-"]:hover {
+  text-decoration: none;
 }
 /* more sprites.less reset */
 .icon-white,
