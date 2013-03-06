@@ -4362,6 +4362,9 @@ input[type="submit"].btn.btn-mini {
   right: -5px;
   line-height: 20px;
 }
+span.alert {
+  padding-bottom: 8px;
+}
 .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
