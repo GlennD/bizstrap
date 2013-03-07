@@ -5378,7 +5378,8 @@ Bizo Related Edits:
   padding-left: 15px;
   padding-right: 15px;
 }
-.navbar .nav > li.primary a:hover i {
+.navbar .nav > li.primary a:hover i,
+.navbar .nav > li.primary a:focus i {
   color: #ffffff;
 }
 .navbar .nav > li.secondary {
@@ -5390,7 +5391,8 @@ Bizo Related Edits:
   padding-right: 7px;
   line-height: 19px;
 }
-.navbar .nav > li.secondary a:hover i {
+.navbar .nav > li.secondary a:hover i,
+.navbar .nav > li.secondary a:focus i {
   color: #ffffff;
 }
 .navbar .nav > li.primary:first-child {
