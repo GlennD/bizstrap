@@ -5378,6 +5378,9 @@ Bizo Related Edits:
   padding-left: 15px;
   padding-right: 15px;
 }
+.navbar .nav > li.primary a:hover i {
+  color: #ffffff;
+}
 .navbar .nav > li.secondary {
   margin: 0px;
 }
@@ -5386,6 +5389,9 @@ Bizo Related Edits:
   padding-left: 7px;
   padding-right: 7px;
   line-height: 19px;
+}
+.navbar .nav > li.secondary a:hover i {
+  color: #ffffff;
 }
 .navbar .nav > li.primary:first-child {
   border-left: 1px solid #eeeeee;
