@@ -17,10 +17,10 @@ title: Contributing
 <hr />
 
 <div class="well">
-  <h3>Closed state  <span class="label label-info pointer">FAQ</span></h3>
-  <h3>Open state</h3>
+  <h3>Closed state  <button class="btn btn-mini btn-info">FAQ</button></h3>
+  <h3>Open state <button class="btn btn-mini btn-info active">FAQ</button></h3>
   <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
-    <h4 class="alert-heading">Creative Tips <span class="label label-info">Tips</span></h4>
+    <h4 class="alert-heading">Creative Tips</h4>
     <ul>
       <li>Bizo supports the standard three <span class="initialism">IAB</span> display ad creative sizes.</li>
       <li>Creatives can be <span class="initialism">JPEG</span>, <span class="initialism">GIF</span>, animated <span class="initialism">GIF</span> or Flash.</li>
@@ -28,21 +28,10 @@ title: Contributing
     </ul>
   </div>
 
-  <h3>FAQ</h3>
-  <p>If the in-line help box contains frequently asked questions, include a title and follow it with "FAQ" in a label-info label. Make the questions expandable/collapsible using the plus and minus sign glyphicons</p>
-  <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
-    <h4>Ad Placement <span class="label label-info">FAQ</span></h4>
-    <ul class="unstyled">
-      <li><i class="icon-plus"></i> Where will my ads show up?</li>
-      <li><i class="icon-plus"></i> Will my ad look exactly like the preview?</li>
-    </ul>
-  </div>
-
-
   <h3>Expandable</h3>
   <p>The content of the box should be kept as brief as possible. If it exceeds one paragraph, it should either be condensed or moved into a separate help document and linked from within the help box. If the content exceeds four lines (including title), shorten the box to hide anything below and allow the user to click to expand the box and show the full contents. Use this sparingly.</p>
   <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
-    <h4 class="alert-heading">Creative Tips <span class="label label-info">Tips</span></h4>
+    <h4 class="alert-heading">Creative Tips</h4>
     <ul>
       <li>Bizo supports the standard three <span class="initialism">IAB</span> display ad creative sizes.</li>
       <li>Creatives can be <span class="initialism">JPEG</span>, <span class="initialism">GIF</span>, animated <span class="initialism">GIF</span> or Flash.</li>
@@ -55,7 +44,7 @@ title: Contributing
   <p>When the box is expanded, it's content should not exceed 8 lines (not including dynamically shown question answers). If more help content is available, link to it in an external document as shown.</p>
   
   <div class="alert alert-info"><button class="close" data-dismiss="alert">&times;</button>
-    <h4 class="alert-heading">Upload your ad creative <span class="label label-info">FAQ</span></h4>
+    <h4 class="alert-heading">Upload your ad creative</h4>
     <ul class="unstyled">
       <li><i class="icon-plus"></i> Do I have to load all three creatives?</li>
       <li><i class="icon-plus"></i> What creative formats does Bizo accept?</li>
@@ -76,7 +65,7 @@ title: Contributing
   <li>A user flow is divided into several sections, to which the above criteria apply.</li>
 </ul>
 <h3>Specifications</h3>
-<p>The Bizstrap alert and alert-info classes provide the basic form of the in-line help box. The box should be displayed immediately beneath a header and immediately above the functionality it references, when active. In most cases, the box should be made collapsible. To make the box collapsible, include the "close" button in the upper right corner, but when the button is clicked, dismiss the box and show the label for the box type (example: FAQ) immediately after the header above. If the label is clicked, expand the help box to its open state and hide the label in the header row. When the label is hovered over, show a slight glow to indicate clickability. Hide all in-line help boxes by default.</p>
+<p>The Bizstrap btn, btn-mini and btn-info classes provide the basic form of the in-line help box. The box should be displayed immediately after a header. In most cases, the box should be made collapsible. To make the box collapsible, include the "close" button in the upper right corner, but when the button is clicked, dismiss the box. If the button is clicked, set it to active and show the help box. All in-line help boxes should be closed by default</p>
 <p>In rare cases it may make sense to remove the collapse option, or to make the box completely dismissable.</p> 
 
 <a name="field-button"></a>
