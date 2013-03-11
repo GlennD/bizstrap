@@ -920,6 +920,11 @@ div.home-header p {
   font-size: 16px;
   margin-top: -4px;
 }
+.lede {
+  font-size: 16px;
+  font-style: italic;
+  color: #555555;
+}
 .success {
   color: #468847;
 }
