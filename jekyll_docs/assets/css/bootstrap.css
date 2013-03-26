@@ -7629,24 +7629,40 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   -moz-animation-delay: 0.25s;
   -o-animation-delay: 0.25s;
   animation-fill-mode: 0.25s;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 .animated.delayed-05s {
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
   -o-animation-delay: 0.5s;
   animation-fill-mode: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 .animated.delayed-1s {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   -o-animation-delay: 1s;
   animation-fill-mode: 1s;
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
 }
 .animated.delayed-2s {
   -webkit-animation-delay: 2s;
   -moz-animation-delay: 2s;
   -o-animation-delay: 2s;
   animation-fill-mode: 2s;
+  -webkit-transition-delay: 2s;
+  -moz-transition-delay: 2s;
+  -o-transition-delay: 2s;
+  transition-delay: 2s;
 }
 .animated.fade-in {
   -webkit-animation-name: fade-in;
@@ -7689,4 +7705,154 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   -moz-animation-name: hinge;
   -o-animation-name: hinge;
   animation-name: hinge;
+}
+.funnel {
+  width: 163px;
+  margin: 0 auto;
+}
+.funnel img {
+  display: block;
+}
+.center-text {
+  text-align: center;
+}
+.center-text h3 {
+  margin: 15px 0 0 0;
+  padding: 0;
+  font-size: 30px;
+}
+.center-text h5 {
+  font-weight: normal;
+  color: #555;
+  margin: 0px 0 20px  0;
+  padding: 0;
+}
+.center-text .emphasis {
+  font-weight: bold;
+}
+.center-text p {
+  margin-bottom: 30px;
+}
+.center-text.blue .vertical-bar,
+.center-text.blue .circle-icon {
+  background: #00a4df;
+}
+.center-text.blue .label,
+.center-text.blue .emphasis {
+  color: #00a4df;
+}
+.center-text.teal .vertical-bar,
+.center-text.teal .circle-icon {
+  background: #00c7df;
+}
+.center-text.teal .label,
+.center-text.teal .emphasis {
+  color: #00c7df;
+}
+.center-text.green .vertical-bar,
+.center-text .emphasis .vertical-bar,
+.center-text.green .circle-icon,
+.center-text .emphasis .circle-icon {
+  background: #82cc39;
+}
+.center-text.green .label,
+.center-text .emphasis .label,
+.center-text.green .emphasis,
+.center-text .emphasis .emphasis {
+  color: #82cc39;
+}
+.vertical-bar-container {
+  position: relative;
+  height: 300px;
+  width: 55px;
+  margin: 0 auto;
+}
+.vertical-bar-container .vertical-bar {
+  position: absolute;
+  width: 18px;
+  height: 0;
+  left: 8px;
+  z-index: 1;
+  bottom: 0;
+  opacity: 0.4;
+  -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  -o-transition: height 1s;
+  transition: height 1s;
+}
+.vertical-bar-container .vertical-bar.primary {
+  width: 22px;
+  left: 26px;
+  opacity: 1;
+}
+.vertical-bar-container .vertical-bar.delayed-1s {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-fill-mode: 1s;
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+}
+.vertical-bar-container .vertical-bar.delayed-025s {
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  -o-animation-delay: 0.25s;
+  animation-fill-mode: 0.25s;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.vertical-bar-container .vertical-bar.delayed-05s {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-fill-mode: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.vertical-bar-container .circle-icon {
+  position: absolute;
+  bottom: -10px;
+  border: 4px solid #fff;
+  z-index: 2;
+  width: 55px;
+  height: 55px;
+  background: #00a5dc;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.vertical-bar-container .circle-icon [class^="icon-"],
+.vertical-bar-container .circle-icon [class*=" icon-"] {
+  display: block;
+  color: #fff;
+  font-size: 27.5px;
+  line-height: 55px;
+  text-align: center;
+}
+.vertical-bar-container .label {
+  background: transparent;
+  text-shadow: none;
+  color: #333;
+  position: absolute;
+  left: -50px;
+  bottom: 0;
+  opacity: 0.4;
+  line-height: 55px;
+}
+.vertical-bar-container .label.primary {
+  left: auto;
+  right: -60px;
+  opacity: 1;
 }

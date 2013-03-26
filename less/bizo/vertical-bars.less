@@ -1,0 +1,152 @@
+  .funnel {
+    width: 163px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+    }
+  }
+
+.center-text {
+  text-align: center;
+
+  h3 {
+    margin: 15px 0 0 0;
+    padding: 0;
+    font-size: 30px;
+  }
+
+  h5 { 
+    font-weight: normal;
+    color: #555;
+    margin: 0px 0 20px  0;
+    padding: 0;
+  }
+
+  .emphasis {
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+
+  
+  &.blue {
+    .vertical-bar, .circle-icon {
+      background: #00a4df;
+    }
+
+    .label, .emphasis {
+      color: #00a4df;
+    }
+  }
+
+  &.teal {
+    .vertical-bar, .circle-icon {
+      background: #00c7df;
+    }
+
+    .label, .emphasis {
+      color: #00c7df;
+    }
+  }
+
+  &.green, .emphasis {
+    .vertical-bar, .circle-icon {
+      background: #82cc39;
+    }
+
+    .label, .emphasis {
+      color: #82cc39;
+    }
+  }
+
+}
+
+.vertical-bar-container {
+  @height: 300px;
+  @diameter: 55px;
+  @barWidth: round(@diameter / 3);
+  @primaryBarWidth: round(@diameter / 2.5);
+  @totalWidth:  @barWidth + @primaryBarWidth;
+  @barOffset: round((@diameter - @totalWidth) / 2);
+
+  position: relative; 
+  height: @height;
+  width: @diameter;
+  margin: 0 auto;
+
+  .vertical-bar {
+    position: absolute;
+    width: @barWidth;
+    height: 0;
+    left: @barOffset;
+    z-index: 1;
+    bottom: 0;
+    opacity: 0.4;
+
+    .transition(height 1s);
+
+    &.primary {
+      width: @primaryBarWidth;
+      left: @barOffset + @barWidth;
+      opacity: 1;
+    }
+
+    &.delayed-1s {
+      #animation > .delay(1s);
+    }
+
+    &.delayed-025s {
+      #animation > .delay(0.25s);
+    }
+
+    &.delayed-05s {
+      #animation > .delay(0.5s);
+    }
+  }
+
+  .circle-icon {
+    position: absolute;
+    bottom: -10px;
+    border: 4px solid #fff;
+    z-index: 2;
+    #shapes > .circle(@diameter, @blue);
+    .box-shadow(0 2px 3px rgba(0,0,0,.2));
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      display: block;
+      color: #fff;
+      font-size: @diameter / 2;
+      line-height: @diameter;
+      text-align: center;
+    }
+  }
+
+
+  .label {
+    background: transparent;
+    text-shadow: none;
+    color: #333;
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    opacity: 0.4;
+    line-height: @diameter;
+
+    &.primary {
+      left: auto;
+      right: -60px;
+      opacity: 1;
+    }
+  }
+
+
+  
+}
+
+
+
