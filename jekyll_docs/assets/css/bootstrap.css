@@ -7710,6 +7710,36 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   width: 163px;
   margin: 0 auto;
 }
+.funnel .top,
+.funnel .middle,
+.funnel .bottom {
+  display: block;
+  width: 163px;
+  max-height: 68px;
+  height: 68px;
+  background-size: contain;
+}
+.funnel .top {
+  background: url("../img/funnel/funnel-top.png");
+}
+.funnel .middle {
+  background: url("../img/funnel/funnel-mid.png");
+}
+.funnel .bottom {
+  background: url("../img/funnel/funnel-bottom.png");
+}
+.funnel.show-top .middle,
+.funnel.show-top .bottom {
+  opacity: 0.2;
+}
+.funnel.show-middle .top,
+.funnel.show-middle .bottom {
+  opacity: 0.2;
+}
+.funnel.show-bottom .top,
+.funnel.show-bottom .middle {
+  opacity: 0.2;
+}
 .funnel img {
   display: block;
 }

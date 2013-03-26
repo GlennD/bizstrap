@@ -1,5 +1,6 @@
-# Used for local development
-prefix: ""
-css: "/assets/css/bootstrap.css" 
-responsive_css: "/assets/css/bootstrap-responsive.css"
+# Prod docs Configuration used by the Rakefile
+prefix: "/bizstrap/docs/rc"
+css: "http://media.bizo.com/bizstrap/css/bizstrap-rc.css"  
+responsive_css: "http://media.bizo.com/bizstrap/css/bizstrap-responsive-rc.css"
 version: "rc"
+

@@ -92,8 +92,10 @@
 .carousel-control {}
 .carousel-inner {}
 .cent {}
+.center-text {}
 .checkbox {}
 .circle-btn {}
+.circle-icon {}
 .clearfix {}
 .close {}
 .collapse {}
@@ -123,6 +125,7 @@
 .dropdown-toggle {}
 .dropup {}
 .dt {}
+.emphasis {}
 .empty {}
 .error {}
 .fade {}
@@ -141,6 +144,7 @@
 .form-search {}
 .form-vertical {}
 .full-screen {}
+.funnel {}
 .google-maps {}
 .green {}
 .h1 {}
@@ -353,6 +357,7 @@
 .tabs-stacked {}
 .tbody {}
 .td {}
+.teal {}
 .text-error {}
 .text-info {}
 .text-success {}
@@ -376,6 +381,8 @@
 .unselected-label {}
 .unstyled {}
 .vert-space {}
+.vertical-bar {}
+.vertical-bar-container {}
 .warning {}
 .well {}
 .well-featured {}

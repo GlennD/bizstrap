@@ -2,6 +2,48 @@
     width: 163px;
     margin: 0 auto;
 
+
+    .top, .middle, .bottom {
+      display: block;
+      width: 163px;
+      max-height: 68px;
+      height: 68px;
+      background-size: contain;
+    }
+
+    
+
+    .top {
+      background: url("../img/funnel/funnel-top.png");
+    }
+
+    .middle {
+      background: url("../img/funnel/funnel-mid.png");
+    }
+
+    .bottom {
+      background: url("../img/funnel/funnel-bottom.png");
+    }
+
+    &.show-top {
+      .middle, .bottom {
+        opacity: 0.2;
+      }
+    }
+
+    &.show-middle {
+      .top, .bottom {
+        opacity: 0.2;
+      }
+    }
+
+    &.show-bottom {
+      .top, .middle {
+        opacity: 0.2;
+      }
+    }
+
+
     img {
       display: block;
     }
