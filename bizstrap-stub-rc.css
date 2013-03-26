@@ -230,6 +230,7 @@
 .metric {}
 .metric-medium {}
 .metric-unit {}
+.middle {}
 .modal {}
 .modal-backdrop {}
 .modal-body {}
@@ -322,6 +323,9 @@
 .select {}
 .settings-active {}
 .show {}
+.show-bottom {}
+.show-middle {}
+.show-top {}
 .small {}
 .smartlink-attributes {}
 .span {}

@@ -7709,12 +7709,13 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
 .funnel {
   width: 163px;
   margin: 0 auto;
+  display: none;
 }
 .funnel .top,
 .funnel .middle,
 .funnel .bottom {
   display: block;
-  width: 163px;
+  width: 100%;
   max-height: 68px;
   height: 68px;
   background-size: contain;
@@ -7763,8 +7764,18 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
 .center-text p {
   margin-bottom: 30px;
 }
+.center-text .funnel {
+  display: block;
+}
+.center-text .badge {
+  display: block;
+  margin: 20px auto 0;
+  max-width: 100px;
+  padding: 3px 0;
+}
 .center-text.blue .vertical-bar,
-.center-text.blue .circle-icon {
+.center-text.blue .circle-icon,
+.center-text.blue .badge {
   background: #00a4df;
 }
 .center-text.blue .label,
@@ -7772,7 +7783,8 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   color: #00a4df;
 }
 .center-text.teal .vertical-bar,
-.center-text.teal .circle-icon {
+.center-text.teal .circle-icon,
+.center-text.teal .badge {
   background: #00c7df;
 }
 .center-text.teal .label,
@@ -7782,7 +7794,9 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
 .center-text.green .vertical-bar,
 .center-text .emphasis .vertical-bar,
 .center-text.green .circle-icon,
-.center-text .emphasis .circle-icon {
+.center-text .emphasis .circle-icon,
+.center-text.green .badge,
+.center-text .emphasis .badge {
   background: #82cc39;
 }
 .center-text.green .label,

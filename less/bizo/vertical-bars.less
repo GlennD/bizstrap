@@ -1,11 +1,12 @@
   .funnel {
     width: 163px;
     margin: 0 auto;
+    display: none;
 
 
     .top, .middle, .bottom {
       display: block;
-      width: 163px;
+      width: 100%;
       max-height: 68px;
       height: 68px;
       background-size: contain;
@@ -73,10 +74,20 @@
     margin-bottom: 30px;
   }
 
+  .funnel {
+    display: block;
+    //display: none;
+  }
 
+  .badge {
+    display: block;
+    margin: 20px auto 0;
+    max-width: 100px;
+    padding: 3px 0;
+  }
   
   &.blue {
-    .vertical-bar, .circle-icon {
+    .vertical-bar, .circle-icon, .badge {
       background: #00a4df;
     }
 
@@ -86,7 +97,7 @@
   }
 
   &.teal {
-    .vertical-bar, .circle-icon {
+    .vertical-bar, .circle-icon, .badge {
       background: #00c7df;
     }
 
@@ -96,7 +107,7 @@
   }
 
   &.green, .emphasis {
-    .vertical-bar, .circle-icon {
+    .vertical-bar, .circle-icon, .badge {
       background: #82cc39;
     }
 
