@@ -7765,7 +7765,7 @@ html#brand-bar-page .brand-bar .brand-bar-inner .span-brandbartweet {
   margin-bottom: 30px;
 }
 .center-text .funnel {
-  display: block;
+  display: none;
 }
 .center-text .badge {
   display: block;
