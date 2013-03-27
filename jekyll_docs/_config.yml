@@ -1,6 +1,6 @@
 # Prod docs Configuration used by the Rakefile
 prefix: "/bizstrap/docs/rc"
-css: "http://media.bizo.com/bizstrap/css/bizstrap-rc.css"  
+css: "/assets/css/bootstrap.css"  
 responsive_css: "http://media.bizo.com/bizstrap/css/bizstrap-responsive-rc.css"
 version: "rc"
 

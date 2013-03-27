@@ -1,57 +1,57 @@
-  .funnel {
-    width: 163px;
-    margin: 0 auto;
-    display: none;
+.span-funnel {
+  max-width: 432px + 20px;
+}
 
+.funnel {
+  width: 432px;
+  position: relative;
 
-    .top, .middle, .bottom {
-      display: block;
-      width: 100%;
-      max-height: 68px;
-      height: 68px;
-      background-size: contain;
+  .top, .middle, .bottom {
+    margin: 0 auto 30px;
+    .transition(opacity 1s);
+    opacity: 1;
+
+    &.faded {
+      opacity: 0.2;
     }
 
-    
-
-    .top {
-      background: url("../img/funnel/funnel-top.png");
-    }
-
-    .middle {
-      background: url("../img/funnel/funnel-mid.png");
-    }
-
-    .bottom {
-      background: url("../img/funnel/funnel-bottom.png");
-    }
-
-    &.show-top {
-      .middle, .bottom {
-        opacity: 0.2;
-      }
-    }
-
-    &.show-middle {
-      .top, .bottom {
-        opacity: 0.2;
-      }
-    }
-
-    &.show-bottom {
-      .top, .middle {
-        opacity: 0.2;
-      }
-    }
-
-
-    img {
-      display: block;
+    &.active {
+      opacity: 1;
     }
   }
 
-.center-text {
-  text-align: center;
+  .top {
+    margin-top: 80px;
+    width: 432px;
+    height: 192px;
+    background: url("../img/funnel/funnel-top.png");
+  }
+
+  .middle {
+    width: 280px;
+    height: 124px;
+    background: url("../img/funnel/funnel-mid.png");
+  }
+
+  .bottom {
+    width: 176px;
+    height: 79px;
+    background: url("../img/funnel/funnel-bottom.png");
+  }
+}
+
+.bars {
+  cursor: pointer;
+
+  .caption {
+    margin-top: 15px;
+    opacity: 0;
+    .transition(opacity 0.5s);
+  }
+
+  &:hover .caption {
+    opacity: 1;
+  }
 
   h3 {
     margin: 15px 0 0 0;
@@ -59,24 +59,16 @@
     font-size: 30px;
   }
 
-  h5 { 
-    font-weight: normal;
-    color: #555;
-    margin: 0px 0 20px  0;
-    padding: 0;
-  }
+
 
   .emphasis {
     font-weight: bold;
   }
 
   p {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
-  .funnel {
-    display: none;
-  }
 
   .badge {
     display: block;
@@ -118,32 +110,32 @@
 }
 
 .vertical-bar-container {
-  @height: 300px;
-  @diameter: 55px;
-  @barWidth: round(@diameter / 3);
-  @primaryBarWidth: round(@diameter / 2.5);
-  @totalWidth:  @barWidth + @primaryBarWidth;
-  @barOffset: round((@diameter - @totalWidth) / 2);
+  @diameter: 40px;
+  @barHeight: round(@diameter / 3);
+  @primaryBarHeight: round(@diameter / 2.5);
+  @totalHeight:  @barHeight + @primaryBarHeight;
+  @barOffset: round((@diameter - @totalHeight) / 2);
 
   position: relative; 
-  height: @height;
-  width: @diameter;
-  margin: 0 auto;
+  width: 100%;
+  height: @diameter;
 
   .vertical-bar {
     position: absolute;
-    width: @barWidth;
-    height: 0;
-    left: @barOffset;
+    height: @barHeight;
+    width: 0%;
+    top: @barOffset;
+    left: @diameter/2;
     z-index: 1;
     bottom: 0;
     opacity: 0.4;
 
-    .transition(height 1s);
+    .transition(width 1s);
 
     &.primary {
-      width: @primaryBarWidth;
-      left: @barOffset + @barWidth;
+      height: @primaryBarHeight;
+      top: @barOffset + @barHeight;
+      left: @diameter/2;
       opacity: 1;
     }
 
@@ -162,11 +154,10 @@
 
   .circle-icon {
     position: absolute;
-    bottom: -10px;
-    border: 4px solid #fff;
+    border: 2px solid #fff;
     z-index: 2;
     #shapes > .circle(@diameter, @blue);
-    .box-shadow(0 2px 3px rgba(0,0,0,.2));
+    .box-shadow(0 1px 2px rgba(0,0,0,.2));
 
     [class^="icon-"],
     [class*=" icon-"] {
@@ -177,6 +168,7 @@
       text-align: center;
     }
   }
+
 
 
   .label {
