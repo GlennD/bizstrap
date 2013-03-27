@@ -64,18 +64,6 @@
   .emphasis {
     font-weight: bold;
   }
-
-  p {
-    margin-bottom: 10px;
-  }
-
-
-  .badge {
-    display: block;
-    margin: 20px auto 0;
-    max-width: 100px;
-    padding: 3px 0;
-  }
   
   &.blue {
     .vertical-bar, .circle-icon, .badge {
@@ -106,11 +94,10 @@
       color: #82cc39;
     }
   }
-
 }
 
 .vertical-bar-container {
-  @diameter: 40px;
+  @diameter: 50px;
   @barHeight: round(@diameter / 3);
   @primaryBarHeight: round(@diameter / 2.5);
   @totalHeight:  @barHeight + @primaryBarHeight;
@@ -154,7 +141,7 @@
 
   .circle-icon {
     position: absolute;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     z-index: 2;
     #shapes > .circle(@diameter, @blue);
     .box-shadow(0 1px 2px rgba(0,0,0,.2));
