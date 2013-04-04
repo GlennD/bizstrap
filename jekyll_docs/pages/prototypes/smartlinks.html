@@ -18,7 +18,6 @@ title: SmartLinks
   </ul>
   <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-filter"></i> Filter <span class="caret"></span></a>
   <ul class="dropdown-menu">
-    <li><i class="icon-certificate"></i> Promoted</li>
     <li class="dropdown-submenu"><a tabindex="-1" href="#"><i class="icon-tag"></i> Tag</a></li>
       <ul class="dropdown-menu">
         <li>BMP</li>
@@ -30,10 +29,10 @@ title: SmartLinks
         <li>Conf Registration</li>
         <li>Contact Form</li>
       </ul>
+    <li><i class="icon-hdd"></i> Archived</li>
     <li class="divider"></li>
     <li>Clear Filtering</li>
   </ul>
-  <a class="btn" href="#"><i class="icon-cog"></i> Chart</a>
 </div>
 </form>
 
@@ -41,33 +40,24 @@ title: SmartLinks
   <div class="contentbox-header">
     <div class="report-metrics">
       <ul>
-        <li class="metric-unit metric clickable"><a href="#" rel:"popover" data-placement="bottom">540 <span 
+        <li class="metric-unit metric"><a href="#" rel:"popover" data-placement="bottom">540 <span 
         class="help-block"><span class="label label-bizolightblue">Clicks</span></span></a></li>
-          <div class="popover bottom">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-              <h3 class="popover-title">Clicks</h3>
-              <div class="popover-content">Number of clicks on your shared SmartLink</div>
-            </div>
+        <div class="popover bottom">
+          <div class="arrow"></div>
+          <div class="popover-inner">
+            <h3 class="popover-title">Clicks</h3>
+            <div class="popover-content">Number of clicks on your shared SmartLink</div>
           </div>
-        <li class="metric-unit metric clickable"><a href="#" rel:"popover" data-placement="bottom">472 <span class="help-block"><span 
+        </div>
+        <li class="metric-unit metric"><a href="#" rel:"popover" data-placement="bottom">472 <span class="help-block"><span 
         class="label label-bizogreen">Actions</span></span></a></li>
-          <div class="popover bottom">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-              <h3 class="popover-title">Actions</h3>
-              <div class="popover-content">Number of Actions completed by users who clicked on your SmartLink</div>
-            </div>
+        <div class="popover bottom">
+          <div class="arrow"></div>
+          <div class="popover-inner">
+            <h3 class="popover-title">Actions</h3>
+            <div class="popover-content">Number of Actions completed by users who clicked on your SmartLink</div>
           </div>
-        <li class="metric-unit metric clickable"><a href="#" rel:"popover" data-placement="bottom">97 <span class="help-block"><span 
-        class="unselected-label">Brand Bar Actions</span></span></a></li>      
-          <div class="popover bottom">
-            <div class="arrow"></div>
-            <div class="popover-inner">
-              <h3 class="popover-title">Brand Bar Actions</h3>
-              <div class="popover-content">Actions completed by users who clicked a promoted SmartLink on your BrandBar</div>
-            </div>
-          </div>
+        </div>
       </ul>
     </div>
   </div>
@@ -82,12 +72,6 @@ title: SmartLinks
     <span class="add-on"><i class="icon-globe"></i></span>
     <input type="url" class="input-xlarge" placeholder="URL"/>
   </div>
-  <div class="input-prepend">
-    <span class="add-on"><i class="icon-check"></i></span>
-    <select class="input-large">
-      <option>Select Action (optional)</option>
-    </select>
-  </div>
   <button class="btn">Create SmartLink</button>
 </form>
 </div>
@@ -97,16 +81,15 @@ title: SmartLinks
     <th>SmartLinks</th>
     <th class="pagination-right">Clicks</th>
     <th class="pagination-right">Actions</th>    
-    <th class="pagination-right">Brand Bar Actions</th>
   </tr>
   <tr>
-    <td><a href="http://bizo.me/n9Ckt">http://bizo.me/n9Ckt</a>
-      <br />
+    <td>
       <div class="smartlink-attributes">
         <ul>
+          <li class="smartlink"><a href="http://bizo.me/n9Ckt">http://bizo.me/n9Ckt</a></li>
           <li class="link-attribute">
             <div class="btn-group pull-right">
-              <button class="btn" title="Copy">Copy</button>
+              <button class="btn" title="Copy"><i class="icon-copy"></i> Copy</button>
               <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
               <ul class="dropdown-menu">
                 <li>Copy</li>
@@ -115,8 +98,7 @@ title: SmartLinks
             </div>          
           </li>
           <li class="link-attribute" title="2:45 PM, Monday September 25, 2012"><i class="icon-calendar"></i> Sep 25</li>
-          <li class="link-attribute" title="Conference, BMP"><i class="icon-tag"></i> Email, BMP</li>
-          <li class="link-attribute" title="Conference Registration"><i class="icon-check"></i> BMP Signup</li>
+          <li class="link-attribute" title="Conference, BMP"><i class="icon-tag"></i> Add Tag</li>
           <li class="link-attribute" title="www.bizo.com/marketing/self-service/signup.html"><i 
           class="icon-globe"></i> www.bizo.com/marketing/self-service/signup.html</li>          
         </ul>
@@ -124,16 +106,15 @@ title: SmartLinks
     </td>
     <td class="metric-medium">23</td>
     <td class="metric-medium">10</td>
-    <td class="metric-medium">1</td>
   </tr>  
   <tr>
-    <td>Sign up for this awesome conference TODAY! <a href="http://bizo.me/irEun">http://bizo.me/irEun</a>
-      <br />
+    <td>
       <div class="smartlink-attributes">
         <ul>
+          <li class="smartlink"><a href="http://bizo.me/irEun">http://bizo.me/irEun</a></li>
           <li class="link-attribute">
             <div class="btn-group pull-right">
-              <button class="btn" title="Promote"><i class="icon-certificate"></i></button>
+              <button class="btn" title="Copy"><i class="icon-copy"></i> Copy</button>
               <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
               <ul class="dropdown-menu">
                 <li><i class="icon-certificate"></i> Promote</li>
@@ -145,7 +126,6 @@ title: SmartLinks
           </li>
           <li class="link-attribute" title="2:45 PM, Monday September 25, 2012"><i class="icon-calendar"></i> Sep 25</li>
           <li class="link-attribute" title="Conference, BMP"><i class="icon-tag"></i> Conference, BMP</li>
-          <li class="link-attribute" title="Conference Registration"><i class="icon-check"></i> Conference Registration</li>
           <li class="link-attribute" title="www.bizo.com/marketing/self-service/signup.html"><i 
           class="icon-globe"></i> www.bizo.com/marketing/self-service/signup.html</li>          
         </ul>
@@ -153,28 +133,24 @@ title: SmartLinks
     </td>
     <td class="metric-medium">82</td>
     <td class="metric-medium">70</td>
-    <td class="metric-medium">18</td>
   </tr>
   <tr>
-    <td>Bizo Marketing Platform - Self-Service Edition <a href="http://bizo.me/AxoRt">http://bizo.me/AxoRt</a>
-      <br />
+    <td>
       <div class="smartlink-attributes">
         <ul>
+          <li class="smartlink"><a href="http://bizo.me/AxoRt">http://bizo.me/AxoRt</a></li>
           <li class="link-attribute">
             <div class="btn-group pull-right">
-              <button class="btn active" title="Promote"><i class="icon-certificate"></i></button>
+              <button class="btn" title="Copy"><i class="icon-copy"></i> Copy</button>
               <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <li><i class="icon-certificate"></i> Promote</li>
-                <li><i class="icon-list"></i> Show in Brand Bar</li>
-                <li><i class="icon-share-alt"></i> View on Twitter</li>                
+                <li><i class="icon-copy"></i> Copy</li>
                 <li><i class="icon-hdd"></i> Archive</li>                
               </ul>
             </div>          
           </li>        
           <li class="link-attribute" title="7:52 PM, Sunday September 24, 2012"><i class="icon-calendar"></i> Sep 24</li>
-          <li class="link-attribute" title="Conference, BMP"><i class="icon-tag"></i> n/a</li>
-          <li class="link-attribute" title="Conference Registration"><i class="icon-check"></i> BMP Signup</li>
+          <li class="link-attribute" title="Conference, BMP"><i class="icon-tag"></i> Add Tag</li>
           <li class="link-attribute" title="www.bizo.com/marketing/self-service/signup.html"><i 
           class="icon-globe"></i> www.bizo.com/marketing/self-service/signup.html</li>                 
         </ul>
@@ -182,28 +158,24 @@ title: SmartLinks
     </td>
     <td class="metric-medium">108</td>
     <td class="metric-medium">42</td>
-    <td class="metric-medium">27</td>
   </tr>
   <tr>
-    <td>Work at Bizo, now hiring! <a href="http://bizo.me/8oEmk">http://bizo.me/8oEmk</a>
-      <br />
+    <td>
       <div class="smartlink-attributes">
         <ul>
+          <li class="smartlink"><a href="http://bizo.me/8oEmk">http://bizo.me/8oEmk</a></li>
           <li class="link-attribute">
             <div class="btn-group pull-right">
-              <button class="btn" title="Promote"><i class="icon-certificate"></i></button>
+              <button class="btn" title="Copy"><i class="icon-copy"></i> Copy</button>
               <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <li><i class="icon-certificate"></i> Promote</li>
-                <li><i class="icon-list"></i> Show in Brand Bar</li>
-                <li><i class="icon-share-alt"></i> View on Twitter</li>                
+                <li><i class="icon-copy"></i> Copy</li>
                 <li><i class="icon-hdd"></i> Archive</li>                
               </ul>
             </div>          
           </li>        
           <li class="link-attribute" title="11:23 AM, Saturday September 23, 2012"><i class="icon-calendar"></i> Sep 23</li>
           <li class="link-attribute" title="Hiring"><i class="icon-tag"></i> Hiring</li>
-          <li class="link-attribute" title="Submit Application"><i class="icon-check"></i> Submit Application</li>
           <li class="link-attribute" title="www.bizo.com/marketing/self-service/signup.html"><i 
           class="icon-globe"></i> www.bizo.com/careers</li>           
         </ul>
@@ -211,6 +183,5 @@ title: SmartLinks
     </td>
     <td class="metric-medium">31</td>
     <td class="metric-medium">111</td>
-    <td class="metric-medium">15</td>
   </tr>  
 </table>

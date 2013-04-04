@@ -1064,13 +1064,21 @@ li.metric-unit.clickable:hover:first-child {
   color: #333333;
   text-decoration: none;
 }
+li.smartlink {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+  padding: 5px;
+  width: 150px;
+}
 li.link-attribute {
   display: inline-block;
   font-size: 12px;
   vertical-align: middle;
   margin-right: 20px;
   white-space: nowrap;
-  max-width: 150px;
+  max-width: 300px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
