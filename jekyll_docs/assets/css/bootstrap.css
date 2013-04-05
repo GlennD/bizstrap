@@ -1089,6 +1089,37 @@ li.link-attribute > a {
   display: inline-block;
   margin: 0 10px 0 22px;
 }
+.engagement-lift h3 {
+  margin: 10px -5px 0px;
+}
+.engagement-lift h3 > span {
+  background-color: #e6e6e6;
+  padding: 5px;
+  font-weight: normal;
+}
+.engagement-lift h3 > span .highlight {
+  font-weight: bold;
+  color: #00a5dc;
+}
+.engagement-lift p {
+  margin-top: 10px;
+}
+.engagement-lift p .highlight {
+  font-weight: bold;
+}
+.engagement-lift .explanation {
+  border-left: 2px solid #00a5dc;
+  padding-left: 4px;
+}
+.engagement-lift p.hidden {
+  visibility: hidden;
+}
+.engagement-lift .funnel-img {
+  padding: 5px 10px;
+}
+.engagement-lift .label {
+  margin-top: 20px;
+}
 body.login {
   border-top: 3px solid #00a5dc;
 }
