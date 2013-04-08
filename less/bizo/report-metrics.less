@@ -126,6 +126,16 @@ li.link-attribute > a {
       font-weight:bold;
     }
   }
+  
+  .row-fluid .explanation {
+   .transition(opacity .4s);
+   opacity: 0;
+  }
+  
+  .row-fluid:hover .explanation {
+   opacity: 1;
+  }  
+  
   .explanation {
     border-left: 2px solid @bizolightblue;
     padding-left: 4px;

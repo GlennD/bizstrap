@@ -54,6 +54,7 @@
 .bar-lightgray {}
 .bar-success {}
 .bar-warning {}
+.bars {}
 .bizodarkblue {}
 .bizogreen {}
 .bizolightblue {}
@@ -92,7 +93,6 @@
 .carousel-control {}
 .carousel-inner {}
 .cent {}
-.center-text {}
 .checkbox {}
 .circle-btn {}
 .circle-icon {}
@@ -127,7 +127,9 @@
 .dt {}
 .emphasis {}
 .empty {}
+.engagement-lift {}
 .error {}
+.explanation {}
 .fade {}
 .fade-in {}
 .fade-in-down {}
@@ -135,6 +137,7 @@
 .fade-in-up {}
 .fade-out {}
 .fade-out-down {}
+.faded {}
 .focused {}
 .footer {}
 .form {}
@@ -145,6 +148,7 @@
 .form-vertical {}
 .full-screen {}
 .funnel {}
+.funnel-img {}
 .google-maps {}
 .green {}
 .h1 {}
@@ -157,8 +161,10 @@
 .help-block {}
 .help-inline {}
 .hero-unit {}
+.hidden {}
 .hide {}
 .hide-text {}
+.highlight {}
 .hinge {}
 .home-graphic {}
 .home-header {}
@@ -323,14 +329,13 @@
 .select {}
 .settings-active {}
 .show {}
-.show-bottom {}
-.show-middle {}
-.show-top {}
 .small {}
+.smartlink {}
 .smartlink-attributes {}
 .span {}
 .span-avatar {}
 .span-brandbartweet {}
+.span-funnel {}
 .span1 {}
 .span10 {}
 .span11 {}

@@ -1107,6 +1107,16 @@ li.link-attribute > a {
 .engagement-lift p .highlight {
   font-weight: bold;
 }
+.engagement-lift .row-fluid .explanation {
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+.engagement-lift .row-fluid:hover .explanation {
+  opacity: 1;
+}
 .engagement-lift .explanation {
   border-left: 2px solid #00a5dc;
   padding-left: 4px;
